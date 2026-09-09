@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Housewright Calc — the construction calculator, rebuilt for this decade.</title>
+<meta name="description" content="Housewright Calc is an iPhone construction calculator with true feet-inch-fraction math to 1/64&quot;, 34 trade calculators with technical drawings, printable cut sheets, and built-in code checks. Works offline. No account. No subscription — $29.99 once.">
+<meta property="og:title" content="Housewright Calc — the construction calculator, rebuilt for this decade.">
+<meta property="og:description" content="Exact feet-inch-fraction math, 34 trade calculators, real technical drawings, and cut sheets you can hand to a crew. Works offline. No account. No subscription. Ever.">
+<meta property="og:type" content="website">
+<!-- og:image intentionally omitted — a dedicated calc social card is a launch-step deliverable, not fabricated here -->
+<link rel="icon" href="../assets/app-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Housewright Calc",
+  "operatingSystem": "iOS",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "Construction calculator for iPhone with true feet-inch-fraction math to 1/64 inch, 34 trade calculators, technical drawings, printable cut sheets, and built-in IRC code checks. Works offline, no account required.",
+  "offers": { "@type": "Offer", "price": "29.99", "priceCurrency": "USD" }
+}
+</script>
+<style>
+/* ============ TOKENS — black & gold ledger + drafting cyan, from the product itself ============ */
+:root{
+  --bg:#0c0b09; --bg-1:#131110; --bg-2:#1a1815; --bg-3:#211e1a;
+  --line:#2b2822; --line-soft:#221f1b;
+  --text-hi:#f1ead9; --text:#b9af9c; --dim:#847b6a;
+  --gold:#d9a441; --gold-hi:#f2c363; --gold-deep:#8a6420;
+  --gold-ghost:rgba(217,164,65,.14); --gold-faint:rgba(217,164,65,.06);
+  --cyan:#62b6cb; --cyan-hi:#8fd0e2; --cyan-deep:#3d7d8f;
+  --cyan-ghost:rgba(98,182,203,.14); --cyan-faint:rgba(98,182,203,.06);
+  --ok:#79b473;
+  --serif:ui-serif,"New York",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+  --w: min(1140px, calc(100vw - 48px));
+  color-scheme: dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+html,body{overflow-x:clip}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:var(--sans); font-size:16.5px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    linear-gradient(var(--gold-faint) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gold-faint) 1px, transparent 1px);
+  background-size:72px 72px;
+  background-position:center top;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold-hi);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+::selection{background:var(--gold-deep);color:var(--text-hi)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px}
+
+/* ============ DRAWING-SHEET BORDER ============ */
+.sheet-frame{position:fixed;inset:10px;border:1px solid rgba(217,164,65,.16);pointer-events:none;z-index:60}
+.sheet-frame i{position:absolute;width:14px;height:14px;border-color:rgba(217,164,65,.5);border-style:solid;border-width:0}
+.sheet-frame i:nth-child(1){top:-1px;left:-1px;border-top-width:1px;border-left-width:1px}
+.sheet-frame i:nth-child(2){top:-1px;right:-1px;border-top-width:1px;border-right-width:1px}
+.sheet-frame i:nth-child(3){bottom:-1px;left:-1px;border-bottom-width:1px;border-left-width:1px}
+.sheet-frame i:nth-child(4){bottom:-1px;right:-1px;border-bottom-width:1px;border-right-width:1px}
+.sheet-tag{position:fixed;bottom:14px;right:22px;z-index:61;pointer-events:none;
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+@media (max-width:720px){ .sheet-tag,.sheet-frame{display:none} }
+
+/* ============ TYPE ============ */
+.mono{font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;font-size:11.5px}
+.eyebrow{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase;font-size:11.5px;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);color:var(--text-hi);font-weight:700;text-wrap:balance;line-height:1.08}
+h1{font-size:clamp(38px,5.8vw,76px);letter-spacing:-.015em}
+h2{font-size:clamp(28px,3.8vw,44px);letter-spacing:-.01em}
+h3{font-size:20px;line-height:1.25}
+.gold-i{font-style:italic;color:var(--gold)}
+.cyan-i{font-style:italic;color:var(--cyan)}
+p.lede{font-size:clamp(17px,1.6vw,20px);max-width:62ch;color:var(--text)}
+.measure{max-width:62ch}
+.num{font-variant-numeric:tabular-nums}
+
+/* ============ LAYOUT ============ */
+.wrap{width:var(--w);margin:0 auto}
+section{padding:clamp(64px,8vw,112px) 0;position:relative}
+.sect-head{display:flex;align-items:center;gap:18px;margin-bottom:clamp(36px,4.5vw,56px)}
+.sect-head .rule{flex:1;height:1px;background:var(--line);position:relative}
+.sect-head .rule::before,.sect-head .rule::after{content:"";position:absolute;top:-4px;width:1px;height:9px;background:var(--gold-deep)}
+.sect-head .rule::before{left:0}
+.sect-head .rule::after{right:0}
+.sect-head .lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+
+/* ============ NAV ============ */
+header{position:sticky;top:0;z-index:50;background:rgba(12,11,9,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.nav{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--text-hi)}
+.brand:hover{text-decoration:none}
+.hw-mark{width:30px;height:30px;border-radius:7px;background:#131110;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
+.hw-mark svg{display:block}
+.wordmark{font-family:var(--serif);font-weight:700;font-size:16px;letter-spacing:.06em;white-space:nowrap}
+.wordmark b{color:var(--gold);font-weight:700}
+.calc-tag{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--cyan-deep);border-radius:4px;padding:2px 6px;margin-left:7px;vertical-align:2px}
+.nav-links{display:flex;gap:22px;margin-left:auto}
+.nav-links a{color:var(--text);font-size:14px}
+.nav-links a:hover{color:var(--text-hi);text-decoration:none}
+.nav-links .exit{color:var(--dim)}
+.nav-links .exit:hover{color:var(--gold-hi)}
+.nav .cta{margin-left:8px}
+.mnav{display:none;margin-left:auto;position:relative}
+.mnav summary{list-style:none;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--line);padding:9px 13px;border-radius:6px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav[open] summary{background:var(--bg-2)}
+.mnav .sheet{position:absolute;right:0;top:calc(100% + 10px);background:var(--bg-1);border:1px solid var(--line);border-radius:10px;padding:10px;display:grid;gap:2px;min-width:220px;box-shadow:0 18px 50px rgba(0,0,0,.5)}
+.mnav .sheet a{padding:10px 14px;border-radius:7px;color:var(--text);font-size:15px}
+.mnav .sheet a:hover{background:var(--bg-2);color:var(--text-hi);text-decoration:none}
+@media (max-width:960px){ .nav-links,.nav .cta{display:none} .mnav{display:block} }
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:600;font-size:15.5px;
+  padding:13px 24px;border-radius:8px;border:1px solid transparent;cursor:pointer;transition:transform .15s ease, background .15s ease, border-color .15s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#171204;border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-hi)}
+.btn-ghost{background:transparent;color:var(--text-hi);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--cyan-deep)}
+.btn-sm{padding:9px 16px;font-size:14px}
+.btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2}
+.appstore-badge{position:relative}
+/* App Store link isn't live yet — pending.* is the "swap for the real badge" hook.
+   Dan: once the ASC record + real link exist, delete class="pending" (and this comment)
+   from each appstore-badge instance; the plain .btn.btn-gold styling takes over. */
+.appstore-badge.pending{
+  background:var(--bg-1);color:var(--dim);border:1px dashed var(--line);
+  cursor:not-allowed;pointer-events:none;
+}
+.appstore-badge.pending:hover{transform:none;background:var(--bg-1)}
+.appstore-badge.pending svg{stroke:var(--dim)}
+.appstore-badge.pending .soon{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cyan);border:1px solid var(--cyan-deep);border-radius:4px;padding:2px 7px;margin-left:2px;
+}
+
+/* ============ HERO ============ */
+.hero{padding:clamp(56px,7vw,96px) 0 clamp(44px,5vw,64px)}
+.hero .eyebrow{display:block;margin-bottom:20px}
+.hero h1{max-width:14ch}
+.hero p.lede{margin:24px 0 32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;align-items:center}
+.hero-ctas .note{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.dim-ruler{display:flex;flex-wrap:wrap;align-items:center;margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dim-ruler span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);padding:13px 22px 13px 0;margin-right:22px;position:relative}
+.dim-ruler span::after{content:"";position:absolute;right:0;top:8px;bottom:8px;width:1px;background:var(--line)}
+.dim-ruler span:last-child::after{display:none}
+.dim-ruler b{color:var(--gold);font-weight:400}
+
+/* ============ EXACT-MATH READOUT ============ */
+.exact-wrap{display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,56px);align-items:center;margin-top:clamp(36px,4.5vw,56px)}
+.exact-card{background:var(--bg-1);border:1px solid var(--line);border-radius:12px;padding:26px 30px;min-width:270px}
+.exact-row{display:flex;gap:16px;justify-content:flex-end;font-family:var(--mono);font-size:19px;color:var(--text-hi);padding:3px 0}
+.exact-row .op{color:var(--dim);width:16px;text-align:center}
+.exact-rule{height:1px;background:var(--gold-deep);margin:10px 0}
+.exact-sum{font-size:23px;color:var(--cyan-hi);font-weight:600}
+.exact-sum .op{color:var(--cyan)}
+.exact-tag{display:block;margin-top:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);text-align:right}
+.exact-caption{max-width:36ch;font-size:15px;color:var(--text)}
+.exact-caption b{color:var(--text-hi)}
+
+/* ============ TILES / CHIPS ============ */
+.honesty-line{margin-top:0;font-family:var(--sans);font-size:15.5px;color:var(--text)}
+.approx-strip{margin-top:28px;padding-top:22px;border-top:1px solid var(--line-soft);font-size:15px;color:var(--text);max-width:62ch}
+.approx-strip .mono-eq{font-family:var(--mono);color:var(--cyan-hi);white-space:nowrap}
+
+/* ============ CALCULATOR CHIPS ============ */
+.calc-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{border:1px solid var(--line);background:var(--bg-1);color:var(--text-hi);font-family:var(--sans);font-weight:500;font-size:14.5px;padding:9px 17px;border-radius:999px}
+.chip.more{border-color:var(--cyan-deep);color:var(--cyan-hi);background:var(--cyan-faint)}
+
+/* ============ BULLETS ============ */
+.bullets{display:grid;gap:14px;margin:24px 0 0}
+.bullet{display:flex;gap:14px;align-items:flex-start;font-size:15.5px}
+.bullet svg{width:17px;height:17px;stroke:var(--cyan);fill:none;stroke-width:2;flex-shrink:0;margin-top:4px}
+.bullet b{color:var(--text-hi);font-weight:650}
+
+/* ============ FEATURE GRID (code checks) ============ */
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.fcard{background:var(--bg-1);border:1px solid var(--line-soft);border-radius:10px;padding:20px 18px}
+.fcard svg{width:20px;height:20px;stroke:var(--cyan);fill:none;stroke-width:1.6;margin-bottom:12px}
+.fcard h4{font-family:var(--sans);font-size:14.5px;font-weight:650;color:var(--text-hi);margin-bottom:5px}
+.fcard p{font-size:13px;line-height:1.5;color:var(--dim)}
+@media (max-width:920px){ .fgrid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){ .fgrid{grid-template-columns:1fr} }
+
+/* ============ HONESTY BOX (code checks) ============ */
+.honesty-box{border:1px solid var(--cyan-deep);border-radius:12px;padding:24px 26px;background:linear-gradient(180deg, rgba(98,182,203,.08), rgba(98,182,203,.02));margin-top:28px}
+.honesty-box .k{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--cyan);display:block;margin-bottom:10px}
+.honesty-box p{font-size:15px}
+
+/* ============ PHONE PLACEHOLDERS (screenshots) ============ */
+.phones-row{display:flex;align-items:flex-start;justify-content:center;gap:clamp(16px,3vw,28px);flex-wrap:wrap;margin-top:clamp(32px,4vw,52px)}
+.phone-ph{width:220px;background:#0a0a0a;border:1px solid #2e2b25;border-radius:30px;padding:8px;box-shadow:0 22px 60px rgba(0,0,0,.55)}
+.phone-ph .screen{aspect-ratio:750/1624;border-radius:22px;border:1px dashed var(--cyan-deep);
+  background:repeating-linear-gradient(135deg, var(--bg-2) 0 10px, var(--bg-1) 10px 20px);
+  display:flex;align-items:center;justify-content:center;padding:18px;text-align:center}
+.phone-ph .cap{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan-hi);line-height:1.7}
+.phone-single{display:flex;justify-content:center;margin-top:clamp(32px,4vw,52px)}
+@media (max-width:560px){ .phone-ph{width:44vw;max-width:200px} }
+
+/* ============ PRICING ============ */
+.price-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,4vw,48px);align-items:start;margin-top:clamp(32px,4vw,52px)}
+.price-card{border:1px solid var(--line);border-radius:14px;background:var(--bg-1);padding:30px 28px;position:relative}
+.price-card.pro{border-color:var(--gold-deep);background:linear-gradient(180deg,var(--bg-2),var(--bg-1));box-shadow:0 30px 90px rgba(0,0,0,.45), 0 0 100px rgba(217,164,65,.06)}
+.price-card .flag{position:absolute;top:-13px;left:26px;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#171204;background:var(--gold);padding:5px 11px;border-radius:4px}
+.price-card .plan{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+.price-line{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price-line .amount{font-family:var(--serif);font-weight:700;font-size:52px;color:var(--text-hi);letter-spacing:-.02em}
+.price-line .was{font-family:var(--serif);font-size:22px;color:var(--dim);text-decoration:line-through;text-decoration-color:var(--gold-deep)}
+.price-line .per{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.price-sub{font-size:13.5px;color:var(--dim);margin:8px 0 22px}
+.inc{display:grid;gap:11px;margin:22px 0 26px}
+.inc li{list-style:none;display:flex;gap:12px;font-size:14.5px;align-items:flex-start}
+.inc svg{width:16px;height:16px;stroke:var(--cyan);fill:none;stroke-width:2.2;flex-shrink:0;margin-top:4px}
+.price-card.pro .inc svg{stroke:var(--gold)}
+.inc b{color:var(--text-hi);font-weight:600}
+.price-card .btn{width:100%;justify-content:center}
+.price-fine{margin-top:14px;font-size:12px;color:var(--dim);text-align:center}
+.no-sub-banner{text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,25px);color:var(--text-hi);margin-bottom:clamp(28px,3.5vw,44px)}
+.no-sub-banner b{color:var(--gold);font-weight:700}
+@media (max-width:860px){ .price-wrap{grid-template-columns:1fr} }
+@media (max-width:520px){
+  .price-card{padding:24px 20px}
+  .price-line .amount{font-size:44px}
+  section{padding:52px 0}
+}
+
+/* ============ FAQ ============ */
+.faq{max-width:780px;margin:0 auto}
+.faq details{border-top:1px solid var(--line-soft)}
+.faq details:last-child{border-bottom:1px solid var(--line-soft)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 2px;font-family:var(--sans);font-size:16.5px;font-weight:600;color:var(--text-hi);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:8px;top:50%;transform:translateY(-50%);font-family:var(--serif);font-size:24px;color:var(--cyan);font-weight:400;transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq .a{padding:0 2px 26px;max-width:68ch;font-size:15.5px;color:var(--text)}
+.faq .a p+p{margin-top:10px}
+
+/* ============ FINAL CTA / FOOTER ============ */
+.final{text-align:center;padding-bottom:clamp(72px,9vw,120px)}
+.final h2{font-size:clamp(32px,4.6vw,54px);max-width:16ch;margin:0 auto 20px}
+.final p{max-width:56ch;margin:0 auto 30px}
+footer{border-top:1px solid var(--line-soft);padding:34px 0 44px}
+.foot{display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-size:13.5px;color:var(--dim)}
+.foot .brand{margin-right:auto}
+.foot a{color:var(--dim)}
+.foot a:hover{color:var(--cyan-hi)}
+.foot-note{margin-top:18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#5c5546}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){ .rv{opacity:1;transform:none;transition:none} }
+</style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+
+<div class="sheet-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="sheet-tag" aria-hidden="true">housewright · calc · sheet 1 of 1 · rev a</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Housewright Calc home">
+      <span class="hw-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="30" height="30"><path d="M 15 29 L 32 16 L 49 29" fill="none" stroke="#d9a441" stroke-width="4.5" stroke-linecap="round"/><text x="32" y="49" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="30" fill="#f2ecdd">H</text><rect x="19" y="53" width="26" height="3" rx="1" fill="#d9a441"/></svg></span>
+      <span class="wordmark">HOUSE<b>WRIGHT</b><span class="calc-tag">Calc</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#exact">Exact math</a>
+      <a href="#calculators">Calculators</a>
+      <a href="#cutsheets">Cut sheets</a>
+      <a href="#code">Code checks</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="exit" href="/">housewright.app ↗</a>
+    </nav>
+    <a class="btn btn-gold btn-sm cta" href="#get">Get the app</a>
+    <details class="mnav">
+      <summary aria-label="Open menu">Menu</summary>
+      <nav class="sheet" aria-label="Mobile">
+        <a href="#exact">Exact math</a>
+        <a href="#calculators">Calculators</a>
+        <a href="#cutsheets">Cut sheets</a>
+        <a href="#code">Code checks</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="/">housewright.app ↗</a>
+        <a href="#get" style="color:var(--gold)">Get the app →</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Housewright Calc · iPhone · offline · no subscription</span>
+      <h1>The construction calculator, rebuilt for <span class="cyan-i">this decade.</span></h1>
+      <p class="lede">Feet-inch-fraction math the way you say it. 34 professional calculators with real technical
+      drawings, code checks, and cut sheets you can hand to a crew — sharing one exact math engine. Works offline.
+      No account. No ads.</p>
+      <div class="hero-ctas">
+        <!-- PLACEHOLDER: App Store link — Dan fills in after the ASC record exists. Do not fabricate a store URL. -->
+        <a class="btn btn-gold appstore-badge pending" href="#" aria-disabled="true" tabindex="-1" data-note="App Store link — Dan fills in after ASC record exists">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
+          Get it on the App Store <span class="soon">Coming soon</span>
+        </a>
+        <a class="btn btn-ghost" href="#exact">See the exact math ↓</a>
+      </div>
+      <div class="dim-ruler num" role="list">
+        <span role="listitem"><b>31</b> calculators</span>
+        <span role="listitem">fractions to <b>1/64&#8243;</b></span>
+        <span role="listitem"><b>$29.99</b> once</span>
+        <span role="listitem"><b>0</b> subscriptions</span>
+      </div>
+
+      <div class="exact-wrap rv">
+        <div class="exact-card num" role="img" aria-label="4 feet 3 and three quarter inches, plus 5 feet 6 and three sixteenths inches, equals 9 feet 9 and fifteen sixteenths inches — exact, not rounded">
+          <div class="exact-row"><span class="op">&nbsp;</span><span>4&#8242; 3-3/4&#8243;</span></div>
+          <div class="exact-row"><span class="op">+</span><span>5&#8242; 6-3/16&#8243;</span></div>
+          <div class="exact-rule"></div>
+          <div class="exact-row exact-sum"><span class="op">=</span><span>9&#8242; 9-15/16&#8243;</span></div>
+          <span class="exact-tag">exact — not rounded</span>
+        </div>
+        <p class="exact-caption">Type <b>4&#8242; 3-3/4&#8243; + 5&#8242; 6-3/16&#8243;</b> and get <b>9&#8242; 9-15/16&#8243;</b> —
+        the exact answer, not a rounded decimal. Housewright Calc does dimension math in true fractions, down to
+        1/64&#8243;, because people cut lumber from these numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXACT FRACTIONS (the money pitch) ================= -->
+  <section id="exact">
+    <div class="wrap">
+      <div class="sect-head rv"><span class="lab">The money pitch</span><span class="rule"></span></div>
+      <h2 class="rv" style="max-width:20ch">Exact fractions, not rounded decimals.</h2>
+      <p class="lede rv" style="margin-top:16px">Every other calculator on your phone converts to a decimal and
+      rounds. Housewright Calc keeps the math in feet, inches, and fractions the whole way through — addition,
+      subtraction, multiplication, division — down to 1/64&#8243;. When a value truly isn't exact, it says so
+      instead of quietly rounding.</p>
+      <p class="approx-strip rv num">Unit Converter shows its work, too — <span class="mono-eq">1 m &asymp; 3&#8242; 3-3/8&#8243;</span> —
+      when a conversion doesn't land on an exact fraction, it's marked with &asymp;, not printed as if it were exact.</p>
+    </div>
+  </section>
+
+  <!-- ================= 31 CALCULATORS + DRAWINGS ================= -->
+  <section id="calculators">
+    <div class="wrap">
+      <div class="sect-head rv"><span class="lab">31 calculators, one exact math engine</span><span class="rule"></span></div>
+      <h2 class="rv" style="max-width:22ch">Every trade calculator a residential crew reaches for.</h2>
+      <p class="lede rv" style="margin-top:16px">Stairs, rafters, framing, joists, headers, decks, concrete,
+      retaining walls, fences, drywall, flooring, electrical, plumbing — in one app, sharing one exact math engine.</p>
+      <div class="calc-chips rv" role="list" aria-label="Calculator list">
+        <span class="chip" role="listitem">Stairs</span>
+        <span class="chip" role="listitem">Rafters</span>
+        <span class="chip" role="listitem">Framing</span>
+        <span class="chip" role="listitem">Joists</span>
+        <span class="chip" role="listitem">Headers</span>
+        <span class="chip" role="listitem">Decks</span>
+        <span class="chip" role="listitem">Concrete</span>
+        <span class="chip" role="listitem">Retaining walls</span>
+        <span class="chip" role="listitem">Fences</span>
+        <span class="chip" role="listitem">Drywall</span>
+        <span class="chip" role="listitem">Flooring</span>
+        <span class="chip" role="listitem">Electrical</span>
+        <span class="chip" role="listitem">Plumbing</span>
+        <span class="chip more" role="listitem">+ 18 more — 31 in all</span>
+      </div>
+
+      <div style="margin-top:clamp(40px,5vw,60px)">
+        <h3 class="rv">Real technical drawings.</h3>
+        <div class="bullets rv">
+          <div class="bullet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+            <p><b>Stair stringers</b> with riser checks, dimensioned to convention.</p></div>
+          <div class="bullet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+            <p><b>Rafter elevations</b> with birdsmouth details.</p></div>
+          <div class="bullet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+            <p><b>Framing layouts, deck plans, and story poles</b> — updating live as you type.</p></div>
+        </div>
+      </div>
+
+      <div class="phones-row rv">
+        <figure class="phone-ph">
+          <div class="screen"><span class="cap">Screenshot placeholder<br>Stair calculator —<br>IRC check + technical<br>drawing together</span></div>
+        </figure>
+        <!-- Screenshot placeholder — real capture is a Dan/Xcode simulator step. Content per listing/APP_STORE_LISTING.md screenshot #2. Do not point this at a real asset until captured. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CUT SHEETS (the crew-share story) ================= -->
+  <section id="cutsheets">
+    <div class="wrap">
+      <div class="sect-head rv"><span class="lab">The crew-share story</span><span class="rule"></span></div>
+      <h2 class="rv" style="max-width:20ch">Cut sheets you can hand to a crew.</h2>
+      <p class="lede rv" style="margin-top:16px">One tap turns any calculation into a vector-PDF cut sheet —
+      drawing, inputs, and materials list on one page — ready to print, text, or AirDrop from the truck.</p>
+      <div class="phones-row rv">
+        <figure class="phone-ph">
+          <div class="screen"><span class="cap">Screenshot placeholder<br>Cut sheet PDF in the<br>iOS share sheet</span></div>
+        </figure>
+        <!-- Screenshot placeholder — real capture is a Dan/Xcode simulator step. Content per listing/APP_STORE_LISTING.md screenshot #4. Do not point this at a real asset until captured. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CODE CHECKS ================= -->
+  <section id="code">
+    <div class="wrap">
+      <div class="sect-head rv"><span class="lab">Code checks, built in</span><span class="rule"></span></div>
+      <h2 class="rv" style="max-width:22ch">Flagged on the drawing, where you'd catch it.</h2>
+      <p class="lede rv" style="margin-top:16px">IRC riser/tread limits, headroom, guard spacing, and ramp slope
+      are flagged right on the drawing where you'd catch them, with code references included.</p>
+      <div class="fgrid" role="list" aria-label="Code checks">
+        <div class="fcard rv" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4v-4l8-8 4 4-8 8H4z"/><path d="M13 7l4 4"/></svg>
+          <h4>Riser &amp; tread limits</h4><p>Stair geometry checked against IRC maximums as you dial it in.</p></div>
+        <div class="fcard rv" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M4 12h16M4 4h6M4 20h6"/></svg>
+          <h4>Headroom</h4><p>Stairway clearance flagged against code minimums on the elevation.</p></div>
+        <div class="fcard rv" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V6h16v14"/><path d="M8 20v-6M12 20v-9M16 20v-4"/></svg>
+          <h4>Guard spacing</h4><p>Baluster and guard spacing checked against IRC limits.</p></div>
+        <div class="fcard rv" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20L20 8"/><path d="M4 20h16"/></svg>
+          <h4>Ramp slope</h4><p>Slope checked against code maximums on the ramp drawing.</p></div>
+      </div>
+      <div class="honesty-box rv">
+        <span class="k">Honest about its limits</span>
+        <p>Code checks are IRC baselines with references included — always verify local amendments. The app says
+        so too.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="sect-head rv"><span class="lab">Pricing</span><span class="rule"></span></div>
+      <h2 class="rv" style="max-width:20ch">One purchase. Every calculator. Yours for life.</h2>
+      <p class="no-sub-banner rv" style="margin-top:clamp(24px,3vw,36px)">No subscription. <b>Ever.</b></p>
+      <div class="price-wrap">
+        <div class="price-card rv">
+          <div class="plan">Free · no account, no ads</div>
+          <div class="price-line num"><span class="amount">$0</span></div>
+          <p class="price-sub">Forever — not a trial.</p>
+          <ul class="inc">
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>Dimensional Calculator,</b> full, forever</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>Unit &amp; Material Converter</b></span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>Three full pro calculators</b> — Framing, Concrete, Rough Opening</span></li>
+          </ul>
+        </div>
+        <div class="price-card pro rv">
+          <span class="flag">Founding price — launch intro</span>
+          <div class="plan">Housewright Calc Pro · one purchase, every calculator</div>
+          <div class="price-line num">
+            <span class="amount">$19.99</span>
+            <span class="was">$29.99</span>
+            <span class="per">one time</span>
+          </div>
+          <p class="price-sub num">Founding price for launch, then $29.99. One purchase, yours for life.</p>
+          <ul class="inc">
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>All 34 calculators</b> and their technical drawings</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>PDF export &amp; cut sheets</b></span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>Saved history</b>, across your devices</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>Family Sharing</b> included</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg><span><b>No subscription. Ever.</b> Purchased stays purchased, for life</span></li>
+          </ul>
+          <!-- PLACEHOLDER: App Store link — Dan fills in after ASC record exists. Do not fabricate a store URL. -->
+          <a class="btn btn-gold appstore-badge pending" href="#" aria-disabled="true" tabindex="-1" data-note="App Store link — Dan fills in after ASC record exists">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
+            Get it on the App Store <span class="soon">Coming soon</span>
+          </a>
+          <p class="price-fine">Non-consumable purchase, restorable free on every device signed into your Apple ID</p>
+        </div>
+      </div>
+      <div class="phone-single rv">
+        <figure class="phone-ph">
+          <div class="screen"><span class="cap">Screenshot placeholder<br>"No subscription. Ever."<br>card over the calculator<br>grid</span></div>
+        </figure>
+        <!-- Screenshot placeholder — real capture is a Dan/Xcode simulator step. Content per listing/APP_STORE_LISTING.md screenshot #3. Do not point this at a real asset until captured. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sect-head rv"><span class="lab">Questions a builder would ask</span><span class="rule"></span></div>
+      <div class="faq rv">
+        <details>
+          <summary>Does it really work offline?</summary>
+          <div class="a"><p>Yes. Housewright Calc makes no network calls of its own — every calculator, drawing,
+          and cut sheet runs entirely on your device. The only network activity involved anywhere is the App Store
+          purchase itself, which Apple handles.</p></div>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <div class="a"><p>No. There are no user accounts. Your calculations, saved history, and settings live
+          only on your device (and your own iCloud or iTunes backups, if you use them).</p></div>
+        </details>
+        <details>
+          <summary>Is this a subscription?</summary>
+          <div class="a"><p>No — and it never will be. The free tier is free forever. Pro is a single $29.99
+          purchase ($19.99 at launch) that unlocks everything else, for life, across your devices.</p></div>
+        </details>
+        <details>
+          <summary>What's actually free?</summary>
+          <div class="a"><p>The Dimensional Calculator (full, forever), the Unit &amp; Material Converter, and
+          three complete pro calculators — Framing, Concrete, and Rough Opening. One purchase unlocks the rest.</p></div>
+        </details>
+        <details>
+          <summary>Does Family Sharing work?</summary>
+          <div class="a"><p>Yes. The Pro unlock supports Family Sharing, so one purchase can cover your household.</p></div>
+        </details>
+        <details>
+          <summary>I bought it — what if I switch phones?</summary>
+          <div class="a"><p>Restore your purchase from the App Store. It's tied to your Apple ID, not to one
+          installation, so it comes back on any device, for life — everything already purchased stays purchased.</p></div>
+        </details>
+        <details>
+          <summary>Does it know my local building code?</summary>
+          <div class="a"><p>It checks against IRC baselines — riser/tread limits, headroom, guard spacing, ramp
+          slope — with code references shown on the drawing. Always verify local amendments; the app says so too.</p></div>
+        </details>
+        <details>
+          <summary>Any ads or tracking?</summary>
+          <div class="a"><p>No ads, ever, and no analytics or tracking of any kind. The privacy label is a clean
+          "no data collected" — see the <a href="./privacy.html">privacy policy</a> for the full detail.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section id="get" class="final">
+    <div class="wrap">
+      <span class="eyebrow rv" style="display:block;margin-bottom:20px">Housewright Calc · iPhone</span>
+      <h2 class="rv">Exact math, in your pocket.</h2>
+      <p class="lede rv" style="margin-inline:auto">Free to start — Dimensional Calculator, Unit Converter, and
+      three full pro calculators, no account required. Unlock everything for $19.99 at launch, $29.99 after.
+      No subscription. Ever.</p>
+      <div class="rv">
+        <!-- PLACEHOLDER: App Store link — Dan fills in after ASC record exists. Do not fabricate a store URL. -->
+        <a class="btn btn-gold appstore-badge pending" href="#" aria-disabled="true" tabindex="-1" data-note="App Store link — Dan fills in after ASC record exists">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 21h14"/></svg>
+          Get it on the App Store <span class="soon">Coming soon</span>
+        </a>
+      </div>
+      <!-- "From the builders of Housewright." byline deferred until Housewright's public launch — owner decision 2026-07-21. -->
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top" aria-label="Housewright Calc home">
+        <span class="hw-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="30" height="30"><path d="M 15 29 L 32 16 L 49 29" fill="none" stroke="#d9a441" stroke-width="4.5" stroke-linecap="round"/><text x="32" y="49" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="30" fill="#f2ecdd">H</text><rect x="19" y="53" width="26" height="3" rx="1" fill="#d9a441"/></svg></span>
+        <span class="wordmark" style="font-size:14px">HOUSE<b>WRIGHT</b><span class="calc-tag">Calc</span></span>
+      </a>
+      <!-- support@housewright.app: mailbox does not exist yet — launch-table deliverable, see business/MARKETING.md T-6wk row. Dan must create it before this link goes live. -->
+      <a href="mailto:support@housewright.app">support@housewright.app</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="/">Housewright ↗</a>
+      <span>© 2026 Housewright</span>
+    </div>
+    <p class="foot-note">No cookies · no trackers · no account · this page is a static file — like the app, it stays put.</p>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const io = new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// Close mobile menu on navigation
+const mnav = document.querySelector('.mnav');
+if (mnav) mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mnav.removeAttribute('open')));
+</script>
+</body>
+</html>
