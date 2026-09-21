@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Framing — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Framing</h1>
+<h2 id="what">What it's for</h2>
+<p>Counting the lumber for one framed wall. You give it the wall's length and height, the stud size and
+spacing, and any doors, windows and corners, and it gives you the stud count, the plate lengths, board feet, an
+elevation drawing and a material list with the stud length to buy. It does not check the wall against code.
+On a bearing wall it sizes the headers and jack studs from the IRC header table. With LOAD BEARING on, a line
+under those rows names the table.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>This example uses the numbers the screen opens with.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/framing--inputs.webp" alt="Framing inputs: LENGTH 12' 0&quot;, HEIGHT 9' 0&quot;, STUD SIZE 2x4, SPACING 16 inches OC, DOUBLE TOP PLATE on, LOAD BEARING off, DOORS 0, WINDOWS 0, CORNERS 0, WASTE FACTOR 10%, and the result 11 studs" width="660" height="1435">
+  <span class="pin" style="--x:42%;--y:23.6%">1</span>
+  <span class="pin" style="--x:42%;--y:29.8%">2</span>
+  <span class="pin" style="--x:50%;--y:35%">3</span>
+  <span class="pin" style="--x:60%;--y:52.6%">4</span>
+  <span class="pin" style="--x:56%;--y:58.7%">5</span>
+</div><figcaption>Steps 1 to 5. The whole form fits on one screen until you add openings.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">LENGTH</span> — the wall, end to end along the plate. The example is 12' 0".</li>
+  <li><span class="label">HEIGHT</span> — the framed wall height, plates included. The example is 9' 0".</li>
+  <li><span class="label">STUD SIZE</span>, 2x4 or 2x6, and <span class="label">SPACING</span> on center.</li>
+  <li><span class="label">DOUBLE TOP PLATE</span> — leave it on for a second plate lapped over the first. It
+      doubles the top plate length and changes the stud length.</li>
+  <li><span class="label">LOAD BEARING</span> — turn it on if the wall carries floor, ceiling or roof. Three more
+      rows appear, and they decide the header size and the jack studs at each opening:
+      <span class="label">BUILDING WIDTH</span>, <span class="label">GROUND SNOW</span> for your area, and
+      <span class="label">WALL SUPPORTS</span>, which is what sits on the wall, from roof and ceiling only up to
+      two floors above.</li>
+  <li><span class="label">DOORS</span> and <span class="label">WINDOWS</span> — how many of each. Once a count is
+      above zero its width row appears: <span class="label">DOOR R.O. WIDTH</span> or
+      <span class="label">WINDOW R.O. WIDTH</span>. Enter the rough opening, not the unit size. A
+      <span class="label">HEADERS</span> row also appears, Lumber or LVL. With Lumber you can turn on
+      <span class="label">FLITCH PLATES</span> to add steel plates to the buy list. Flitch plates need an
+      engineer, and the list says so.</li>
+  <li><span class="label">CORNERS</span> — how many ends of this wall are corners. Each one adds studs.</li>
+  <li><span class="label">WASTE FACTOR</span> — the extra you buy over the measured quantity.</li>
+  <li>Read the answer: <strong>11 studs</strong>.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/framing--results.webp" alt="Framing results: 11 studs, bottom plate 12' 0&quot;, top plate 24' 0&quot;, 92 board ft, the BASIS &amp; WHAT WAS ASSUMED row, and the WALL FRAMING elevation drawing of a 12' 0&quot; by 9' 0&quot; wall with studs at 16&quot;" width="660" height="1435">
+  <span class="pin" style="--x:35%;--y:33.3%">1</span>
+  <span class="pin" style="--x:45%;--y:38.8%">2</span>
+  <span class="pin" style="--x:75%;--y:42.2%">3</span>
+  <span class="pin" style="--x:89.5%;--y:60%">4</span>
+</div><figcaption>The results card and the wall elevation.</figcaption></figure>
+<ol class="steps">
+  <li><strong>The headline</strong> is the number of studs to buy. It includes the layout studs, the extra studs
+      at each opening and corner, and the waste factor.</li>
+  <li><strong>The lines under it.</strong> <strong>Bottom plate</strong> and <strong>Top plate</strong> are the
+      lengths you cut, with no waste in them. The top plate is twice the wall when the double plate is on.
+      <strong>Board ft</strong> covers the studs and plates.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it to see how board feet were worked out. They
+      use the nominal size, 2x4 or 2x6, not the actual size.</li>
+  <li><strong>The drawing</strong> is the wall in elevation with its length, height and spacing, and any
+      openings. Pinch to zoom, drag to pan, double-tap to reset. The expand button opens it full screen. See
+      <a href="../tools/drawings.html">Reading the drawing</a>.</li>
+</ol>
+<p>This screen has no pass or fail line. Nothing on it turns red.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/framing--more.webp" alt="The Framing MATERIALS list: 2x4 Studs 104-5/8&quot; precut 11 pcs, bottom plate 14 lin ft, top plate 27 lin ft, each plate row showing its order length with 10% waste, then the greyed export buttons beside a lit SAVE and the line Enter your own measurements to export" width="660" height="1435">
+  <span class="pin" style="--x:35%;--y:58.7%">5</span>
+  <span class="pin" style="--x:12%;--y:79.2%">6</span>
+</div><figcaption>The material list and the export buttons.</figcaption></figure>
+<ol class="steps" start="5" style="counter-reset:s 4">
+  <li><span class="label">MATERIALS</span> — the stud row gives the stud length to buy. For a standard wall height
+      with a double top plate that is the precut stud. For any other height it is the wall height less the
+      plates. Each plate row shows the cut length, then the order length with waste, then the lineal feet to
+      buy. Openings add header rows.</li>
+  <li><span class="label">CUT SHEET</span>, the small button beside it, <span class="label">CUT LIST</span> and <span class="label">SEND LIST</span>
+      stay grey until you change at least one input, and the line under them says so. <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
+      <span class="label">CUT SHEET</span> makes a PDF, the small button beside it shares the material list only,
+      <span class="label">SAVE</span> keeps the result in History, <span class="label">CUT LIST</span> puts the
+      list on the Lock Screen and <span class="label">SEND LIST</span> sends a checkable list to another
+      phone.</li>
+</ol>
+<div class="note">Framing is free. The cut sheet, cut list, send list and History buttons are part of Pro, a
+one-time purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li><strong>Reading the plate lines as the order.</strong> The results give the plate lengths you cut. The
+      lineal feet to buy, with waste, are in <span class="label">MATERIALS</span>.</li>
+  <li><strong>Adding waste twice.</strong> The stud count already has the waste factor in it.</li>
+  <li><strong>Entering the door or window size.</strong> The width rows want the rough opening.</li>
+  <li><strong>Leaving LOAD BEARING off on a bearing wall.</strong> The headers and jack studs are then sized for a
+      partition.</li>
+  <li><strong>Doing a whole house in one go.</strong> The screen frames one wall. Run each wall on its own.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="header-sizing.html">Header Sizing</a></li>
+  <li><a href="rough-opening.html">Rough Opening</a></li>
+  <li><a href="beam-sizing.html">Beam Sizing</a></li>
+  <li><a href="board-feet.html">Board Feet</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/cut-list-lock-screen-and-widgets.html">Cut list on the Lock Screen</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Water Heater — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Water Heater</h1>
+<h2 id="what">What it's for</h2>
+<p>Sizes a water heater from the size of the household. For a tank you get a gallon size for gas or
+electric. For tankless you get the flow in GPM and the temperature rise the unit has to deliver. It is a
+sizing estimate to take to the supplier, with two installation reminders from the code in the basis row. It
+does not check an installation.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: a gas tank for 3 bedrooms and 2.5 bathrooms.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/water-heater--inputs.webp" alt="Water Heater as it opens: WATER HEATER TYPE Tank, FUEL Gas, BEDROOMS 3, BATHROOMS 2.5. Results read 50 gal gas, Est. demand: 81 gal FHR, with the BASIS &amp; WHAT WAS ASSUMED row under it, then SHARE PDF and SAVE." width="660" height="1435">
+  <span class="pin" style="--x:61.4%;--y:22.6%">1</span>
+  <span class="pin" style="--x:35.2%;--y:30.9%">2</span>
+  <span class="pin" style="--x:34.8%;--y:40.2%">3</span>
+  <span class="pin" style="--x:33.5%;--y:46.4%">4</span>
+  <span class="pin" style="--x:45%;--y:57.6%">5</span>
+  <span class="pin" style="--x:60%;--y:64%">6</span>
+</div><figcaption>Steps 1–4 are the inputs in Tank mode. Step 5 is the recommended size. Step 6 is the basis row.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">WATER HEATER TYPE</span> — <strong>Tank</strong> or <strong>Tankless</strong>. The
+      rows below change with it.</li>
+  <li><span class="label">FUEL</span> — <strong>Gas</strong> or <strong>Electric</strong>. Tank mode only.
+      The same demand lands on a different gallon size for each fuel.</li>
+  <li><span class="label">BEDROOMS</span> — the number of bedrooms in the house. The example is 3.</li>
+  <li><span class="label">BATHROOMS</span> — in steps of a half, so a powder room counts as 0.5. The example
+      is 2.5.</li>
+  <li>Read RESULTS: <strong>50 gal gas</strong>, and under it <strong>Est. demand: 81 gal FHR</strong>.</li>
+  <li>Tap <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> for the installation reminders and the code
+      edition.</li>
+</ol>
+
+<h3>Tankless mode</h3>
+<p>The same house, switched to Tankless and left on the rows as they open.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/water-heater--tankless.webp" alt="Water Heater with Tankless selected: BEDROOMS 3, BATHROOMS 2.5, SIMULTANEOUS SHOWERS 2, GROUNDWATER TEMP 50°F. Results read 5.5 GPM @ 70°F rise, Est. demand: 81 gal FHR, and 5.5 GPM demand · 70°F rise, then the BASIS &amp; WHAT WAS ASSUMED row, SHARE PDF and SAVE." width="660" height="1435">
+  <span class="pin" style="--x:84.8%;--y:23.3%">1</span>
+  <span class="pin" style="--x:38.8%;--y:44.2%">2</span>
+  <span class="pin" style="--x:33.6%;--y:50.4%">3</span>
+  <span class="pin" style="--x:62%;--y:61.5%">4</span>
+</div><figcaption>Tankless mode: FUEL is gone and two rows are added under BATHROOMS.</figcaption></figure>
+<ol class="steps">
+  <li>Switch <span class="label">WATER HEATER TYPE</span> to <strong>Tankless</strong>.
+      <span class="label">FUEL</span> goes away and two rows appear.</li>
+  <li><span class="label">SIMULTANEOUS SHOWERS</span> — how many showers you expect to run at the same time.
+      It opens at 2 and cannot go below 1.</li>
+  <li><span class="label">GROUNDWATER TEMP</span> — the temperature of the water coming into the house, in
+      steps of 5°F. It opens at 50°F. Colder water in means more rise for the unit to make.</li>
+  <li>Read RESULTS: <strong>5.5 GPM @ 70°F rise</strong>. Under it, <strong>Est. demand: 81 gal FHR</strong>
+      is unchanged, and the last line repeats the flow and the rise.</li>
+</ol>
+<p><span class="label">BEDROOMS</span> and <span class="label">BATHROOMS</span> stay on screen. They still
+feed the estimated demand line, but the tankless headline comes from the two rows above.</p>
+
+<h2 id="results">Reading the results</h2>
+<p><strong>The headline in Tank mode</strong> is a tank size and fuel, such as <strong>50 gal gas</strong>:
+the smallest tank on the screen's list whose first-hour rating covers the estimated demand.</p>
+<p><strong>Est. demand</strong> is the first-hour rating the household is estimated to need, in gallons,
+worked from <span class="label">BEDROOMS</span> and <span class="label">BATHROOMS</span>. It shows in both
+modes. When you shop, compare it with the first-hour rating on the heater's label, not with the tank's
+gallons.</p>
+<p><strong>The headline in Tankless mode</strong> is a flow and a rise, written as GPM @ °F rise, such as
+<strong>5.5 GPM @ 70°F rise</strong>, and a second line repeats the GPM demand and the rise. Ask the supplier what the unit delivers at that rise.</p>
+<p><strong>Red lines.</strong> In Tank mode, <span class="flag">DEMAND EXCEEDS COMMON TANK FHR — CONSIDER TWO
+UNITS OR TANKLESS.</span> means the household needs more than the largest tank on the list delivers. The
+headline still shows that largest tank, so do not read it as enough. Fewer
+<span class="label">BEDROOMS</span> or <span class="label">BATHROOMS</span> would clear it, but only enter
+what the house has. The real fix is the one the line gives. In Tankless mode,
+<span class="flag">COLD GROUNDWATER — VERIFY GPM AT THIS RISE, NOT THE HEADLINE RATING.</span> appears when
+<span class="label">GROUNDWATER TEMP</span> is low enough to make a large rise. It is a warning about the
+unit's brochure figure, not about your inputs.</p>
+<p><strong><span class="label">BASIS &amp; WHAT WAS ASSUMED</span></strong> opens to two installation
+reminders, each with its IRC section: one on the temperature-and-pressure relief valve, its drain and the
+pan, and one on appliances in a garage. They show for every result. They are not checks on your job. Under
+them is the line <em>IRC 2021 — verify local code</em> and a sentence saying that states and municipalities
+amend the code, and to verify local amendments and the adopted edition with your building department. Your
+local code and your inspector govern.</p>
+<p>This screen has no drawing and no MATERIALS list. <span class="label">SHARE PDF</span> stays dimmed until
+you change an input, then shares the recommendation, the reminders and your inputs.
+<span class="label">SAVE</span> puts the result in History.</p>
+<div class="note">Water Heater is a Pro calculator. The PDF and History are Pro too. Pro is a one-time
+purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Shopping by gallons alone. The estimate is a first-hour rating. Two tanks of the same gallons can have
+      different first-hour ratings, which is why <span class="label">FUEL</span> changes the answer.</li>
+  <li>Counting a half bath as a whole one. <span class="label">BATHROOMS</span> steps by 0.5 for that
+      reason.</li>
+  <li>Leaving <span class="label">GROUNDWATER TEMP</span> at 50°F in Tankless mode. Use your own incoming
+      water temperature. It sets the rise, and the rise sets what a tankless unit can deliver.</li>
+  <li>Expecting <span class="label">SIMULTANEOUS SHOWERS</span> to change a tank size. It shows only in
+      Tankless mode.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="plumbing.html">Plumbing</a> — fixture units, drain size and pipe for the same house</li>
+  <li><a href="electrical.html">Electrical</a> — has a switch for an electric water heater circuit</li>
+  <li><a href="voltage-drop.html">Voltage Drop</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

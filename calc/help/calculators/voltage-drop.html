@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Voltage Drop — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Voltage Drop</h1>
+<h2 id="what">What it's for</h2>
+<p>A long run loses voltage in the wire. Enter the run, the load and the wire you plan to pull, and Voltage
+Drop tells you the drop in volts and percent, whether that is inside the limit you set, and the smallest
+listed size from yours upward that is. The limit is yours to set. It is a check on one run, with no material
+list.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: a 75' 0" run, 20 A at 120 V, on 12 AWG copper, held to 3.0%.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/voltage-drop--inputs.webp" alt="Voltage Drop inputs: ONE-WAY RUN 75' 0&quot;, SYSTEM VOLTAGE 120 V, AMPS 20 A, WIRE SIZE 12 AWG, CONDUCTOR Copper, MAX DROP 3.0%. Results: 8 AWG, with 12 AWG struck through at 4.94% drop (5.93 V) — over the 3.0% limit, 8 AWG: 1.95% drop (2.34 V), and a green line 8 AWG within 3.0% max drop." width="660" height="1435">
+  <span class="pin" style="--x:45%;--y:23.5%">1</span>
+  <span class="pin" style="--x:46%;--y:29.8%">2</span>
+  <span class="pin" style="--x:45%;--y:35.5%">3</span>
+  <span class="pin" style="--x:38.5%;--y:41.1%">4</span>
+  <span class="pin" style="--x:48%;--y:46.5%">5</span>
+</div><figcaption>Steps 1–5. Step 6, MAX DROP, is the last input row.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">ONE-WAY RUN</span> — the length of cable from the panel to the load, one way, along
+      the route the cable really takes. Do not double it. The calculator counts out and back for you. The
+      example is 75' 0".</li>
+  <li><span class="label">SYSTEM VOLTAGE</span> — 120, 208, 240, 277 or 480 V. The example is 120 V.</li>
+  <li><span class="label">AMPS</span> — the load current. Tap it and type the number. The example is 20 A.</li>
+  <li><span class="label">WIRE SIZE</span> — the size you plan to pull, from 14 AWG up to 4/0 AWG. The example
+      is 12 AWG.</li>
+  <li><span class="label">CONDUCTOR</span> — <strong>Copper</strong> or <strong>Aluminum</strong>.</li>
+  <li><span class="label">MAX DROP</span> — the limit you are holding the run to, in steps of 0.5%. The
+      example is 3.0%.</li>
+  <li>Read RESULTS. The headline is the size that passes: <strong>8 AWG</strong>. Under it, your own size is
+      struck through with its drop, <strong>12 AWG 4.94% drop (5.93 V) — over the 3.0% limit</strong>, then
+      the passing size with its drop, <strong>8 AWG: 1.95% drop (2.34 V)</strong>.</li>
+  <li>Tap <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> to see what the recommended size was
+      governed by, and the formula.</li>
+  <li>Scroll down to the run drawing and its ladder of sizes.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/voltage-drop--results.webp" alt="Voltage Drop results and drawing: headline 8 AWG, the struck-through 12 AWG line, the green check, the BASIS &amp; WHAT WAS ASSUMED row, then a one-line drawing from PANEL 20 A to LOAD showing 120 V and 114.1 V over 75' 0&quot;, a ladder of sizes 12, 10, 8, 6, 4 with 4.9%, 3.1%, 2.0%, 1.2%, 0.8%, an inset comparing #12 at 6530 and #8 at 16510 circular mils, and notes including DROP 5.93 V = 4.94% · OVER LIMIT 3.0% (STRUCK) in red. SHARE PDF and SAVE at the bottom." width="660" height="1435">
+  <span class="pin" style="--x:35%;--y:30%">7</span>
+  <span class="pin" style="--x:75%;--y:45%">8</span>
+  <span class="pin" style="--x:64%;--y:65%">9</span>
+</div><figcaption>Steps 7–9: the size that passes, the basis row, and the ladder of sizes.</figcaption></figure>
+<p>The results card reads one of five ways.</p>
+<ul>
+  <li><strong>Your size passes.</strong> The headline is your <span class="label">WIRE SIZE</span>, the line
+      under it is its drop, and the green line reads <strong>Within 3.0% max drop</strong>, with your limit in
+      it. Your size has met both tests: the drop, and carrying the <span class="label">AMPS</span>.</li>
+  <li><strong>Your size passes the drop but cannot carry the amps.</strong> A 12 AWG copper on a 30 A load
+      over 10' 0" drops under 1%, but the table rates it at 20 A. The headline is the size that carries the
+      load, your size is struck through with its rating beside it, and the red line reads
+      <span class="flag">12 AWG CANNOT CARRY 30 A — NEC 310.16</span>.</li>
+  <li><strong>Your size fails and a larger one passes.</strong> This is the example. The headline is the
+      larger size, your size is struck through, and the green line names the size that is within the limit.
+      The search starts at your size and only goes up.</li>
+  <li><strong>Nothing listed passes.</strong> The headline reads <strong>Even 4/0 AWG exceeds</strong> your
+      limit and the red line reads <span class="flag">EVEN 4/0 AWG EXCEEDS … LIMIT — REDUCE RUN LENGTH OR
+      LOAD</span>. The fix is a shorter <span class="label">ONE-WAY RUN</span>, fewer
+      <span class="label">AMPS</span>, or a higher <span class="label">SYSTEM VOLTAGE</span> if the equipment
+      allows it.</li>
+  <li><strong>The load is too big for the list.</strong> The headline reads <strong>No listed size</strong>
+      and the red line reads <span class="flag">NO LISTED SIZE CARRIES … A — PARALLEL RUNS / ENGINEER
+      SIZING</span>. That one is not yours to fix on this screen.</li>
+</ul>
+<p>One more red line can appear: <span class="flag">14 AWG NOT LISTED IN ALUMINUM — SMALLEST AL SIZE IS
+12</span>. Pick a larger <span class="label">WIRE SIZE</span> or switch <span class="label">CONDUCTOR</span>
+to Copper.</p>
+<p><strong><span class="label">BASIS &amp; WHAT WAS ASSUMED</span></strong> opens to the formula and a reminder
+that the limit is your own setting. When a size passes, a line above it says whether that size was set by the
+drop limit or had to go bigger to carry the current, and names the table it used. A recommended size
+always has to carry the <span class="label">AMPS</span> as well as meet the drop.</p>
+<p><strong>The drawing</strong> is a one-line schematic, not to scale: panel to load and back, the voltage at
+each end on the wire you entered, and the one-way run. Under it is a ladder of sizes with the percent drop
+for each. Your size is struck through when it fails and the passing size is filled in. The boxed inset draws
+the two conductors at their true relative area, in circular mils. The notes repeat the working: the out and
+back length, the wire you entered, the drop — in red when it is over the limit — and the upsize. The last
+note on the drawing reads <strong>3%/5% IS AN NEC INFORMATIONAL NOTE, NOT A VIOLATION</strong>. Pinch to
+zoom, drag to move around, double-tap to reset, or tap the expand button at its top right for the whole
+screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</p>
+<p>There is no MATERIALS list. <span class="label">SHARE PDF</span> stays dimmed until you change an input,
+then shares the drawing, the result and your inputs. <span class="label">SAVE</span> puts the result in
+History. The PDF footer reads <em>Estimate — verify dimensions and local code before cutting/ordering.</em>
+Your local code and your inspector govern the conductor you install.</p>
+<div class="note">Voltage Drop is a Pro calculator. The PDF and History are Pro too. Pro is a one-time
+purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Entering the out-and-back length. <span class="label">ONE-WAY RUN</span> is one way. The drawing shows
+      the doubling: <strong>OUT + BACK: CIRCUIT = 2 × 75' 0" = 150' 0"</strong>.</li>
+  <li>Measuring the run in a straight line. Measure the route the cable takes, up, over and down.</li>
+  <li>Leaving <span class="label">CONDUCTOR</span> on Copper for an aluminum feeder. The same size drops
+      more in aluminum.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="electrical.html">Electrical</a> — the rough-in takeoff whose cable row sends you here</li>
+  <li><a href="water-heater.html">Water Heater</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

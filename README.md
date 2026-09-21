@@ -1,3 +1,9 @@
-# housewright.app/calc
+# housewright.app
 
-The public pages for Housewright Calc: `calc/` (landing) and `calc/privacy.html` (privacy policy). Static files, no build step. Served by GitHub Pages; the custom domain `housewright.app` points here once its DNS does.
+The published Housewright site, served by GitHub Pages: the suite home, `calc/` (with its
+help pages and privacy policy — the App Store's marketing, support and privacy URLs), `desktop/`
+and `companion/`. Static files, no build step, no external requests.
+
+**Do not edit here.** The source is the private `Shill21/housewright-website` repo; a release is
+`tools/publish.sh <this checkout>` there, then a commit and push here. Pages serves `main`
+within about a minute. `CNAME` and `.nojekyll` are kept across releases.

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Plumbing — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Plumbing</h1>
+<h2 id="what">What it's for</h2>
+<p>A rough-in takeoff from a fixture count. Set how many of each fixture the house has and you get the total
+drainage fixture units, a main drain size, a fittings estimate, a riser drawing, and a material list of
+drain, supply and vent pipe. It is an estimate for pricing and ordering. Nothing on the results card passes
+or fails, and it does not lay out or size the branches.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: one of each fixture, two hose bibbs, two stories, 60' 0" from the
+main to the farthest fixture.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/plumbing--inputs.webp" alt="Plumbing inputs: FIXTURES with TOILET 1, BATHROOM SINK 1, KITCHEN SINK 1, BATHTUB 1, SHOWER 1, WASHER 1, DISHWASHER 1, UTILITY SINK 1, HOSE BIBB 2, then STORIES 2, MAIN TO FARTHEST FIXTURE 60' 0&quot;, MAIN SUPPLY SIZE 3/4 and WASTE FACTOR 10%. 16 DFU is pinned under the title." width="660" height="1435">
+  <span class="pin" style="--x:82%;--y:29.3%">1</span>
+  <span class="pin" style="--x:82%;--y:79.9%">2</span>
+  <span class="pin" style="--x:59%;--y:86.1%">3</span>
+  <span class="pin" style="--x:50%;--y:92.4%">4</span>
+</div><figcaption>Steps 1–4. Step 1 is the whole FIXTURES list, one − + row per fixture.</figcaption></figure>
+<ol class="steps">
+  <li>Under FIXTURES, set the count of each with − and +: <span class="label">TOILET</span>,
+      <span class="label">BATHROOM SINK</span>, <span class="label">KITCHEN SINK</span>,
+      <span class="label">BATHTUB</span>, <span class="label">SHOWER</span>, <span class="label">WASHER</span>,
+      <span class="label">DISHWASHER</span>, <span class="label">UTILITY SINK</span> and
+      <span class="label">HOSE BIBB</span>. The list is fixed. Set a fixture to 0 if the job has none.</li>
+  <li><span class="label">STORIES</span> — how many floors have plumbing. It multiplies the supply pipe run
+      and nothing else. The example is 2.</li>
+  <li><span class="label">MAIN TO FARTHEST FIXTURE</span> — the pipe route from where the main comes in to
+      the fixture farthest from it, measured the way the pipe will run. The example is 60' 0".</li>
+  <li><span class="label">MAIN SUPPLY SIZE</span> — 1/2, 3/4, 1, 1 1/4 or 1 1/2. It names the supply pipe row
+      in MATERIALS. It does not change any number. The example is 3/4.</li>
+  <li><span class="label">WASTE FACTOR</span> — extra pipe and fittings, in steps of 5%. The example is
+      10%.</li>
+  <li>Read RESULTS: <strong>16 DFU</strong>, <strong>3 in main drain</strong>,
+      <strong>33 fittings estimated</strong>.</li>
+  <li>Tap <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> to see which code tables the fixture units
+      and the drain size come from.</li>
+  <li>Scroll down to the riser drawing.</li>
+  <li>Read MATERIALS for the order.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<div class="shots">
+<figure class="shot"><div class="frame">
+  <img src="../shots/plumbing--results.webp" alt="Plumbing results: 16 DFU, 3 in main drain, 33 fittings estimated, the BASIS &amp; WHAT WAS ASSUMED row, then a DWV riser drawing with a branch for each fixture labelled with its DFU and a running total, from 1 WC 3 DFU Σ3 to 1 US 2 DFU Σ16, 2 HB 0 DFU · NO DWV dashed, a 3 IN drain to SEWER dimensioned 60' 0&quot;, and notes including FALL 1' 3&quot; @ 1/4&quot;/FT UPC · 7-1/2&quot; @ 1/8&quot;/FT IPC." width="660" height="1435">
+  <span class="pin" style="--x:40%;--y:49.4%">6</span>
+  <span class="pin" style="--x:60%;--y:58.3%">7</span>
+  <span class="pin" style="--x:88%;--y:72%">8</span>
+</div><figcaption>Steps 6–8: the counts, the basis row, the riser.</figcaption></figure>
+<figure class="shot"><div class="frame">
+  <img src="../shots/plumbing--more.webp" alt="Plumbing materials: Main drain 3 in — 3 in min with any WC; 4 in over 3 WCs (UPC — IPC branches cap at 2) — verify local code 66 lin ft, Supply pipe 3/4 132 lin ft, Assorted fittings 33 pcs, Vent pipe (1-1/2 – 2 in) — rough proxy — verify vent layout per code 45 lin ft, then SHARE PDF and SAVE." width="660" height="1435">
+  <span class="pin" style="--x:35%;--y:59.7%">9</span>
+</div><figcaption>Step 9: the order, with waste added.</figcaption></figure>
+</div>
+<p><strong>The headline</strong> is the total drainage fixture units: each fixture's count times its unit
+value, added up. A hose bibb has no drain, so it adds nothing. The drawing shows every fixture's value and
+the running total, from <strong>1 WC 3 DFU Σ3</strong> to <strong>1 US 2 DFU Σ16</strong> in the
+example.</p>
+<p><strong>The main drain</strong> line is the size picked for the building drain from the total and from
+how many toilets there are. The first note under the drawing says why. In the example:
+<strong>16 DFU · 1 WC · DRAIN 3 IN — OVER 6 DFU</strong>. With no fixture that drains, the line reads
+<strong>supply only — no DWV</strong> and the drain and vent rows leave the material list.</p>
+<p><strong>Fittings estimated</strong> is a rule of thumb, a few fittings for every fixture, with waste
+added. Treat it as a starting count.</p>
+<p><strong><span class="label">BASIS &amp; WHAT WAS ASSUMED</span></strong> opens to one line naming the IPC
+tables the fixture units and the drain size are taken from, and the value used for a washer standpipe. If
+you work to a different code, check your own table.</p>
+<p><strong>The drawing</strong> is a schematic riser: the stack with its vent through the roof (VTR), a
+branch for each fixture, and the building drain running to the sewer with your run dimensioned. The fixture
+tags are WC toilet, LAV bathroom sink, KS kitchen sink, TUB, SH shower, WM washer, DW dishwasher, US utility
+sink and HB hose bibb. The engine does not work out slope. With a 3 in or 4 in drain the drawing prints the
+fall over your run twice, once for each model code, and labels them (with a 2 in drain both codes agree and it
+prints one fall): <strong>FALL 1' 3" @ 1/4"/FT UPC · 7-1/2" @ 1/8"/FT IPC</strong>
+in the example. Two notes say the riser is schematic, not isometric, and that the branches are not
+arranged by story. Only the total at the base is a calculated figure. Pinch to zoom, drag to move around,
+double-tap to reset, or tap the expand button at its top right for the whole screen. See
+<a href="../tools/drawings.html">Reading the drawing</a>.</p>
+<p><strong>MATERIALS</strong>, with waste added and rounded up:</p>
+<ul>
+  <li><strong>Main drain</strong> — your <span class="label">MAIN TO FARTHEST FIXTURE</span> run. 66 lin ft
+      in the example. The row carries the sizing rule after the dash: 3 in min with any toilet, 4 in over
+      three — verify local code.</li>
+  <li><strong>Supply pipe</strong> — the same run once for every story. 132 lin ft in the example.</li>
+  <li><strong>Assorted fittings</strong> — the fittings estimate. 33 pcs.</li>
+  <li><strong>Vent pipe</strong> — a rough proxy at about two-thirds of the drain run. 45 lin ft. The
+      drawing labels it PROXY for the same reason. Work out the real vent layout before you order. The row says so too: rough
+      proxy — verify vent layout per code.</li>
+</ul>
+<p><strong>The buttons</strong> wait for your own numbers: the export button stays dimmed, and
+<span class="label">SAVE</span> tells you to enter them first. After that <span class="label">SHARE PDF</span>
+shares the riser, the counts, your fixtures and the materials, the small list button beside it shares the
+material list alone, and <span class="label">SAVE</span> puts the result in History. The PDF footer reads
+<em>Estimate — verify dimensions and local code before cutting/ordering.</em> Your local code and your
+inspector govern pipe sizes, slope and venting.</p>
+<div class="note">Plumbing is a Pro calculator. The PDF and History are Pro too. Pro is a one-time purchase.
+See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Measuring <span class="label">MAIN TO FARTHEST FIXTURE</span> in a straight line. Every pipe length in
+      MATERIALS comes from this one number. Measure the route.</li>
+  <li>Taking the pipe footage as the whole job. It is one run to the farthest fixture, not every branch.
+      Add your branch lines.</li>
+  <li>Expecting <span class="label">MAIN SUPPLY SIZE</span> to be checked. It is a label for the material
+      row. The screen does not size the supply.</li>
+  <li>Using the wrong code's slope. At a 3 in or 4 in drain the drawing prints the fall for both model codes because
+      they differ.
+      Use the one your jurisdiction adopts.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="water-heater.html">Water Heater</a> — size the heater for the same fixtures</li>
+  <li><a href="electrical.html">Electrical</a> — the other rough-in takeoff</li>
+  <li><a href="grade-slope.html">Grade / Slope</a> — fall over a run</li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Drywall — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Drywall</h1>
+<h2 id="what">What it's for</h2>
+<p>A board takeoff for one room or a whole house. You list the rooms and walk away with a sheet count, tape,
+joint compound, screws and corner bead, plus an elevation of the first room's longest wall with the board hung
+on it. It is an order quantity, not a code check.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: one 12' by 10' room with 8' walls, a door, a window and a ceiling,
+hung in 4x8 board.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/drywall--inputs.webp" alt="Drywall inputs at their defaults: SHEET SIZE 4x8, THICKNESS 1/2 inch, FINISH LEVEL 4, then ROOM 1 with LENGTH 12' 0&quot;, WIDTH 10' 0&quot;, HEIGHT 8' 0&quot;, DOORS 1, WINDOWS 1 and INCLUDE CEILING on. The strip under the title reads 17 sheets." width="660" height="1435">
+  <span class="pin" style="--x:50%;--y:26.5%">1</span>
+  <span class="pin" style="--x:26.5%;--y:44.1%">3</span>
+  <span class="pin" style="--x:42%;--y:58.9%">4</span>
+  <span class="pin" style="--x:32%;--y:76.8%">5</span>
+  <span class="pin" style="--x:65%;--y:88.4%">6</span>
+</div><figcaption>The board first, then one block of inputs for each room.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">SHEET SIZE</span> — the board you are buying: 4x8, 4x10 or 4x12. Leave it at 4x8.</li>
+  <li><span class="label">THICKNESS</span> — 1/4", 3/8", 1/2" or 5/8". This names the board on the material
+      list. It does not change any quantity.</li>
+  <li><span class="label">FINISH LEVEL</span> — 0 to 5, how far the board is finished, from left bare up to a
+      skim coat over the whole surface. A higher level buys more joint compound. Leave it at 4. At 0 the board
+      is hung and left bare — no tape, no mud, and neither row on the list.</li>
+  <li>Under <span class="label">ROOMS</span>, measure the room wall to wall along the floor for
+      <span class="label">LENGTH</span> (12' 0") and <span class="label">WIDTH</span> (10' 0"), and floor to
+      ceiling for <span class="label">HEIGHT</span> (8' 0"). Tap a value to type your own.</li>
+  <li><span class="label">DOORS</span> and <span class="label">WINDOWS</span> — count the openings in the room.
+      One of each here. The counts buy corner bead. They do not take board off the order.</li>
+  <li><span class="label">INCLUDE CEILING</span> — on if you are boarding the lid as well as the walls.</li>
+  <li>For a second room, tap <strong>Add Room</strong> and fill in its block the same way. The trash can at the
+      top right of a block removes that room.</li>
+  <li><span class="label">WASTE FACTOR</span> — the extra you buy for offcuts and breakage, in steps of 5%. It
+      opens at 10%.</li>
+  <li>Read the answer in <span class="label">RESULTS</span>: <strong>17 sheets</strong>, 1 tape roll, 4.6 gal
+      mud, 472 sq ft net area.</li>
+  <li>Scroll on to the drawing and the <span class="label">MATERIALS</span> list.
+      <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the yields the list is figured on: no
+      opening deductions, the corner bead per door and window, tape per 1,000 sq ft, mud per finish level and
+      screws per square foot.</li>
+  <li>Save or share the job with the buttons at the foot of the screen.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/drywall--results.webp" alt="WASTE FACTOR at 10%, then the RESULTS card reading 17 sheets, 1 tape roll, 4.6 gal mud and 472 sq ft net area, with the drywall elevation drawing below it" width="660" height="1435">
+  <span class="pin" style="--x:22.8%;--y:38.8%">8</span>
+  <span class="pin" style="--x:40%;--y:48.7%">9</span>
+  <span class="pin" style="--x:75%;--y:57.6%">10</span>
+</div><figcaption>Waste factor, the results card, and the wall elevation under it.</figcaption></figure>
+
+<div class="note">The small <span class="label">default</span> tag beside a value means you have not changed it.
+While every input is still a default the results are dimmed and tagged <span class="label">defaults</span>,
+because the answer is not your job yet. The ⓘ beside <span class="label">FINISH LEVEL</span> and
+<span class="label">WASTE FACTOR</span> opens one sentence on what the term means.</div>
+
+<h2 id="results">Reading the results</h2>
+<p><strong>The headline</strong> is the sheet count for every room together, with waste added and rounded up to
+a whole sheet. It also shows in a strip under the title whenever the results card is scrolled off screen.</p>
+<p><strong>Tape and mud.</strong> Tape is in whole rolls. Mud is in gallons and moves with
+<span class="label">FINISH LEVEL</span>, down to none at level 0.</p>
+<p><strong>Net area</strong> is the walls, plus the ceiling where you included it, before waste. Door and window
+openings are not taken out — the cutout is scrap, and the drawing says so:
+<em>NO DEDUCT — CUTOUT IS SCRAP</em>.</p>
+<p><strong>The drawing</strong> is room 1's longest wall in elevation with the board hung horizontal, the
+ceiling as a tile beside it, and a detail of a tapered joint and a butt joint. The line
+<em>JOB 472 SF +10% = 519.2 SF / 32 SF = 17 SHEETS</em> is the sheet count worked out in front of you, so you
+can check it. The openings on the wall are schematic — the screen only knows how many there are, not their
+size or where they sit. The screw line ends <em>VERIFY PER GA-216</em>: the calculator buys screws by weight
+and does not set a spacing. Pinch to zoom, or tap the expand button in the strip above the drawing to open it
+full screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/drywall--more.webp" alt="The drywall drawing and the MATERIALS list: 1/2 drywall 4x8, 17 sheets; joint tape, 1 roll; joint compound, 4.6 gal; drywall screws, 4 lb; corner bead, 4 sticks. Below are the SHARE PDF and list buttons, dimmed, beside a lit SAVE, with the line Enter your own measurements to export." width="660" height="1435">
+  <span class="pin" style="--x:35%;--y:64.9%">10</span>
+  <span class="pin" style="--x:93%;--y:89.2%">11</span>
+</div><figcaption>The material list, and the save and share buttons at the foot of the screen.</figcaption></figure>
+<p><strong>Materials</strong> is the order: board, joint tape, joint compound, screws by the pound, and corner
+bead in 10' sticks for the door and window wraps and returns.</p>
+<p><span class="label">SHARE PDF</span> sends a sheet with the drawing, your inputs and the material list. The
+list button beside it sends the material list alone. <span class="label">SAVE</span> puts the job in History.
+<span class="label">SHARE PDF</span> and the list button stay dim until you change at least one input.
+<span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers
+<strong>Enter your job's numbers first</strong> and saves nothing.</p>
+<div class="note">Drywall is a Pro calculator, and sharing a PDF and saving to History are part of Pro too.
+This help is free. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Expecting doors and windows to reduce the sheet count. They do not. They only add corner bead.</li>
+  <li>Leaving <span class="label">INCLUDE CEILING</span> on for a room where the lid is already up, or off for
+      one where it is not. In the example the ceiling is 120 of the 472 sq ft.</li>
+  <li>Changing <span class="label">THICKNESS</span> and expecting the order to move. Only the name on the
+      material list changes.</li>
+  <li>Entering every room and leaving <span class="label">SHEET SIZE</span> at 4x8 when you are hanging
+      twelves. The count is by area per sheet, so set the board you are really buying.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="paint.html">Paint</a> — the same rooms, once the board is finished</li>
+  <li><a href="insulation.html">Insulation</a> — what goes in the wall before the board</li>
+  <li><a href="framing.html">Framing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

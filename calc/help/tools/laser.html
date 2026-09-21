@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bosch laser measure — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Bosch laser measure</h1>
+<p>Pair a Bosch Bluetooth laser measure once, and every measurement you take on it lands in the Dimensional
+Calculator as an exact fraction — no reading it off the laser and typing it in.</p>
+
+<h2>Which lasers</h2>
+<p>The Settings screen says it as it stands: "Works with Bluetooth Low Energy Bosch laser measures — GLM 50 C and
+PLR C-series; newer GLM -27 C models are not verified yet."</p>
+
+<h2>Step by step</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/tool-settings.webp" alt="Settings screen. Under LASER, the PAIR BOSCH LASER button, and below it the line naming GLM 50 C and PLR C-series." width="660" height="1435">
+  <span class="pin" style="--x:87.9%;--y:55.3%">2</span>
+</div><figcaption>Settings ▸ LASER.</figcaption></figure>
+<ol class="steps">
+  <li>Open the drawer and tap <span class="label">Settings</span>.</li>
+  <li>Under <span class="label">LASER</span>, tap <span class="label">PAIR BOSCH LASER</span>. The first time, iOS
+      asks to let Housewright Calc use Bluetooth. Allow it.</li>
+  <li>The screen reads "Searching… press the Bluetooth button on your laser." Press it.</li>
+  <li>Your laser appears as a button with its name. Tap it. The row now shows the name and
+      <span class="label">CONNECTED</span>.</li>
+  <li>Close Settings, go to the Dimensional Calculator, and take a measurement on the laser. It appears on the
+      display, ready for the next key — <span class="label">+</span>, <span class="label">×</span>, or whatever
+      the sum needs.</li>
+</ol>
+<p>You only pair once. After that the app connects to the laser by itself when it starts, and reconnects if the
+link drops. <span class="label">STOP SEARCHING</span> ends a search; <span class="label">FORGET LASER</span>
+asks "Forget this laser?" — readings stop until you pair it again — then unpairs.</p>
+
+<h2>Where a measurement goes</h2>
+<ul>
+  <li>Readings go to the Dimensional Calculator, and only there. A reading replaces whatever was half-typed and
+      becomes the current number. A sum in progress is kept.</li>
+  <li>If you fire the laser while another calculator is open, the reading is held. A note — "Reading received —
+      open the calculator" — shows at the top for a few seconds. Go back to the Dimensional Calculator and the
+      measurement is there.</li>
+  <li>If you fire it with Settings, History or a guide open over the Dimensional Calculator — say, to test the
+      laser right after pairing — the reading lands in the calculator underneath and a "Reading received" note
+      shows at the top of the sheet.</li>
+  <li>Once a laser is paired, a small laser mark sits at the top right of the Dimensional Calculator. Gold means
+      connected; grey means it is still connecting.</li>
+  <li>A low battery on the laser does not affect a reading. The measurement it sent is still good.</li>
+</ul>
+
+<div class="note">Laser pairing is in Settings for everyone, and readings land in the free Dimensional
+Calculator. It does not need Pro.</div>
+
+<h2>If it doesn't work</h2>
+<ul>
+  <li><strong>"Can't search — Bluetooth is off, or this app doesn't have Bluetooth access."</strong> Turn
+      Bluetooth on in Control Centre, then check Settings ▸ Housewright Calc on the phone.</li>
+  <li><strong>The search finds nothing.</strong> Press the Bluetooth button on the laser — it has to be switched
+      on at the laser. Lasers that are not Bluetooth Low Energy models will not show up.</li>
+  <li><strong>The status reads <span class="label">BLUETOOTH IS OFF</span>.</strong> Turn Bluetooth on in Control
+      Centre.</li>
+  <li><strong>The status reads <span class="label">BLUETOOTH ACCESS DENIED</span>.</strong> Tap
+      <span class="label">Open Settings</span> under it and turn Bluetooth on for the app.</li>
+  <li><strong>The status stays on <span class="label">RECONNECTING…</span></strong> The laser is off, asleep or
+      out of range. Wake it; the app keeps trying.</li>
+  <li><strong>The laser fired and nothing landed.</strong> Check you are on the Dimensional Calculator and the
+      laser mark is gold.</li>
+</ul>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="../calculators/dimensional.html">The Dimensional Calculator</a></li>
+  <li><a href="voice-entry.html">Voice entry</a></li>
+  <li><a href="../start/the-tape-and-fixing-a-number.html">The tape and fixing a number</a></li>
+  <li><a href="../more/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

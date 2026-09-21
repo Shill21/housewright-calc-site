@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cut List Optimizer — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Cut List Optimizer</h1>
+<h2 id="what">What it's for</h2>
+<p>You have a list of parts to cut and one length of stock to cut them from. The optimizer works out which
+parts come out of which board, how many boards to buy, and how much ends up as offcut and sawdust. The
+parts can be typed in, or sent over from another calculator. Nothing here is checked against code.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The screen opens with 8' 0" stock, a 1/8″ kerf and no cuts. There is no answer until you add one. The
+example is a job with three parts cut from 12' 0" stock.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/tool-optimizer.webp" alt="Cut List Optimizer with a job entered: STOCK LENGTH 12' 0&quot;, KERF 1/8″ selected from None, 1/16″, 1/8″ and 3/16″, CUT 1 LENGTH 5' 6&quot; QUANTITY 8, CUT 2 LENGTH 2' 10-1/2&quot; QUANTITY 12, CUT 3 LENGTH 1' 10-1/4&quot; QUANTITY 10. Pinned under the title: 9 boards, Every cut fits the stock." width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:27.4%">1</span>
+  <span class="pin" style="--x:36%;--y:34.3%">2</span>
+  <span class="pin" style="--x:70%;--y:53.8%">4</span>
+  <span class="pin" style="--x:70%;--y:59.1%">5</span>
+</div><figcaption>The inputs: stock, kerf, then one block per part. The answer is already pinned under the
+title.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">STOCK LENGTH</span> — the length of the boards you are buying. It opens at 8' 0".
+      The example uses 12' 0". One run uses one stock length.</li>
+  <li><span class="label">KERF</span> — the width your blade turns to sawdust: <strong>None</strong>,
+      <strong>1/16″</strong>, <strong>1/8″</strong> or <strong>3/16″</strong>. It opens at 1/8″.</li>
+  <li>Tap <strong>Add your first cut</strong>. A block headed CUT 1 appears.</li>
+  <li><span class="label">LENGTH</span> — the finished length of that part. CUT 1 in the example is 5' 6".</li>
+  <li><span class="label">QUANTITY</span> — how many of that part, 8 here. Tap it and type the number. There
+      is no stepping through one at a time.</li>
+  <li>Tap <strong>Add Cut</strong> for each different length. The example adds 12 at 2' 10-1/2" and 10 at
+      1' 10-1/4". The red bin beside a CUT heading deletes that part.</li>
+  <li>Read the answer in RESULTS, under the cuts: <strong>9 boards</strong>, then one row per board. The
+      headline stays pinned under the title while you scroll.</li>
+  <li>Scroll to the end of the board list for the waste line and the check.</li>
+  <li>Under RESULTS are MATERIALS and the buttons for taking the plan with you.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/cut-optimizer--job1.webp" alt="The same job scrolled down: CUT 3 LENGTH 1' 10-1/4&quot; QUANTITY 10, the Add Cut button, then RESULTS 9 boards. Boards 1 to 4 each read 5' 6&quot; · 5' 6&quot; → 11-3/4&quot; offcut. Boards 5 to 7 each hold four parts at 2' 10-1/2&quot; with a 5-1/2&quot; offcut. Boards 8 and 9 hold the 1' 10-1/4&quot; parts. Each board has a bar under it." width="660" height="1435">
+  <span class="pin" style="--x:36%;--y:41.3%">6</span>
+  <span class="pin" style="--x:36%;--y:51.5%">7</span>
+</div><figcaption>Step 6 is Add Cut at the end of the list. Step 7 is the answer, 9 boards, with a row and a bar
+for each board.</figcaption></figure>
+<figure class="shot"><div class="frame">
+  <img src="../shots/cut-optimizer--job2.webp" alt="The end of the results: boards 2 to 9, board 9 with a 4' 6-1/2&quot; offcut, then 10.1% waste incl. kerf — offcuts + sawdust; n−1 kerfs per board, and Every cut fits the stock in green. MATERIALS reads Stock boards — 12' each, 9 pcs. Below are the buttons CUT SHEET, SAVE, CUT LIST and SEND LIST. 9 boards stays pinned under the title." width="660" height="1435">
+  <span class="pin" style="--x:64%;--y:70.5%">8</span>
+  <span class="pin" style="--x:40%;--y:76.7%">9</span>
+</div><figcaption>Step 8: 10.1% waste and the green check. Step 9: MATERIALS and the four buttons.</figcaption></figure>
+
+<h3>Parts sent from another calculator</h3>
+<p>Stairs and Hip &amp; Valley have an <span class="label">OPTIMIZE</span> button with their export buttons. It
+opens this screen with the parts already in the CUTS list, and sets <span class="label">STOCK LENGTH</span>
+when the sending calculator suggests one. The incoming parts replace whatever rows were here. After that you
+can edit them like any others. See
+<a href="../tools/send-to-cut-optimizer.html">Send to the Cut List Optimizer</a>.</p>
+
+<h2 id="results">Reading the results</h2>
+<p><strong>Before there is a job</strong> the headline reads <strong>Add your first cut</strong>. If you have
+rows but none has both a length and a quantity, it reads <strong>Give a cut its length</strong>.</p>
+<p><strong>The headline</strong> is the number of boards to buy. In the example it is
+<strong>9 boards</strong>. If it ends <strong>(placed cuts only)</strong>, some parts did not fit and are
+not counted. Look at the red line.</p>
+<p><strong>The board list</strong> comes next, one row per board: the parts cut from it in order, then the
+offcut if there is one, with a bar under it showing the parts in gold and the offcut in grey. Cut each board
+in the order given. In the example, boards 1 to 4 each take two 5' 6" parts and leave an 11-3/4" offcut.
+Boards 5 to 7 each take four 2' 10-1/2" parts and leave 5-1/2". Board 9 is the last and part full, with a
+4' 6-1/2" offcut.</p>
+<p><strong>The waste line</strong> is everything you buy that does not end up as a part — offcuts and kerf
+together — as a percentage of the stock bought. The example reads <strong>10.1% waste incl. kerf</strong>, and the
+line says how the kerf is counted: a saw passes between pieces, so three parts from one board take two
+kerfs, one fewer than the parts on that board. The offcut, if there is one, takes the last cut.</p>
+<p><strong>The check.</strong> Green reads <strong>Every cut fits the stock</strong>. Red reads
+<span class="flag">DOES NOT FIT STOCK:</span> followed by the parts that are longer than the stock, such as
+a count and a length. Those parts are left out of the plan, never dropped quietly. The fix is a longer
+<span class="label">STOCK LENGTH</span>, or correcting the <span class="label">LENGTH</span> of that cut.</p>
+<p>The optimizer places the longest parts first and puts each part in the first board that has room for it.
+That lands at or near the fewest boards. It is not a proof of the minimum.</p>
+<p>This results card has no <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> row and the screen has no
+drawing. The two things it assumes are on the screen: the stock length and the kerf.</p>
+<p><strong>MATERIALS</strong> is one row, the stock boards to buy, with the stock length after the dash. The
+example reads <strong>Stock boards — 12' each, 9 pcs</strong>.</p>
+<p><strong>The buttons</strong> wait for a job. <span class="label">CUT SHEET</span> shares a PDF with the
+inputs, the board count, the waste and the parts for each board. It lists the first 20 boards and says so if
+there are more. <span class="label">SAVE</span> puts the result in History.
+<span class="label">CUT LIST</span> puts the plan on the Lock Screen, one check-off per board with that
+board's cuts, for the first 30 boards. <span class="label">SEND LIST</span> sends the same list to another
+phone as a checkable page.</p>
+<div class="note">Cut List Optimizer is a Pro calculator. The cut sheet, the cut list on the Lock Screen,
+sending a list and History are Pro too. Pro is a one-time purchase. See
+<a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Entering the nominal stock length when you trim the ends. There is no trim allowance. If you square
+      both ends of every board first, enter the length that is left as <span class="label">STOCK LENGTH</span>.</li>
+  <li>Setting <span class="label">KERF</span> to None for a real saw. A tight plan that fits on paper then
+      comes up short on the last part of the board.</li>
+  <li>Reading a headline with <strong>(placed cuts only)</strong> as the whole job. The parts on the red line
+      still have to come from somewhere.</li>
+  <li>Mixing stock sizes in one run. Every board in a plan is the same length. Run the list again for a
+      second stock length.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="../tools/send-to-cut-optimizer.html">Send to the Cut List Optimizer</a></li>
+  <li><a href="stairs.html">Stairs</a> and <a href="hip-valley.html">Hip &amp; Valley</a> — the calculators that send parts here</li>
+  <li><a href="board-feet.html">Board Feet</a> — footage and cost for the boards</li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a></li>
+  <li><a href="../tools/cut-list-lock-screen-and-widgets.html">Cut list on the Lock Screen</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

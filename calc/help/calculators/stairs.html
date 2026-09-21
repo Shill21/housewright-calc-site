@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Stairs — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Stairs</h1>
+<h2 id="what">What it's for</h2>
+<p>Laying out a straight flight of stairs. You give it the floor-to-floor rise, or the run, or both, and it
+gives you the riser count, the riser and tread you cut to, the stringer length to lay out and the length to
+order, the stairwell opening the headroom needs, a section drawing, a stringer board with every notch marked,
+a running mark-out tape and a material list. It checks the stair against IRC R311.7 and prints any failure in
+red.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>This example uses the numbers the screen opens with, so your screen matches the shots.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/stairs--inputs.webp" alt="Stairs inputs: INPUT MODE By Height, TOTAL RISE 9' 0&quot;, TARGET RISER HEIGHT 7&quot;, RISER ROUNDING Riser Limited, TREAD DEPTH 10-1/2&quot;, NOSING 3/4&quot;, TARGET HEADROOM 6' 8&quot;, STAIR WIDTH 3' 0&quot;, UPPER FLOOR THICKNESS 10&quot;" width="660" height="1435">
+  <span class="pin" style="--x:50%;--y:26.5%">1</span>
+  <span class="pin" style="--x:50%;--y:35.8%">2</span>
+  <span class="pin" style="--x:58%;--y:42%">3</span>
+  <span class="pin" style="--x:60%;--y:48.8%">4</span>
+  <span class="pin" style="--x:44%;--y:59.7%">5</span>
+</div><figcaption>Steps 1 to 5. The strip under the title repeats the answer while you scroll.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">INPUT MODE</span> — leave it on <strong>By Height</strong>. You know the rise and the
+      riser you want. The other three modes are covered below.</li>
+  <li><span class="label">TOTAL RISE</span> — measure plumb from the finished lower floor to the finished upper
+      floor. If the finish floors are not down yet, add or take off their thickness first. The example is
+      9' 0".</li>
+  <li><span class="label">TARGET RISER HEIGHT</span> — the riser you would like. The example is 7".</li>
+  <li><span class="label">RISER ROUNDING</span> — the rise rarely divides evenly by your target.
+      <strong>Riser Limited</strong> rounds the count up, so no riser comes out taller than your target.
+      <strong>Nearest</strong> rounds to the closest whole count. That can save a riser, but the riser can come
+      out taller than you asked for.</li>
+  <li><span class="label">TREAD DEPTH</span> — the level run of one step. The total run is this times the number
+      of treads. The example is 10-1/2".</li>
+  <li><span class="label">NOSING</span> is how far the front of the tread hangs over the riser below.
+      <span class="label">TARGET HEADROOM</span> is the clear height you want over the stair, measured plumb from
+      the sloped line along the nosings. <span class="label">STAIR WIDTH</span> is the width of the flight.
+      <span class="label">UPPER FLOOR THICKNESS</span> is the thickness of the whole upper floor
+      assembly. The opening the stair needs is worked out from it.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/stairs--results.webp" alt="The lower Stairs inputs: STAIRWELL OPENING and MEASURED HEADROOM switches off, RISER TYPE Open, STRINGERS 3, TREAD STOCK 5/4x12, RISER STOCK 1x8, WASTE FACTOR 10%, and the start of the results reading 16 risers @ 6-3/4&quot;" width="660" height="1435">
+  <span class="pin" style="--x:61%;--y:29.8%">7</span>
+  <span class="pin" style="--x:50%;--y:43.2%">8</span>
+  <span class="pin" style="--x:36%;--y:53.6%">9</span>
+  <span class="pin" style="--x:23%;--y:82.9%">10</span>
+</div><figcaption>Steps 7 to 10, further down the inputs.</figcaption></figure>
+<ol class="steps" start="7" style="counter-reset:s 6">
+  <li>If the hole in the floor is already framed, turn on <span class="label">STAIRWELL OPENING</span> and enter
+      <span class="label">OPENING LENGTH</span>, measured level, back from the face of the top riser. The
+      headroom is then worked out from it. If you have taped the real clearance on site, turn on
+      <span class="label">MEASURED HEADROOM</span> and enter it. A measured figure is used for the code check
+      ahead of a worked-out one. The example leaves both off.</li>
+  <li><span class="label">RISER TYPE</span> — <strong>Open</strong> leaves the gap between treads open.
+      <strong>Closed</strong> takes riser boards, and the material list buys them.</li>
+  <li><span class="label">STRINGERS</span> is how many you are cutting. <span class="label">TREAD STOCK</span>
+      sets the tread thickness, which is what the bottom riser is dropped by.
+      <span class="label">RISER STOCK</span> is the thickness of the riser boards.</li>
+  <li><span class="label">WASTE FACTOR</span> — the extra you buy over the measured quantity.</li>
+  <li>Read the answer: <strong>16 risers @ 6-3/4"</strong>. With open risers the example also shows a red flag.
+      Switch <span class="label">RISER TYPE</span> to <strong>Closed</strong> and the flag clears.</li>
+</ol>
+<h3>The other input modes</h3>
+<ul>
+  <li><strong>By Count</strong> — you choose the number of risers. <span class="label">RISERS</span> replaces the
+      riser target and the rounding choice.</li>
+  <li><strong>By Run</strong> — you only know the run. Enter <span class="label">TOTAL RUN</span>, measured level
+      from the foot of the stair to the face of the top riser, with
+      <span class="label">TARGET RISER HEIGHT</span> and <span class="label">TARGET TREAD DEPTH</span>. There is
+      no rise field in this mode. The rise is worked out for you.</li>
+  <li><strong>Rise+Run</strong> — both are fixed. Enter <span class="label">TOTAL RISE</span> and
+      <span class="label">TOTAL RUN</span>. There is no tread field in this mode. The tread is the run divided
+      by the number of treads.</li>
+</ul>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/stairs--more.webp" alt="Stairs results: 16 risers @ 6-3/4&quot;, three riser-count chips, tread 10-1/2&quot;, rise 9' 0&quot;, run 13' 1-1/2&quot;, 32.74°, stringer layout and order lengths, opening required 11' 8-3/4&quot; for 6' 8&quot; headroom, a red open riser flag, the BASIS &amp; WHAT WAS ASSUMED row, and the stair section drawing" width="660" height="1435">
+  <span class="pin" style="--x:60.6%;--y:35%">1</span>
+  <span class="pin" style="--x:92%;--y:39.2%">2</span>
+  <span class="pin" style="--x:93%;--y:64.3%">4</span>
+  <span class="pin" style="--x:70%;--y:69.5%">5</span>
+  <span class="pin" style="--x:57.5%;--y:78%">6</span>
+</div><figcaption>The results card, then the section drawing.</figcaption></figure>
+<ol class="steps">
+  <li><strong>The headline</strong> is the riser count and the riser height you cut to, rounded to 1/16". The
+      <span class="label">defaults</span> tag means you have not entered anything of your own yet.</li>
+  <li><strong>The chips</strong> show one riser fewer, the current count, and one more, each with its riser
+      height and its verdict. Tap a chip to take that count. The screen switches to <strong>By Count</strong>.
+      A chip past the <span class="label">RISERS</span> row's range of 2 to 30 is dimmed and does nothing when tapped.</li>
+  <li><strong>The lines under the chips.</strong> Tread, rise, run and the incline in degrees.
+      <strong>R+/–</strong> and <strong>T+/–</strong> are what rounding to 1/16" leaves over the whole flight.
+      They print bold when they are not zero. <strong>Bottom riser cut</strong> is the first riser you cut. It
+      is shorter than the rest by the tread thickness and any R+/–. <strong>Stringer LAYOUT</strong> is the length
+      you lay out and cut. <strong>ORDER</strong> is the tip-to-tip length the board has to hold, with the board
+      size after it. <strong>Opening req'd</strong> is the stairwell opening that gives your target headroom,
+      nosing included.</li>
+  <li><strong>The check.</strong> A stair with nothing wrong reads <strong>Meets code — IRC R311.7</strong> in
+      green. Otherwise each failure gets its own <span class="flag">RED LINE IN CAPITALS</span>, with the number
+      that failed and the code section it was checked against. There can be several at once. Fix every one.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it. It opens the rounding rule, how the opening
+      was worked out, the headroom note, how the riser count was rounded, the bottom riser drop, the stringer
+      throat, the code edition the checks use and a reminder to check your local code. If you have not given an
+      opening or a measured headroom, the headroom note tells you to check it on site.</li>
+  <li><strong>The drawing</strong> is the stair in section with the same numbers on it, and one step enlarged in
+      the corner. Pinch to zoom, drag to pan, double-tap to reset. The expand button opens it full screen. See
+      <a href="../tools/drawings.html">Reading the drawing</a>.</li>
+</ol>
+<p>What clears each flag:</p>
+<ul>
+  <li><strong>Open riser gap</strong> — set <span class="label">RISER TYPE</span> to Closed.</li>
+  <li><strong>Riser height too tall</strong> — lower <span class="label">TARGET RISER HEIGHT</span>, tap the chip
+      with one more riser, or go back to Riser Limited.</li>
+  <li><strong>Riser height too short</strong> — raise <span class="label">TARGET RISER HEIGHT</span>, or tap the
+      chip with one fewer riser.</li>
+  <li><strong>Riser variation</strong> — the rounding left over is too much for the bottom riser to take. Tap a
+      chip with a different count.</li>
+  <li><strong>Tread depth</strong> — raise <span class="label">TREAD DEPTH</span>, or in a run mode lengthen
+      <span class="label">TOTAL RUN</span>.</li>
+  <li><strong>Stair width</strong> — raise <span class="label">STAIR WIDTH</span>.</li>
+  <li><strong>Nosing</strong> — change <span class="label">NOSING</span> or deepen the tread.</li>
+  <li><strong>Headroom</strong> — lengthen the opening, or re-measure.</li>
+  <li><strong>Stringer throat</strong> — too little wood is left under the notches. The flag says what to do.</li>
+</ul>
+<figure class="shot"><div class="frame">
+  <img src="../shots/stairs--end.webp" alt="Below the section drawing: the STRINGER BOARD — NOTCH SET-OUT drawing, ≈ 16' 7-3/4&quot; tip to tip with 15 notches on a 2x12, and the RUNNING MARK-OUT card with NOTCHED, HOUSED and STORY POLE tapes" width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:53.1%">7</span>
+  <span class="pin" style="--x:50%;--y:92.5%">8</span>
+  <span class="pin" style="--x:88%;--y:89.3%">9</span>
+</div><figcaption>The stringer board and the running mark-out.</figcaption></figure>
+<ol class="steps" start="7" style="counter-reset:s 6">
+  <li><span class="label">STRINGER BOARD — NOTCH SET-OUT</span> is the same stringer lying flat on the horses.
+      It shows the tip-to-tip length, the square settings, the drop on the first riser, the throat, and the
+      running distance to every nose.</li>
+  <li><span class="label">RUNNING MARK-OUT</span> lists those distances one at a time so you hook the tape once
+      and mark down the board. Pick the tape: <strong>NOTCHED</strong>, <strong>HOUSED</strong> or
+      <strong>STORY POLE</strong>.</li>
+  <li>The speaker reads the marks aloud. See <a href="../tools/mark-out-and-speak.html">Mark-out and speak</a>.</li>
+</ol>
+<p>Below the mark-out is the <strong>notching template</strong> card. It prints one notch at true size, across
+more than one sheet if the tread is wider than the page. If the riser is taller than the page it prints the
+set-out numbers instead, and the card says so before you print. Print at 100% scale. Do not fit to page. Then
+comes <span class="label">MATERIALS</span>: stringers, treads, and risers if they are closed, with the waste
+factor in the quantities.</p>
+<p>At the bottom, <span class="label">CUT SHEET</span>, the small list button beside it, <span class="label">CUT LIST</span>, <span class="label">SEND LIST</span> and <span class="label">OPTIMIZE</span>
+stay grey until you change at least one input, so a sheet made from the sample numbers never reaches a job.
+<span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
+<span class="label">CUT SHEET</span> makes a PDF with both drawings,
+<span class="label">SAVE</span> keeps the result in History, <span class="label">CUT LIST</span> puts the list on
+the Lock Screen, <span class="label">SEND LIST</span> sends a checkable list to another phone, and
+<span class="label">OPTIMIZE</span> sends the stringers to the Cut List Optimizer at their order length. A stringer
+over 24' is longer than any single stock, and a line under the buttons says so before you send.</p>
+<div class="note">Stairs, and the cut sheet, cut list, send list and History buttons, are part of Pro, a one-time
+purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li><strong>Measuring the rise off the subfloor.</strong> <span class="label">TOTAL RISE</span> is finished
+      floor to finished floor. If finish flooring is still to go down on either level, allow for it before you
+      enter the rise.</li>
+  <li><strong>Buying to the layout length.</strong> The layout length is what you mark and cut. The board has to
+      be as long as <strong>ORDER</strong>. The material list rounds that up to a stock length.</li>
+  <li><strong>Cutting every riser the same.</strong> The bottom riser is shorter. Cut it to
+      <strong>Bottom riser cut</strong>, not to the headline height.</li>
+  <li><strong>Taking the green line as a headroom pass.</strong> With no opening and no measured headroom, the
+      headroom has not been checked. Open <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> and read the
+      note.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="baluster-spacing.html">Baluster Spacing</a></li>
+  <li><a href="deck.html">Deck</a></li>
+  <li><a href="cut-optimizer.html">Cut List Optimizer</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/mark-out-and-speak.html">Mark-out and speak</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/cut-list-lock-screen-and-widgets.html">Cut list on the Lock Screen</a></li>
+  <li><a href="../tools/send-to-cut-optimizer.html">Send to the Cut List Optimizer</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

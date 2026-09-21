@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Roof Rafter — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Roof Rafter</h1>
+<h2 id="what">What it's for</h2>
+<p>Framing a gable, hip or shed roof with common rafters. You give it the building size, the pitch and the
+rafter size, and it gives you the rafter count and length, the plumb cut angle, the ridge, ties, sheathing, a
+rafter drawing with the birdsmouth enlarged, a second drawing of the rafter marked out on the stock, and a
+material list. It checks the rafter's run against the IRC 2021 rafter span table and flags a rafter that is too
+small.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>This example uses the numbers the screen opens with.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/roof-rafter--inputs.webp" alt="Roof Rafter inputs: BUILDING LENGTH (RIDGE) 32' 0&quot;, BUILDING WIDTH (SPAN) 24' 0&quot;, ROOF STYLE Gable, PITCH 6/12, RAFTER SIZE 2x8, SPACING 1' 4&quot;, CEILING ATTACHED TO RAFTERS off, EAVE OVERHANG 1' 0&quot;, SEAT CUT (WALL BEARING) 3-1/2&quot;, RAKE OVERHANG 1' 0&quot;, BARGE RAFTERS on" width="660" height="1435">
+  <span class="pin" style="--x:57.8%;--y:27.4%">1</span>
+  <span class="pin" style="--x:56%;--y:33.6%">2</span>
+  <span class="pin" style="--x:41%;--y:42%">3</span>
+  <span class="pin" style="--x:40%;--y:48.2%">4</span>
+  <span class="pin" style="--x:50%;--y:56.9%">5</span>
+</div><figcaption>Steps 1 to 5.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">BUILDING LENGTH (RIDGE)</span> — the outside length of the building along the ridge. The
+      example is 32' 0".</li>
+  <li><span class="label">BUILDING WIDTH (SPAN)</span> — outside of wall to outside of wall, across the rafters.
+      On a gable or hip roof the rafter's run is half of this. On a shed roof it is all of it. The example is
+      24' 0".</li>
+  <li><span class="label">ROOF STYLE</span> — <strong>Gable</strong>, <strong>Hip</strong> or
+      <strong>Shed</strong>.</li>
+  <li><span class="label">PITCH</span> — inches of rise per 12 of run. Tap it and pick from the list.</li>
+  <li><span class="label">RAFTER SIZE</span> — the stock you plan to use. The span check tells you if it is too
+      small.</li>
+  <li><span class="label">SPACING</span> is the on-center spacing. Turn on
+      <span class="label">CEILING ATTACHED TO RAFTERS</span> for a cathedral or vaulted ceiling, where the
+      ceiling finish hangs from the rafters. It changes which span table is used.</li>
+  <li><span class="label">EAVE OVERHANG</span> — how far the tails run past the wall, measured level, not along
+      the slope. <span class="label">SEAT CUT (WALL BEARING)</span> — the level cut of the birdsmouth, which is
+      how much rafter sits on the plate. If you also use Hip &amp; Valley for the same roof, enter the same seat
+      there.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/roof-rafter--results.webp" alt="The lower Roof Rafter inputs: RAKE OVERHANG 1' 0&quot;, BARGE RAFTERS, FASCIA, SOFFIT and COLLAR TIES on, RAFTER TIES off, SHEATHING on, SHEATHING TYPE OSB, WASTE FACTOR 10%" width="660" height="1435">
+  <span class="pin" style="--x:56%;--y:34.6%">8</span>
+  <span class="pin" style="--x:50%;--y:40.8%">9</span>
+  <span class="pin" style="--x:55%;--y:53.2%">10</span>
+  <span class="pin" style="--x:58%;--y:70.4%">11</span>
+  <span class="pin" style="--x:22.8%;--y:79.6%">12</span>
+</div><figcaption>Steps 8 to 12. These switches add rows to the material list.</figcaption></figure>
+<ol class="steps" start="8" style="counter-reset:s 7">
+  <li>On a gable roof only: <span class="label">RAKE OVERHANG</span> is how far the roof runs past the gable wall,
+      measured level, and <span class="label">BARGE RAFTERS</span> adds the outermost rafters that carry it.</li>
+  <li><span class="label">FASCIA</span> adds the board across the rafter tails. With it on,
+      <span class="label">SOFFIT</span> adds the underside of the overhang.</li>
+  <li><span class="label">COLLAR TIES</span> sit high, near the ridge. <span class="label">RAFTER TIES</span> sit
+      low and stop the roof pushing the walls apart. Each switch adds its count and length to the results.</li>
+  <li><span class="label">SHEATHING</span> adds the sheet count. With it on, pick the
+      <span class="label">SHEATHING TYPE</span>: OSB, Plywood or ZIP System. ZIP System also counts tape
+      rolls.</li>
+  <li><span class="label">WASTE FACTOR</span> — the extra you buy over the measured quantity.</li>
+  <li>Read the answer: <strong>55 commons @ ≈ 14' 6-7/16"</strong>.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/roof-rafter--more.webp" alt="Roof Rafter results: 55 commons @ ≈ 14' 6-7/16&quot;, run 12' 0&quot;, plumb 26.6°, 988 sq ft roof, ridge 32' 0&quot;, 10 collar ties, 34 sheathing sheets, a green line reading Within IRC 2021 R802.4.1(3) max span, the BASIS &amp; WHAT WAS ASSUMED row, and the common rafter drawing with the birdsmouth enlarged" width="660" height="1435">
+  <span class="pin" style="--x:60%;--y:27.3%">1</span>
+  <span class="pin" style="--x:80%;--y:37.3%">2</span>
+  <span class="pin" style="--x:88%;--y:43.6%">3</span>
+  <span class="pin" style="--x:70%;--y:47%">4</span>
+  <span class="pin" style="--x:20%;--y:58%">5</span>
+</div><figcaption>The results card and the rafter drawing.</figcaption></figure>
+<ol class="steps">
+  <li><strong>The headline</strong> is the number of common rafters to buy and the length of each. The waste factor is
+      already in the count: the example's 55 is 50 on the roof plus 10%. The tie and jack counts under it include
+      the waste too. The length runs from
+      the ridge to the end of the tail, so it includes the eave overhang. ≈ means the figure has been rounded
+      for display.</li>
+  <li><strong>The lines under it.</strong> The run and the plumb cut angle. The roof area and the ridge length.
+      On a hip roof, the hips with their length and the number of jacks. Then the ties and the sheathing, if
+      they are switched on.</li>
+  <li><strong>The span check.</strong> Green means the rafter size you chose is within the table for this run.
+      A <span class="flag">SPAN EXCEEDS MAX</span> line gives the longest run that size allows and names the size
+      to go to. Change <span class="label">RAFTER SIZE</span>, or tighten <span class="label">SPACING</span>. If
+      no size in the list will do, the flag says the run needs an engineered rafter or a mid-span support. If
+      you type a spacing wider than 24", the flag says it is not in the table and names the spacings that are. A
+      spacing between the listed ones is checked at the next wider one. A spacing tighter than 12" is counted
+      at 12" — the table goes no tighter — and a red line says so: <span class="flag">SPACING 8" IS BELOW THE
+      12" TABLE FLOOR — COUNTED AT 12"</span>. The cut sheet's Spacing row carries the same note.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it. It names the span table, and the species,
+      grade, snow load, dead load and deflection limit the table was read for. Check those against your lumber
+      and your local snow load. A span that passes here can fail under a heavier snow load. It also says how the
+      rafters were counted.</li>
+  <li><strong>The drawing</strong> shows the rafter from plate to ridge with the run, the length and the height
+      above the plate, and the birdsmouth enlarged in the corner with its seat and heel. Pinch to zoom, drag to
+      pan, double-tap to reset. The expand button opens it full screen. See
+      <a href="../tools/drawings.html">Reading the drawing</a>.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/roof-rafter--end.webp" alt="The RAFTER STOCK drawing, a 2x8 marked out at ≈ 14' 6-7/16&quot; overall with the birdsmouth ≈ 1' 1-7/16&quot; from the tail, notes giving the plumb angle, seat, heel, HAP and the ridge deduction, then the MATERIALS list and the export buttons" width="660" height="1435">
+  <span class="pin" style="--x:12%;--y:36%">6</span>
+  <span class="pin" style="--x:45%;--y:66.5%">7</span>
+  <span class="pin" style="--x:12%;--y:95.5%">8</span>
+</div><figcaption>The rafter on the stock, the material list and the export buttons.</figcaption></figure>
+<ol class="steps" start="6" style="counter-reset:s 5">
+  <li><strong>The rafter stock drawing</strong> is the same rafter lying flat, the way you mark it. Hook the tape
+      at the tail tip and run it. It is a running tape, not stepped off. The notes give the plumb angle, the
+      birdsmouth, the height above the plate and the amount to take off for the ridge. The headline length does
+      not have that deduction taken off, so make it when you mark the ridge cut.</li>
+  <li><span class="label">MATERIALS</span> lists rafters with the stock length to buy, the ridge, barge rafters,
+      fascia, soffit, sheathing and ties. The waste factor is in these quantities.</li>
+  <li><span class="label">CUT SHEET</span>, the small button beside it, <span class="label">CUT LIST</span> and <span class="label">SEND LIST</span>
+      stay grey until you change at least one input. <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
+      <span class="label">CUT SHEET</span> makes a
+      PDF, the small button beside it shares the material list only, <span class="label">SAVE</span> keeps the
+      result in History, <span class="label">CUT LIST</span> puts the list on the Lock Screen and
+      <span class="label">SEND LIST</span> sends a checkable list to another phone.</li>
+</ol>
+<div class="note">Roof Rafter, and the cut sheet, cut list, send list and History buttons, are part of Pro, a
+one-time purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li><strong>Entering the overhang along the slope.</strong> <span class="label">EAVE OVERHANG</span> and
+      <span class="label">RAKE OVERHANG</span> are level measurements.</li>
+  <li><strong>Entering the run as the width.</strong> <span class="label">BUILDING WIDTH (SPAN)</span> is the whole
+      building, outside to outside. The calculator halves it for you on a gable or hip roof.</li>
+  <li><strong>Cutting to the headline without the ridge deduction.</strong> The amount to deduct is in the notes
+      under the rafter stock drawing.</li>
+  <li><strong>Trusting the green line without reading the basis.</strong> The table behind it is for one species,
+      one grade and one snow load. Yours may differ.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="hip-valley.html">Hip &amp; Valley</a> — cut-ready hips, valleys and jacks</li>
+  <li><a href="roofing.html">Roofing</a></li>
+  <li><a href="framing.html">Framing</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/cut-list-lock-screen-and-widgets.html">Cut list on the Lock Screen</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

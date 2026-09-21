@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Retaining Wall — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Retaining Wall</h1>
+<h2 id="what">What it's for</h2>
+<p>Takes off a segmental block retaining wall: the dry-stacked landscape block that sits on a gravel pad. You
+get blocks, courses, caps, base gravel, drainage stone and drain pipe, with a section drawing of the wall.
+It makes one code check: it tells you when the wall is tall enough that the IRC line on the screen calls for
+an engineer. It does not design the wall.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: a wall 40' 0" long and 3' 0" high, in block 4" high and 1' 0"
+long, with 10% waste.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/retaining-wall--inputs.webp" alt="Retaining Wall inputs at their defaults: WALL LENGTH 40' 0&quot;, WALL HEIGHT 3' 0&quot;, BLOCK HEIGHT 4&quot;, BLOCK LENGTH 1' 0&quot;, WASTE FACTOR 10%. Results read 440 blocks, 10 courses × 40/course, 44 caps, 1.48 yd³ base gravel, 4.94 yd³ drainage stone, and a green check: Under 48&quot; unbalanced fill — IRC R404.4." width="660" height="1435">
+  <span class="pin" style="--x:48%;--y:23.5%">1</span>
+  <span class="pin" style="--x:48%;--y:29.7%">2</span>
+  <span class="pin" style="--x:48%;--y:35.9%">3</span>
+  <span class="pin" style="--x:69.4%;--y:48.2%">4</span>
+  <span class="pin" style="--x:45%;--y:59.4%">5</span>
+</div><figcaption>Four dimensions and a waste factor.</figcaption></figure>
+<ol class="steps">
+  <li>Enter <span class="label">WALL LENGTH</span> along the face of the wall. Follow the curve if it has
+      one.</li>
+  <li>Enter <span class="label">WALL HEIGHT</span>: the exposed face, from finished grade at the toe to the
+      top of the top block, not counting the cap. Do not add the buried part. The calculator adds one buried
+      course for you.</li>
+  <li>Enter <span class="label">BLOCK HEIGHT</span> and <span class="label">BLOCK LENGTH</span> of the unit
+      you are buying, measured on its face. Use the real size, not the catalog name.</li>
+  <li>Set <span class="label">WASTE FACTOR</span>. It is applied to the blocks and the caps. The gravel,
+      stone and pipe carry no waste.</li>
+  <li>Read <strong>RESULTS</strong>. On the defaults: <strong>440 blocks</strong>,
+      <strong>10 courses × 40/course · 44 caps</strong>, <strong>1.48 yd³ base gravel · 4.94 yd³ drainage
+      stone</strong>, and a green <strong>Under 48" unbalanced fill — IRC R404.4</strong>. Then tap
+      <span class="label">BASIS &amp; WHAT WAS ASSUMED</span>.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/retaining-wall--results.webp" alt="Retaining Wall scrolled down. A strip at the top repeats 440 blocks and the green check. The section drawing shows a 3' 0&quot; exposed face, a 4&quot; buried course, a 6&quot; by 2' 0&quot; gravel base, drainage stone behind the wall and a drain pipe, labelled CAP UNITS — 44 PCS, DRAINAGE STONE 4.94 CY, SRW BLOCK — 40/COURSE, BASE GRAVEL 1.48 CY. MATERIALS lists SRW block 440 pcs, Cap units 44 pcs, Base gravel 1.48 yd³, Drainage stone 4.94 yd³, Perforated drain pipe (4&quot;) 40 lin ft." width="660" height="1435">
+  <span class="pin" style="--x:8%;--y:26%">11</span>
+  <span class="pin" style="--x:8%;--y:43%">12</span>
+  <span class="pin" style="--x:35%;--y:57.2%">13</span>
+</div><figcaption>The numbers match the list below. The strip at the top keeps the answer in view once the
+results card has scrolled away.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 5">
+  <li><strong>The headline</strong> is blocks to buy, waste included. The line under it shows where it came
+      from: courses times blocks per course. The course count includes the buried course, so the default
+      3' 0" wall in 4" block is 10 courses, not 9.</li>
+  <li><strong>Caps</strong> are one course of cap units along the length, waste included.</li>
+  <li><strong>Base gravel and drainage stone</strong> are in cubic yards. The material list gives the section
+      each was figured on. On the shot: base gravel <strong>6" deep × 24" wide</strong>, drainage stone
+      <strong>12" behind wall + drain pipe</strong>. The stone runs the full built height, buried course
+      included.</li>
+  <li><strong>The check.</strong> Green reads <strong>Under 48" unbalanced fill — IRC R404.4</strong>.
+      <span class="flag">ENGINEER REQUIRED — OVER 48" UNBALANCED FILL (IRC R404.4)</span> shows when
+      <span class="label">WALL HEIGHT</span> is over that. The quantities still figure, but the wall needs
+      an engineered design. Lower the wall, step it into two terraces, or take it to an engineer.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> opens to the height rule — the height you enter
+      is the exposed face, and the drawing dimensions the stack as built, rounded to full courses plus the
+      burial — then <strong>IRC 2021 — verify local code</strong> and the note on local amendments.</li>
+  <li><strong>The drawing</strong> is a section through the wall: cap, block, the gravel pad, the stone
+      column and the drain pipe. Pinch to zoom, drag to pan, double-tap to reset, and use the expand button
+      for full screen. See <a href="../tools/drawings.html">Drawings</a>.</li>
+  <li><strong>The buried course</strong> is dimensioned on the drawing below the grade line, under the
+      exposed height. If your height is not a whole number of courses, the height on the drawing is the
+      rounded-up stack, not the number you typed.</li>
+  <li><strong>MATERIALS.</strong> The block row says it includes one buried course and tells you to check
+      the embedment against the manufacturer's spec. When the wall is over 3' 0" the drain pipe row adds
+      that walls of that height often need geogrid, and to check the manufacturer's chart. Geogrid is not
+      counted.</li>
+</ol>
+<div class="note">Retaining Wall is a Pro calculator. <strong>SHARE PDF</strong> and <strong>SAVE</strong> are
+Pro as well, a one-time purchase. <strong>SHARE PDF</strong> and the list button beside it stay grey until you have entered your own
+measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+and saves nothing.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Adding the buried course into <span class="label">WALL HEIGHT</span>. It gets counted twice. Enter the
+      exposed face only.</li>
+  <li>Using this for a mortared block or poured wall. The takeoff is for segmental block on a gravel pad.
+      Use <a href="masonry.html">Masonry</a> or <a href="concrete.html">Concrete</a> for those.</li>
+  <li>Entering the block's depth, front to back, as <span class="label">BLOCK LENGTH</span>. Length is
+      along the face of the wall. It sets the blocks per course.</li>
+  <li>Treating a green check as a design. It compares one height with one line of the code. Soil, surcharge
+      from a driveway or slope above, and geogrid are outside it.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="excavation.html">Excavation</a> — the trench and the spoil</li>
+  <li><a href="grade-slope.html">Grade / Slope</a> — the grade above and below the wall</li>
+  <li><a href="masonry.html">Masonry</a> — mortared block, brick and stone</li>
+  <li><a href="../tools/drawings.html">Drawings</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a> — what SHARE PDF sends</li>
+  <li><a href="../tools/saving-and-history.html">Saving and history</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

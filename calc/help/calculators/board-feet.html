@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Board Feet — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Board Feet</h1>
+<h2 id="what">What it's for</h2>
+<p>Lumber is often priced by the board foot. Enter your pieces — size, length and how many — and Board Feet
+totals the footage, and the cost if you put in a price per board foot. The drawing shows the size you pay
+for against the size the board really is. Nothing here is checked against code.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: one line of ten 2x6 at 8' 0", no price.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/board-feet--inputs.webp" alt="Board Feet inputs: PIECE 1 with NOMINAL SIZE 2x6, LENGTH 8' 0&quot;, QUANTITY 10, then Add Piece and PRICE $0.00 / bd ft. Results read 80.0 board feet. The drawing below shows a 2x6 with L 8' 0&quot; and an end section dimensioned 2&quot; by 6&quot; nominal, 1-1/2&quot; by 5-1/2&quot; dressed." width="660" height="1435">
+  <span class="pin" style="--x:45%;--y:32.3%">1</span>
+  <span class="pin" style="--x:45%;--y:38.4%">2</span>
+  <span class="pin" style="--x:33%;--y:44.3%">3</span>
+  <span class="pin" style="--x:40%;--y:50.2%">4</span>
+  <span class="pin" style="--x:22%;--y:54.8%">5</span>
+</div><figcaption>Steps 1–5. The total is in RESULTS straight under the inputs.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">NOMINAL SIZE</span> — pick the size the yard sells it as, from 1x4 to 6x6. The
+      example is 2x6.</li>
+  <li><span class="label">LENGTH</span> — the length of one piece. The example is 8' 0".</li>
+  <li><span class="label">QUANTITY</span> — how many pieces of that size and length. The example is 10. Set
+      it to 0 to leave a line out of the total without deleting it.</li>
+  <li>Tap <strong>Add Piece</strong> for each further size or length. Every line gets its own three rows
+      under a PIECE heading. The red bin beside the heading deletes that line.</li>
+  <li><span class="label">PRICE</span> — the price per board foot, if you want a cost. Tap it to type a
+      price, or use − and + to move it by $0.25. It opens at $0.00, which leaves cost out.</li>
+  <li>Read RESULTS: <strong>80.0 board feet</strong>. With a price entered, a second line gives the total
+      cost.</li>
+  <li>Scroll down to the drawing. The lines under the board show how the figure was reached.</li>
+  <li>MATERIALS lists each line as a size, a length and a piece count.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/board-feet--results.webp" alt="Board Feet scrolled down: 80.0 board feet, then the drawing of a 2x6 with the notes 2x6 × 8' 0&quot; · 10 PC · 80.0 BF, 2 × 6 = 12 IN² × 8 FT / 12 = 8.0 BF/PC, DRESSED 1-1/2&quot; × 5-1/2&quot; = 8.25 IN² · 31% LESS, TOTAL 80.0 BF · 1 LINE · 10 PC · 80 LF, a title block reading BOARD FOOT, NOMINAL — NOT DRESSED, then MATERIALS 2x6 × 8' 0&quot;, 10 pcs, and the export buttons dimmed." width="660" height="1435">
+  <span class="pin" style="--x:6%;--y:59.8%">7</span>
+  <span class="pin" style="--x:60%;--y:76%">8</span>
+</div><figcaption>Step 7: the working under the board. Step 8: the materials list.</figcaption></figure>
+<p><strong>The headline</strong> is the total board feet across every line, to one decimal place. The total
+cost appears under it only when <span class="label">PRICE</span> is above zero.</p>
+<p><strong>The drawing</strong> shows one board: the line that carries the most board feet. The boxed end
+section has the nominal size on the outside and the dressed size inside it. The notes under the board read,
+in the example:</p>
+<ul>
+  <li><strong>2x6 × 8' 0" · 10 PC · 80.0 BF</strong> — the line itself.</li>
+  <li><strong>2 × 6 = 12 IN² × 8 FT / 12 = 8.0 BF/PC</strong> — the working for one piece: nominal width
+      times nominal depth, times the length in feet, divided by 12.</li>
+  <li><strong>DRESSED 1-1/2" × 5-1/2" = 8.25 IN² · 31% LESS</strong> — what the board actually measures, and
+      how much less wood that is than the nominal size you are billed on.</li>
+  <li><strong>TOTAL 80.0 BF · 1 LINE · 10 PC · 80 LF</strong> — the whole list: board feet, lines, pieces and
+      lineal feet.</li>
+</ul>
+<p>The title block reads <strong>NOMINAL — NOT DRESSED</strong> to remind you which size the footage is
+worked from. Pinch to zoom, drag to move around, double-tap to reset, or tap the expand button at its top right for the whole screen. See
+<a href="../tools/drawings.html">Reading the drawing</a>.</p>
+<p><strong>MATERIALS</strong> has one row per line: size × length, and the piece count. Nothing is added for
+waste. This screen has no waste factor.</p>
+<p><strong>The buttons</strong> wait for your own numbers: the export buttons stay dimmed, and
+<span class="label">SAVE</span> tells you to enter them first. After that <span class="label">CUT SHEET</span>
+shares a PDF with the drawing and the list, the small list button beside it shares the material list alone,
+<span class="label">SAVE</span> puts the result in History, <span class="label">CUT LIST</span> starts the
+list on the Lock Screen and <span class="label">SEND LIST</span> sends a checkable list to another phone.
+<span class="label">BASIS &amp; WHAT WAS ASSUMED</span> opens to the one rule the count rests on: board feet come
+from the nominal size, width × depth × length in feet ÷ 12. The working is on the drawing.</p>
+<div class="note">Board Feet is a Pro calculator. The cut sheet, the cut list on the Lock Screen, sending a
+list and History are Pro too. Pro is a one-time purchase. See
+<a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Expecting the footage to match the wood in your hand. Board feet are worked from the nominal size. The
+      DRESSED line on the drawing shows the difference.</li>
+  <li>Entering a price per lineal foot or per piece. <span class="label">PRICE</span> is per board foot. A
+      per-piece price will give a cost that means nothing.</li>
+  <li>Putting mixed lengths on one line. One line is one size at one length. Tap <strong>Add Piece</strong>
+      for each different length.</li>
+  <li>Taking the list as the order. There is no waste allowance here. Add your own pieces for defects and
+      offcuts.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="cut-optimizer.html">Cut List Optimizer</a> — get the parts out of the fewest boards</li>
+  <li><a href="framing.html">Framing</a> and <a href="deck.html">Deck</a> — takeoffs that count the lumber for you</li>
+  <li><a href="material-converter.html">Unit Converter</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

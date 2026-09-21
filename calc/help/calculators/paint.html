@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Paint — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Paint</h1>
+<h2 id="what">What it's for</h2>
+<p>Working out how much paint and primer to buy for a list of rooms. You walk away with gallons for the walls,
+gallons for any ceilings, primer, and a material list that turns each figure into cans to buy. The drawing
+unfolds the first room's walls into one strip so you can check the areas. It is an order quantity, not a code
+check.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: one 12' by 10' room with 9' walls, two coats on a smooth surface,
+primer on, no openings entered and no ceiling.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/paint--inputs.webp" alt="Paint inputs at their defaults: SURFACE Smooth, COATS 2, INCLUDE PRIMER on, then ROOM 1 with LENGTH 12' 0&quot;, WIDTH 10' 0&quot;, HEIGHT 9' 0&quot;, DOORS 0, WINDOWS 0 and INCLUDE CEILING off, then WASTE FACTOR 10%. The strip under the title reads 2.18 gal walls." width="660" height="1435">
+  <span class="pin" style="--x:45%;--y:26.5%">1</span>
+  <span class="pin" style="--x:32%;--y:35.7%">2</span>
+  <span class="pin" style="--x:64%;--y:41.7%">3</span>
+  <span class="pin" style="--x:42%;--y:56.3%">4</span>
+  <span class="pin" style="--x:65%;--y:85.8%">6</span>
+</div><figcaption>The paint job first, then one block of inputs for each room.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">SURFACE</span> — Smooth or Textured. A textured wall takes more paint, so the wall
+      coverage rate drops when you pick it. Leave it at Smooth.</li>
+  <li><span class="label">COATS</span> — finish coats on the walls and ceilings. 2 here.</li>
+  <li><span class="label">INCLUDE PRIMER</span> — on adds one coat of primer over everything you are painting.
+      Turn it off for a repaint that does not need it.</li>
+  <li>Under <span class="label">ROOMS</span>, measure the room wall to wall along the floor for
+      <span class="label">LENGTH</span> (12' 0") and <span class="label">WIDTH</span> (10' 0"), and floor to
+      ceiling for <span class="label">HEIGHT</span> (9' 0").</li>
+  <li><span class="label">DOORS</span> and <span class="label">WINDOWS</span> — count the openings. Each one
+      takes a standard allowance off the wall area. Both open at 0, which paints the walls as if they were
+      solid.</li>
+  <li><span class="label">INCLUDE CEILING</span> — on if you are painting the lid in this room. It opens off.</li>
+  <li>For another room, tap <strong>Add Room</strong>. The trash can at the top right of a block removes that
+      room.</li>
+  <li><span class="label">WASTE FACTOR</span> — the extra for the tray, the roller and touch-up, in steps of 5%.
+      It opens at 10%.</li>
+  <li>Read <span class="label">RESULTS</span>: <strong>2.18 gal walls</strong>, 1.45 gal primer, 396 sq ft net
+      area, walls 400 sq ft/gal.</li>
+  <li>Check the unfolded elevation: four walls, 108, 90, 108 and 90 SF, 44' 0" around.</li>
+  <li>Read <span class="label">MATERIALS</span> for the cans: wall paint, buy 2 gal + 1 qt; primer, buy 1 gal +
+      2 qt. <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the coverage per gallon for each
+      surface, the area taken off per door and window, and the rounding to gallons and quarts.</li>
+  <li>Save or share the job with the buttons at the foot of the screen.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/paint--more.webp" alt="Paint results: 2.18 gal walls, 1.45 gal primer, 396 sq ft net area, walls 400 sq ft/gal. Below is the unfolded elevation of room 1, four walls of 108, 90, 108 and 90 SF over a 44' 0&quot; perimeter, then MATERIALS: wall paint, buy 2 gal + 1 qt, 2.2 gal; primer, buy 1 gal + 2 qt, 1.5 gal; then the SHARE PDF, list and SAVE buttons." width="660" height="1435">
+  <span class="pin" style="--x:92%;--y:17.3%">8</span>
+  <span class="pin" style="--x:60%;--y:22.3%">9</span>
+  <span class="pin" style="--x:25%;--y:58.5%">10</span>
+  <span class="pin" style="--x:35%;--y:75.9%">11</span>
+  <span class="pin" style="--x:93%;--y:89.2%">12</span>
+</div><figcaption>Results, the unfolded elevation, the cans to buy, and the save and share buttons.</figcaption></figure>
+
+<h2 id="results">Reading the results</h2>
+<p><strong>The headline</strong> is wall paint in gallons for every room together, with your coats and waste in
+it. It also shows in a strip under the title whenever the results card is scrolled off screen.</p>
+<p><strong>Ceiling and primer.</strong> A ceiling line appears only when at least one room has
+<span class="label">INCLUDE CEILING</span> on. The primer line appears only while
+<span class="label">INCLUDE PRIMER</span> is on. Primer is one coat, whatever <span class="label">COATS</span>
+says — the drawing notes read <em>PRIMER 1 COAT</em>.</p>
+<p><strong>Net area and coverage.</strong> Net area is walls plus included ceilings, after the door and window
+allowances. The rate beside it is labelled <em>walls</em> on purpose: it is the wall paint rate only. The
+drawing prints each rate on the figure it produced — in the example <em>WALLS 2.18@400 · PRIMER 1.45@300
+GAL</em>. Check those against the can you are buying. If your paint covers less, raise
+<span class="label">WASTE FACTOR</span> to suit.</p>
+<p><strong>The drawing</strong> is room 1 only, its four walls laid out flat in one strip, each with its area
+above and its length below. With no openings entered it says so: <em>NO OPENINGS ENTERED — NO DEDUCTION</em>.
+The gallons in the notes are for the whole job, not just room 1. Pinch to zoom, or tap the expand button at the
+top right to open it full screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</p>
+<p><strong>Materials</strong> rounds each figure to cans: gallons plus quarts to buy, with the quantity beside
+it.</p>
+<p><span class="label">SHARE PDF</span> sends a sheet with the drawing, your inputs and the material list. The
+list button beside it sends the material list alone. <span class="label">SAVE</span> puts the job in History.
+<span class="label">SHARE PDF</span> and the list button stay dim until you change at least one input.
+<span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers
+<strong>Enter your job's numbers first</strong> and saves nothing.</p>
+<div class="note">Paint is a Pro calculator, and sharing a PDF and saving to History are part of Pro too. This
+help is free. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Leaving <span class="label">DOORS</span> and <span class="label">WINDOWS</span> at 0. Unlike the Drywall
+      calculator, this one does take openings off the area, but only if you count them.</li>
+  <li>Forgetting <span class="label">INCLUDE CEILING</span>. It opens off, and it is set room by room.</li>
+  <li>Reading the wall rate as the rate for everything. Primer and ceilings run at their own rates, printed on
+      the drawing.</li>
+  <li>Expecting trim paint. This screen covers walls, ceilings and primer. Doors, casing and base are a
+      separate buy.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="drywall.html">Drywall</a> — the same rooms, one trade earlier</li>
+  <li><a href="trim.html">Trim</a></li>
+  <li><a href="siding.html">Siding</a> — for the outside of the building</li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

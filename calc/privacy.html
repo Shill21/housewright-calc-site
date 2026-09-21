@@ -1,151 +1,79 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy — Housewright Calc</title>
-<meta name="description" content="Housewright Calc privacy policy: no accounts, no analytics, no advertising, no network calls of its own. Purchases are handled entirely by Apple.">
-<link rel="icon" href="../assets/app-icon.png">
-<style>
-/* ============ TOKENS — matches calc/index.html ============ */
-:root{
-  --bg:#0c0b09; --bg-1:#131110; --bg-2:#1a1815; --bg-3:#211e1a;
-  --line:#2b2822; --line-soft:#221f1b;
-  --text-hi:#f1ead9; --text:#b9af9c; --dim:#847b6a;
-  --gold:#d9a441; --gold-hi:#f2c363; --gold-deep:#8a6420;
-  --gold-faint:rgba(217,164,65,.06);
-  --cyan:#62b6cb; --cyan-hi:#8fd0e2; --cyan-deep:#3d7d8f;
-  --serif:ui-serif,"New York",Georgia,"Times New Roman",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
-  --w: min(760px, calc(100vw - 48px));
-  color-scheme: dark;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{overflow-x:clip}
-body{
-  background:var(--bg); color:var(--text);
-  font-family:var(--sans); font-size:16.5px; line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-  background-image:
-    linear-gradient(var(--gold-faint) 1px, transparent 1px),
-    linear-gradient(90deg, var(--gold-faint) 1px, transparent 1px);
-  background-size:72px 72px;
-  background-position:center top;
-}
-a{color:var(--cyan-hi);text-decoration:none}
-a:hover{text-decoration:underline;text-underline-offset:3px}
-::selection{background:var(--gold-deep);color:var(--text-hi)}
-:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px}
-
-.sheet-frame{position:fixed;inset:10px;border:1px solid rgba(217,164,65,.16);pointer-events:none;z-index:60}
-.sheet-frame i{position:absolute;width:14px;height:14px;border-color:rgba(217,164,65,.5);border-style:solid;border-width:0}
-.sheet-frame i:nth-child(1){top:-1px;left:-1px;border-top-width:1px;border-left-width:1px}
-.sheet-frame i:nth-child(2){top:-1px;right:-1px;border-top-width:1px;border-right-width:1px}
-.sheet-frame i:nth-child(3){bottom:-1px;left:-1px;border-bottom-width:1px;border-left-width:1px}
-.sheet-frame i:nth-child(4){bottom:-1px;right:-1px;border-bottom-width:1px;border-right-width:1px}
-.sheet-tag{position:fixed;bottom:14px;right:22px;z-index:61;pointer-events:none;
-  font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
-@media (max-width:720px){ .sheet-tag,.sheet-frame{display:none} }
-
-.wrap{width:var(--w);margin:0 auto}
-header{position:sticky;top:0;z-index:50;background:rgba(12,11,9,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
-.nav{display:flex;align-items:center;gap:20px;height:64px;width:min(940px, calc(100vw - 48px));margin:0 auto}
-.brand{display:flex;align-items:center;gap:11px;color:var(--text-hi)}
-.brand:hover{text-decoration:none}
-.hw-mark{width:30px;height:30px;border-radius:7px;background:#131110;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
-.wordmark{font-family:var(--serif);font-weight:700;font-size:16px;letter-spacing:.06em;white-space:nowrap}
-.wordmark b{color:var(--gold);font-weight:700}
-.calc-tag{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--cyan-deep);border-radius:4px;padding:2px 6px;margin-left:7px;vertical-align:2px}
-.nav a.back{margin-left:auto;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-.nav a.back:hover{color:var(--cyan-hi)}
-
-main{padding:clamp(56px,8vw,88px) 0}
-.eyebrow{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase;font-size:11.5px;color:var(--gold);display:block;margin-bottom:18px}
-h1{font-family:var(--serif);color:var(--text-hi);font-weight:700;font-size:clamp(32px,4.4vw,48px);letter-spacing:-.01em;margin-bottom:10px}
-.eff-date{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:clamp(40px,5vw,56px)}
-.legal h2{font-family:var(--serif);color:var(--text-hi);font-weight:700;font-size:21px;margin:38px 0 12px}
-.legal h2:first-of-type{margin-top:0}
-.legal p{margin-bottom:14px;max-width:66ch}
-.legal p b{color:var(--text-hi)}
-.legal a{color:var(--cyan-hi)}
-.legal-intro{font-size:17px;color:var(--text-hi);max-width:62ch;margin-bottom:8px}
-
-footer{border-top:1px solid var(--line-soft);padding:34px 0 44px}
-.foot{width:min(940px, calc(100vw - 48px));margin:0 auto;display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-size:13.5px;color:var(--dim)}
-.foot .brand{margin-right:auto}
-.foot a{color:var(--dim)}
-.foot a:hover{color:var(--cyan-hi)}
-.foot-note{margin-top:18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#5c5546;width:min(940px, calc(100vw - 48px));margin-left:auto;margin-right:auto}
-</style>
+<meta name="description" content="Housewright Calc collects nothing. No accounts, no analytics, no advertising, no network connections of its own.">
+<meta property="og:title" content="Privacy — Housewright Calc">
+<meta property="og:description" content="Housewright Calc collects nothing. No accounts, no analytics, no advertising, no network connections of its own.">
+<meta property="og:image" content="https://housewright.app/assets/img/og.jpg">
+<meta property="og:url" content="https://housewright.app/calc/privacy.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://housewright.app/calc/privacy.html">
+<meta name="theme-color" content="#0d0e10">
+<link rel="icon" href="../assets/img/brand/icon-64.png">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+<div class="sheet-edge" aria-hidden="true"></div>
+<div class="titleblock" aria-hidden="true"><span>Housewright</span><span id="tb-sheet">A-1.9 Privacy</span><span>Scrolled <b id="tb-scroll">0"</b></span></div>
 
-<div class="sheet-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-<div class="sheet-tag" aria-hidden="true">housewright · calc · privacy · rev a</div>
-
-<header>
-  <div class="nav">
-    <a class="brand" href="./index.html" aria-label="Housewright Calc home">
-      <span class="hw-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="30" height="30"><path d="M 15 29 L 32 16 L 49 29" fill="none" stroke="#d9a441" stroke-width="4.5" stroke-linecap="round"/><text x="32" y="49" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="30" fill="#f2ecdd">H</text><rect x="19" y="53" width="26" height="3" rx="1" fill="#d9a441"/></svg></span>
-      <span class="wordmark">HOUSE<b>WRIGHT</b><span class="calc-tag">Calc</span></span>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Housewright home">
+      <svg viewBox="0 0 256 256" aria-hidden="true"><rect x="2" y="2" width="252" height="252" rx="58" fill="#100e0c" stroke="#d4a046" stroke-opacity=".4" stroke-width="4"/><path d="M64 114 128 64l64 50" fill="none" stroke="#d4a046" stroke-width="15" stroke-linecap="round"/><text x="128" y="204" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="700" font-size="128" fill="#f2ecdd">H</text><rect x="86" y="218" width="84" height="8" rx="2" fill="#d4a046"/></svg>
+      <span>HOUSE<b>WRIGHT</b></span>
     </a>
-    <a class="back" href="./index.html">← Back to Housewright Calc</a>
+    <nav aria-label="Products"><a href="../calc/index.html" aria-current="page">Calc</a><a href="../desktop/index.html">Desktop</a><a href="../companion/index.html">Companion</a></nav>
+    <button class="field-toggle" type="button" aria-pressed="false" title="Switch the whole site to the sunlight palette the apps use outdoors">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span>Field mode</span>
+    </button>
+    <a class="btn small" href="index.html#updates">Get updates</a>
   </div>
 </header>
 
 <main>
-  <div class="wrap">
-    <span class="eyebrow">Privacy policy</span>
-    <h1>Housewright Calc</h1>
-    <p class="eff-date">Effective date: September 9, 2026</p>
+<section data-sheet="A-1.9 Privacy" style="padding-top:clamp(56px,8vw,110px)">
+  <div class="wrap prose" style="max-width:760px">
+    <div class="sheet-head"><b>A-1.9</b><span>Privacy policy</span></div>
+    <h1 style="font-size:clamp(2.6rem,6vw,4.6rem)">Housewright Calc</h1>
+    <p class="note" style="margin-top:16px">Effective date: September 9, 2026</p>
+    <p class="lede" style="margin-top:26px">Housewright Calc is built to work entirely on your device. Our privacy policy is short because there is almost nothing to tell.</p>
 
-    <div class="legal">
-      <p class="legal-intro">Housewright Calc is built to work entirely on your device. Our privacy policy is
-      short because there is almost nothing to tell.</p>
+    <h2>What we collect</h2>
+    <p><strong>Nothing.</strong> Housewright Calc has no user accounts, no analytics, no advertising, and makes no network connections of its own. Your calculations, saved history, and settings live only on your device (and your own device backups, if you use iCloud or iTunes backup).</p>
 
-      <h2>What we collect</h2>
-      <p><b>Nothing.</b> Housewright Calc has no user accounts, no analytics, no advertising, and makes no network
-      connections of its own. Your calculations, saved history, and settings live only on your device (and your
-      own device backups, if you use iCloud or iTunes backup).</p>
+    <h2>Purchases</h2>
+    <p>The one-time Pro unlock is processed entirely by Apple through the App Store. We never see your payment details. Apple provides us aggregate sales numbers only — never your identity. Your purchase is tied to your Apple ID by Apple, which is what lets you restore it on any of your devices.</p>
 
-      <h2>Purchases</h2>
-      <p>The one-time Pro unlock is processed entirely by Apple through the App Store. We never see your payment
-      details. Apple provides us aggregate sales numbers only — never your identity. Your purchase is tied to your
-      Apple ID by Apple, which is what lets you restore it on any of your devices.</p>
+    <h2>Cut sheets and sharing</h2>
+    <p>When you export a cut-sheet PDF or share a calculation, the file goes only where you send it, using the standard iOS share sheet. We never receive a copy.</p>
 
-      <h2>Cut sheets and sharing</h2>
-      <p>When you export a cut-sheet PDF or share a calculation, the file goes only where you send it, using the
-      standard iOS share sheet. We never receive a copy.</p>
+    <h2>Data we hold about you</h2>
+    <p>None. There is no server. If you delete the app, everything it stored is gone (except your own backups).</p>
 
-      <h2>Data we hold about you</h2>
-      <p>None. There is no server. If you delete the app, everything it stored is gone (except your own backups).</p>
+    <h2>Children</h2>
+    <p>Housewright Calc does not collect data from anyone, including children.</p>
 
-      <h2>Children</h2>
-      <p>Housewright Calc does not collect data from anyone, including children.</p>
+    <h2>Changes</h2>
+    <p>If a future version ever collects anything (for example, optional crash reporting), we will update this policy first and the app will ask you before enabling it.</p>
 
-      <h2>Changes</h2>
-      <p>If a future version ever collects anything (for example, optional crash reporting), we will update this
-      policy first and the app will ask you before enabling it.</p>
-
-      <h2>Contact</h2>
-      <p><a href="mailto:housewrightapp@gmail.com">housewrightapp@gmail.com</a></p>
-    </div>
+    <h2>Contact</h2>
+    <p><a href="mailto:housewrightapp@gmail.com">housewrightapp@gmail.com</a></p>
+    <p style="margin-top:48px"><a class="btn ghost" href="index.html">Back to Housewright Calc</a></p>
   </div>
+</section>
+
 </main>
 
 <footer>
-  <div class="foot">
-    <a class="brand" href="./index.html" aria-label="Housewright Calc home">
-      <span class="hw-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="30" height="30"><path d="M 15 29 L 32 16 L 49 29" fill="none" stroke="#d9a441" stroke-width="4.5" stroke-linecap="round"/><text x="32" y="49" text-anchor="middle" font-family="Georgia,serif" font-weight="bold" font-size="30" fill="#f2ecdd">H</text><rect x="19" y="53" width="26" height="3" rx="1" fill="#d9a441"/></svg></span>
-      <span class="wordmark" style="font-size:14px">HOUSE<b>WRIGHT</b><span class="calc-tag">Calc</span></span>
-    </a>
-    <a href="./index.html">Housewright Calc</a>
-    <a href="/">Housewright ↗</a>
-    <span>© 2026 Housewright</span>
+  <div class="wrap cols">
+    <div style="grid-column:span 5"><a class="brand" href="../index.html"><span>HOUSE<b>WRIGHT</b></span></a><p style="margin-top:14px;max-width:30em">Software for residential builders, built by a builder. No cookies and no trackers: this page is a static file and asks your browser for nothing else.</p><p style="margin-top:12px;max-width:30em">Housewright Calc supports a professional's judgment and doesn't replace it. Confirm quantities and your local code before you build. <a href="../calc/index.html#measure-twice">Measure twice</a>.</p></div>
+    <div style="grid-column:span 3"><h4>The set</h4><ul><li><a href="../calc/index.html" aria-current="page">Housewright Calc</a></li><li><a href="../desktop/index.html">Housewright Desktop</a></li><li><a href="../companion/index.html">Housewright Companion</a></li></ul></div>
+    <div style="grid-column:span 4"><h4>Reach us</h4><ul><li><a href="mailto:housewrightapp@gmail.com">housewrightapp@gmail.com</a></li><li><a href="../calc/privacy.html">Calc privacy policy</a></li><li>© 2026 Housewright</li></ul></div>
   </div>
-  <p class="foot-note">No cookies · no trackers · no account · this page is a static file.</p>
 </footer>
-
+<script src="../assets/site.js"></script>
 </body>
 </html>

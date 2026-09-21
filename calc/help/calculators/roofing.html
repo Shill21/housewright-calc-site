@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Roofing — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Roofing</h1>
+<h2 id="what">What it's for</h2>
+<p>Takes off a shingle roof. From the roof area and pitch you get bundles, squares, underlayment rolls and
+nails. Enter the eave, rake, ridge, hip and valley lengths and it adds starter, drip edge, cap, valley
+flashing and ice and water shield. You also get a roof plan drawing and a material list. It is an order
+takeoff. It makes no code check.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: a 1000 sq ft footprint, gable roof, 6/12 pitch, architectural
+shingles, no edge lengths entered, 10% waste.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/roofing--inputs.webp" alt="Roofing inputs at their defaults: AREA ENTRY Footprint × pitch, FOOTPRINT AREA 1000 sq ft with the note measure to the ROOF EDGES (incl. overhangs), not the wall line, ROOF TYPE Gable, PITCH 6/12, SHINGLE TYPE Architectural, EAVE, RAKE, RIDGE, HIP and VALLEY LENGTH all 0&quot;, ICE &amp; WATER SHIELD on. A strip at the top reads 37 bundles." width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:26.5%">1</span>
+  <span class="pin" style="--x:55%;--y:33%">2</span>
+  <span class="pin" style="--x:42%;--y:46%">3</span>
+  <span class="pin" style="--x:70%;--y:57.9%">4</span>
+  <span class="pin" style="--x:50%;--y:67.2%">5</span>
+</div><figcaption>Steps 1 to 5. The strip at the top keeps the bundle count in view while the results are off
+screen.</figcaption></figure>
+<ol class="steps">
+  <li>Pick <span class="label">AREA ENTRY</span>. <strong>Footprint × pitch</strong> works the roof surface
+      out from the plan area and one pitch. <strong>Measured area</strong> takes the true surface you taped
+      plane by plane. Use Measured area for a roof with more than one pitch.</li>
+  <li>In Footprint mode, enter <span class="label">FOOTPRINT AREA</span> in square feet. Measure to the roof
+      edges, overhangs included, not to the wall line. The screen says so under the row. Tap the number to
+      type it, or nudge it 50 sq ft at a time with − and +. In Measured mode this row is replaced by
+      <span class="label">MEASURED ROOF AREA</span>.</li>
+  <li>Pick <span class="label">ROOF TYPE</span>: Gable, Hip, Shed, Mansard or Gambrel. Then
+      <span class="label">PITCH</span>, from 0/12 to 24/12. In Measured mode the pitch row stays on screen
+      with the note <strong>pitch is NOT applied in measured mode</strong>.</li>
+  <li>Pick <span class="label">SHINGLE TYPE</span>: Architectural, 3-Tab or Premium. It sets the bundles
+      per square.</li>
+  <li>Enter the edge lengths. Each one is the total for the whole roof, and each buys its own materials:
+      <span class="label">EAVE LENGTH</span> and <span class="label">RAKE LENGTH</span> buy starter strip and
+      drip edge; <span class="label">RIDGE LENGTH</span> and <span class="label">HIP LENGTH</span> buy cap;
+      <span class="label">VALLEY LENGTH</span> buys valley flashing. On a gable, the eave length is both
+      eaves added together, and the rake length is all four rakes measured up the slope. Leave a length at
+      0" and that material is left off the list.</li>
+  <li>Leave <span class="label">ICE &amp; WATER SHIELD</span> on to buy it along the eaves.
+      <span class="label">SHIELD WIDTH</span> shows while it is on: how far up the roof from the eave edge
+      the membrane runs. The rolls are figured from the eave length, so with no eave length there is no
+      shield on the list.</li>
+  <li>Set <span class="label">WASTE FACTOR</span>. It is added to the order quantities only. The surface
+      area and squares in the results stay true to the tape.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/roofing--results.webp" alt="Roofing scrolled to the results: ICE &amp; WATER SHIELD on, SHIELD WIDTH 6' 0&quot;, WASTE FACTOR 10%. Results read 37 bundles, 11.18 squares, 1118 sq ft surface, order 1230, Pitch factor 1.118. The top of the roof plan drawing shows below." width="660" height="1435">
+  <span class="pin" style="--x:94.5%;--y:37.7%">6</span>
+  <span class="pin" style="--x:22.8%;--y:50.1%">7</span>
+  <span class="pin" style="--x:40%;--y:61.3%">8</span>
+</div><figcaption>Steps 6 and 7, then the answer.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 7">
+  <li><strong>The headline</strong> is shingle bundles to order. On the defaults it reads
+      <strong>37 bundles</strong>. It is figured from the order area, and Hip, Gambrel and Mansard roofs add
+      a cut-waste allowance on top. The shingle row in the material list names the allowance when there is
+      one.</li>
+  <li><strong>Squares, surface, order.</strong> On the defaults: <strong>11.18 squares · 1118 sq ft surface
+      · order 1230</strong>. Surface is the real roof area with no waste. Order is the surface plus your
+      waste factor. Squares are figured from the surface, not the order.</li>
+  <li><strong>Pitch factor</strong> is what the footprint was multiplied by to get the surface, here
+      <strong>1.118</strong> for 6/12. In Measured mode this line reads <strong>Measured area — pitch factor
+      not applied</strong>.</li>
+  <li><strong>The drawing</strong> is a roof plan with an eave detail in the corner. Pinch to zoom, drag to
+      pan, double-tap to reset, and use the expand button for full screen. See
+      <a href="../tools/drawings.html">Drawings</a>.</li>
+  <li><strong>The notes under the drawing are where you check what was assumed.</strong>
+      <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the yields behind them: bundles per square,
+      the extra cut waste for hips, gambrels and mansards, and the roll and bundle coverages for underlayment,
+      ice shield, cap, starter and flashing. The notes show the area sum, here
+      <strong>1000 SF ×1.118 = 1118 SF · 11.18 SQ</strong>, and the order line,
+      <strong>ORDER 1230 SF · BUYS +10% WASTE</strong>. They also tell you what is missing:
+      <strong>NO RIDGE/HIP ENTERED — NO CAP IN TAKEOFF</strong> and <strong>NO EAVE/RAKE ENTERED — NO EDGE
+      MATERIALS</strong>. Enter those lengths in step 5 and the notes clear.</li>
+  <li><em>SCHEMATIC — NOT TO SHAPE</em> means the outline on the plan is a stand-in. A
+      footprint is an area, not a length and a width, so the drawing cannot know the roof's shape. Every
+      number is still right. On a gable or shed roof, enter eave and rake lengths that agree with the
+      footprint and the plan is drawn to shape and dimensioned. On a Mansard or Gambrel it reads
+      <strong>2 PITCHES: USE MEASURED AREA</strong>: switch <span class="label">AREA ENTRY</span> to Measured
+      area.</li>
+  <li><strong>MATERIALS.</strong> On the defaults: shingles, underlayment in rolls, and nails in pounds. The
+      shingle and underlayment rows carry their basis after the dash, such as <strong>10-sq synthetic</strong>
+      on the underlayment. The nails row is a bare weight. With edge lengths entered you
+      also get hip and ridge cap, starter strip, drip edge, valley flashing and ice and water shield, each with the length or coverage it was figured on. The cap
+      row tells you to verify the coverage against your cap product.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/roofing--more.webp" alt="Roofing scrolled to the end: the roof plan drawing with an eave detail, a 6/12 → ×1.118 pitch triangle, the notes NO RIDGE/HIP ENTERED — NO CAP IN TAKEOFF, NO EAVE/RAKE ENTERED — NO EDGE MATERIALS, 6/12 · 26.6° · 1000 SF ×1.118 = 1118 SF · 11.18 SQ, ORDER 1230 SF · BUYS +10% WASTE, and SCHEMATIC — NOT TO SHAPE (FOOTPRINT IS AN AREA). MATERIALS lists Shingles (architectural) — Gable roof 37 bundles, Underlayment — 10-sq synthetic — 12 sq roof 2 rolls, Roofing Nails 31 lbs." width="660" height="1435">
+  <span class="pin" style="--x:91.5%;--y:35.2%">11</span>
+  <span class="pin" style="--x:14%;--y:53.3%">12</span>
+  <span class="pin" style="--x:20%;--y:58.6%">13</span>
+  <span class="pin" style="--x:60%;--y:68.8%">14</span>
+</div><figcaption>The drawing, its notes, the schematic note and the material list.</figcaption></figure>
+<div class="note">Roofing is a Pro calculator. <strong>SHARE PDF</strong> and <strong>SAVE</strong> are Pro as
+well, a one-time purchase. <strong>SHARE PDF</strong> and the list button beside it stay grey until you have entered your own
+measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+and saves nothing.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Measuring the footprint to the wall line. The overhangs are roof too. The screen's own note under
+      <span class="label">FOOTPRINT AREA</span> says to measure to the roof edges.</li>
+  <li>Ordering off the list with the edge lengths still at 0". You get shingles, underlayment and nails
+      and nothing else: no cap, no starter, no drip edge, no ice and water shield. Read the notes under the
+      drawing before you order.</li>
+  <li>Entering one eave or one rake. The lengths are totals for the whole roof.</li>
+  <li>Using Footprint × pitch on a mansard or gambrel. One pitch cannot describe two. Tape the planes and
+      use Measured area.</li>
+  <li>Adding waste twice. The order area and every material row already carry
+      <span class="label">WASTE FACTOR</span>. The surface and squares do not, on purpose.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="roof-rafter.html">Roof Rafter</a> — rafter length and the pitch you are roofing</li>
+  <li><a href="hip-valley.html">Hip &amp; Valley</a> — hip and valley lengths</li>
+  <li><a href="siding.html">Siding</a></li>
+  <li><a href="../tools/drawings.html">Drawings</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a> — what SHARE PDF sends</li>
+  <li><a href="../tools/saving-and-history.html">Saving and history</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

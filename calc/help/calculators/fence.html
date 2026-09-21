@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fence — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Fence</h1>
+<h2 id="what">What it's for</h2>
+<p>Takes off a fence run: privacy, picket, horizontal or split rail. You get posts, boards, rail footage and
+concrete bags to buy, an elevation drawing with a post footing detail, and a running mark-out of the post
+positions to pull off one tape. It is an order takeoff and a layout. It makes no code check.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: a 6 ft privacy fence, 100' 0" long, posts at 8' 0", 4x4 posts,
+5-1/2" boards with a 1/8" gap, no gate, 2.0 bags of concrete per post, 10% waste.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/fence--inputs.webp" alt="Fence inputs at their defaults: STYLE Privacy, HEIGHT 6 ft, TOTAL RUN 100' 0&quot;, POST SPACING 8' 0&quot;, POST SIZE 4x4, BOARD WIDTH 5-1/2&quot;, BOARD GAP 1/8&quot;, INCLUDE GATE off, CONCRETE 2.0 bags/post, WASTE FACTOR 10%. A strip at the top reads 16 posts." width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:26.5%">1</span>
+  <span class="pin" style="--x:45%;--y:44.1%">3</span>
+  <span class="pin" style="--x:45%;--y:64.8%">5</span>
+  <span class="pin" style="--x:62%;--y:77%">6</span>
+  <span class="pin" style="--x:82%;--y:80.8%">7</span>
+</div><figcaption>The strip at the top keeps the post count in view while the results are off screen.</figcaption></figure>
+<ol class="steps">
+  <li>Pick <span class="label">STYLE</span>: Privacy, Picket, Horizontal or Split Rail. Changing the style
+      resets the board width and gap to that style's starting sizes. Split Rail has no boards, so the two
+      board rows are hidden.</li>
+  <li>Pick <span class="label">HEIGHT</span>: 4 ft, 6 ft or 8 ft. It sets the post and picket lengths in the
+      material list and the number of rails.</li>
+  <li>Enter <span class="label">TOTAL RUN</span>, the whole fence line from the center of the first post to
+      the center of the last, gates included. Then <span class="label">POST SPACING</span>, center to
+      center.</li>
+  <li>Pick <span class="label">POST SIZE</span>, 4x4 or 6x6. It names the post row in the material
+      list and sets the post faces in the mark-out and the drawing.</li>
+  <li>Enter <span class="label">BOARD WIDTH</span> as the actual width of the board, not the nominal size, and
+      <span class="label">BOARD GAP</span>, the space between boards.</li>
+  <li>Turn on <span class="label">INCLUDE GATE</span> for a gate. A <span class="label">GATE WIDTH</span> row
+      appears. The gate width comes out of the run before boards and rails are counted, and the gate adds
+      one post.</li>
+  <li>Set <span class="label">CONCRETE</span> in bags per post, in half-bag steps. At 0.0 — posts set dry
+      in gravel, or driven — no concrete is bought and the concrete row leaves the list.</li>
+  <li>Set <span class="label">WASTE FACTOR</span>. It is added to the posts, boards, rails and
+      concrete.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/fence--results.webp" alt="Fence results: 16 posts, 235 boards, 330 lin ft rails, Spacing 8' 0&quot;, Height 6' 0&quot;, 31 bags concrete. The elevation shows a 100' 0&quot; run 6' 0&quot; high with 8' 0&quot; bays, a footing detail marked 2' 0&quot; and VERIFY FROST, and the note 235 BOARDS (SCHEMATIC SPACING). The RUNNING MARK-OUT card starts below." width="660" height="1435">
+  <span class="pin" style="--x:40%;--y:43.3%">9</span>
+  <span class="pin" style="--x:8%;--y:62%">12</span>
+  <span class="pin" style="--x:50%;--y:97%">13</span>
+</div><figcaption>The numbers match the list below.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 8">
+  <li><strong>The headline</strong> is posts to buy, waste included. On the defaults it reads
+      <strong>16 posts</strong>. The count is the run divided by the spacing, rounded up, plus the end post,
+      plus one for a gate, then the waste. It is more than the number you will set. The mark-out below shows
+      the posts you set.</li>
+  <li><strong>Boards and rails.</strong> On the defaults: <strong>235 boards · 330 lin ft rails</strong>.
+      Boards are the run, less the gate, divided by board width plus gap. Rails are lineal feet for the
+      whole run: two rails for a 4 ft fence, three for 6 ft, four for 8 ft, and three for split rail. The
+      next line repeats your spacing and height.</li>
+  <li><strong>Concrete</strong> is bags for every post set, at your bags per post, plus waste, rounded up
+      to whole bags — half a bag per post on 14 posts is 8 bags, not 14. On the
+      defaults: <strong>31 bags concrete</strong>. At 0.0 bags per post it reads 0 and there is no concrete
+      row.</li>
+  <li><strong>The drawing</strong> is an elevation of the run with the first bay and the full length
+      dimensioned, and a footing detail in the corner. The detail shows the burial the post length is
+      figured on, <strong>2' 0"</strong>, marked <strong>VERIFY FROST</strong>, with a concrete collar
+      only when <span class="label">CONCRETE</span> is above 0.0 — a post set dry is drawn in earth. The board note says
+      <strong>SCHEMATIC SPACING</strong>: the count is real, the boards drawn are not one for one. Pinch to
+      zoom, drag to pan, double-tap to reset, and use the expand button for full screen. See
+      <a href="../tools/drawings.html">Drawings</a>.</li>
+  <li><strong>RUNNING MARK-OUT</strong> lists every post between the two ends as a pair of tape readings,
+      the near face and the far face, pulled from the center of the first post. The faces follow
+      <span class="label">POST SIZE</span>: 3-1/2" apart for a 4x4, 5-1/2" for a 6x6. On the defaults there are
+      12 marks, P1 at <strong>7' 10-1/4" → 8' 1-3/4"</strong>. Tap <strong>✓ MARKED — NEXT</strong> as you go,
+      or the speaker to have them read out. The note under the list says it: hook the first post center,
+      and gates lay out on site. See <a href="../tools/mark-out-and-speak.html">Mark-out and speak</a>.</li>
+  <li><strong>MATERIALS.</strong> Each row carries what it was figured on. On the defaults:
+      <strong>4x4 posts — 8' each (2' burial — verify frost depth)</strong>, <strong>Fence boards — 6'
+      pickets</strong>, <strong>Rails — 16' stock typ</strong>, <strong>Concrete mix (60-lb)</strong>. An
+      8 ft fence adds a note on the concrete row to deepen the burial. <span class="label">BASIS &amp; WHAT WAS
+      ASSUMED</span> states the post, rail and burial rules; these notes and the footing detail carry the
+      rest.</li>
+  <li><strong>The buttons.</strong> <strong>CUT SHEET</strong> shares a PDF of the drawing, inputs and
+      materials, and the small list button beside it shares the material list alone.
+      <strong>SAVE</strong> keeps the result in History. <strong>CUT LIST</strong> puts the material list
+      on the Lock Screen as a cut list to work through. <strong>SEND LIST</strong> shares the list as a page someone else
+      can open and tick off on their own phone, with no app.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/fence--end.webp" alt="Fence scrolled to the end: mark-out rows P2 to P12, the note Hook the first post CENTER — interior post faces at 8' oc. Gates lay out on site, the MARKED — NEXT and RESET buttons, MATERIALS listing 4x4 posts 16 pcs, Fence boards 235 pcs, Rails 330 lin ft, Concrete mix (60-lb) 31 bags, and the CUT SHEET, SAVE, CUT LIST and SEND LIST buttons." width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:54.6%">13</span>
+  <span class="pin" style="--x:60%;--y:61.9%">14</span>
+  <span class="pin" style="--x:94%;--y:83.2%">15</span>
+</div><figcaption>The mark-out, the material list and the export buttons.</figcaption></figure>
+<p>There are no red flags on this screen. Nothing here is a pass or a fail.</p>
+<div class="note">Fence is a Pro calculator. <strong>CUT SHEET</strong>, <strong>SAVE</strong>,
+<strong>CUT LIST</strong>, <strong>SEND LIST</strong> and the mark-out speaker are Pro as well, a one-time
+purchase. <strong>CUT SHEET</strong>, the list button beside it, <strong>CUT LIST</strong> and <strong>SEND LIST</strong>
+stay grey until you have entered your own measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+and saves nothing.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Digging a hole for every post in the headline. The headline is the order, with waste. Set the posts
+      the mark-out lists, plus the two ends and any gate post.</li>
+  <li>Entering the nominal board size as <span class="label">BOARD WIDTH</span>. The board count divides
+      the run by the width you type plus the gap. A 1x6 is 5-1/2", which is what the row opens at.</li>
+  <li>Setting your board sizes and then changing <span class="label">STYLE</span>. The style change puts
+      the width and gap back to its own starting values. Pick the style first.</li>
+  <li>Trusting the 2' burial in frost country. The post length in the material list is fence height plus
+      that burial. The screen tells you to verify frost depth. Buy longer posts if yours is deeper.</li>
+  <li>Changing <span class="label">POST SIZE</span> after marking. The mark-out faces follow the post picked —
+      3-1/2" apart for a 4x4, 5-1/2" for a 6x6 — so re-read the list if you switch.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="deck.html">Deck</a></li>
+  <li><a href="baluster-spacing.html">Baluster Spacing</a> — even picket or baluster layout in one bay</li>
+  <li><a href="concrete.html">Concrete</a> — post holes by volume, as a column pour</li>
+  <li><a href="../tools/mark-out-and-speak.html">Mark-out and speak</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a></li>
+  <li><a href="../tools/cut-list-lock-screen-and-widgets.html">Cut list, Lock Screen and widgets</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and history</a></li>
+  <li><a href="../tools/drawings.html">Drawings</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

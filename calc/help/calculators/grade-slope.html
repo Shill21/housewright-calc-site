@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grade / Slope — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Grade / Slope</h1>
+<h2 id="what">What it's for</h2>
+<p>Turns a rise and a run into a slope, written every way a drawing or an inspector might ask for it:
+percent, ratio, degrees and inches per foot. It checks the slope against two IRC lines, the maximum for a
+ramp and the minimum for grade falling away from a foundation, and draws the profile. A
+<span class="label">PURPOSE</span> row picks the line that fits the job. There is nothing to buy, so there is
+no material list.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: 6" of rise in 10' 0" of run, PURPOSE Both.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/grade-slope--inputs.webp" alt="Grade / Slope at its defaults: RISE 6&quot;, RUN 10' 0&quot;, PURPOSE Both. Results read 5.0%, Ratio 1:20, 2.9°, 0.60 in/ft, with two green checks: Within 8.3% (1:12) max ramp slope (IRC R311.8) and Meets 5.0% min grade away from foundation (IRC R401.3). The BASIS &amp; WHAT WAS ASSUMED row and the grade profile drawing are below." width="660" height="1435">
+  <span class="pin" style="--x:45%;--y:23.5%">1</span>
+  <span class="pin" style="--x:45%;--y:29.7%">2</span>
+  <span class="pin" style="--x:30%;--y:49.2%">3</span>
+  <span class="pin" style="--x:45%;--y:35%">4</span>
+  <span class="pin" style="--x:92.5%;--y:58.3%">5</span>
+</div><figcaption>Two inputs. Everything else on the screen is the answer.</figcaption></figure>
+<ol class="steps">
+  <li>Enter <span class="label">RISE</span>: the difference in height between the two ends, measured plumb.
+      Take it off a level line, a laser or a transit, not by eye along the ground.</li>
+  <li>Enter <span class="label">RUN</span>: the level distance between the same two points. Measure it
+      horizontally, not along the slope.</li>
+  <li>Read the headline. On the defaults it is <strong>5.0%</strong>, and the line under it gives the same
+      slope as <strong>Ratio 1:20 · 2.9° · 0.60 in/ft</strong>. The next line repeats your rise and run so
+      you can check what you typed.</li>
+  <li>Set <span class="label">PURPOSE</span>: <strong>Ramp</strong>, <strong>Drainage</strong> or
+      <strong>Both</strong>. Ramp keeps only the ramp line. Drainage keeps only the foundation line. Both, the
+      default, shows the two of them, and one of them is red whenever the slope is outside 5.0–8.3%.</li>
+  <li>Read the check. The ramp line is for a ramp. The foundation line is for finished grade falling away
+      from a building.</li>
+  <li>Tap <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> to see which code edition the two checks
+      come from.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/grade-slope--results.webp" alt="Grade / Slope scrolled down: the results card with 5.0% and both green checks, then the GRADE PROFILE drawing with SLOPE 5.0% (1:20), a dashed ADA 1:12 REF line, a 10' 0&quot; run and a 6&quot; rise, and the SHARE PDF and SAVE buttons." width="660" height="1435">
+  <span class="pin" style="--x:89%;--y:35.4%">8</span>
+  <span class="pin" style="--x:45%;--y:41.5%">9</span>
+  <span class="pin" style="--x:75%;--y:45%">10</span>
+  <span class="pin" style="--x:91.5%;--y:62%">11</span>
+</div><figcaption>The numbers match the list below.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 5">
+  <li><strong>The headline</strong> is the slope in percent: rise over run. It is dimmed and tagged
+      <span class="label">defaults</span> until you change an input.</li>
+  <li><strong>Ratio, degrees, in/ft.</strong> The ratio is rounded to a whole number, so 1:20 means one unit
+      of fall in twenty of run. With no rise at all it reads <strong>1:∞ (flat)</strong>. Inches per foot is
+      the form most crews set a level or a string line to.</li>
+  <li><strong>Ramp check.</strong> Green reads <strong>Within 8.3% (1:12) max ramp slope (IRC R311.8)</strong>.
+      <span class="flag">EXCEEDS 8.3% (1:12) MAX RAMP SLOPE (IRC R311.8)</span> means the slope is steeper
+      than that line. For a ramp, make <span class="label">RUN</span> longer or
+      <span class="label">RISE</span> smaller. For a bank or a swale, this line is not about your job: set
+      <span class="label">PURPOSE</span> to Drainage and it goes away.</li>
+  <li><strong>Drainage check.</strong> Green reads <strong>Meets 5.0% min grade away from foundation
+      (IRC R401.3)</strong>. <span class="flag">BELOW 5.0% MIN GRADE AWAY FROM FOUNDATION (IRC R401.3)</span>
+      means the ground is flatter than that line. For grade next to a building, increase
+      <span class="label">RISE</span> over the same run. For a ramp or a patio, this line is not about your
+      job: set <span class="label">PURPOSE</span> to Ramp and it goes away.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> opens to <strong>IRC 2021 — verify local
+      code</strong> and a note that states and towns amend the code. Check the edition your building
+      department has adopted before you rely on either check.</li>
+  <li><strong>The drawing</strong> is the grade in profile with your rise and run on it and a dashed
+      <strong>ADA 1:12 REF</strong> line to compare against. Pinch to zoom and use the expand button for
+      full screen. See <a href="../tools/drawings.html">Drawings</a>.</li>
+</ol>
+<div class="note">Grade / Slope is a Pro calculator. <strong>SHARE PDF</strong> and <strong>SAVE</strong> are
+Pro as well, a one-time purchase. <strong>SHARE PDF</strong> stays grey until you have entered your own measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+and saves nothing.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Reading both checks as if both must be green. They pull opposite ways: one wants the slope under a
+      maximum, the other wants it over a minimum. With <span class="label">PURPOSE</span> on Both, a gentle
+      ramp shows the foundation line in red, and that is expected. Set the purpose that matches the work and
+      only its line stays.</li>
+  <li>Measuring <span class="label">RUN</span> along the ground. On a steep bank the sloped distance is
+      longer than the level run, and the percent comes out low.</li>
+  <li>Mixing the units. <span class="label">RISE</span> opens in inches and <span class="label">RUN</span>
+      in feet and inches. Both take any dimension you type, so a rise of 2' 0" is fine. Just make sure
+      the bottom line of facts repeats what you meant.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="excavation.html">Excavation</a></li>
+  <li><a href="retaining-wall.html">Retaining Wall</a> — when the grade change is too steep to slope</li>
+  <li><a href="stairs.html">Stairs</a> — when a ramp will not fit the run you have</li>
+  <li><a href="../tools/pythagoras.html">Pythagoras</a> — the sloped length from rise and run</li>
+  <li><a href="../tools/drawings.html">Drawings</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and history</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Excavation — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Excavation</h1>
+<h2 id="what">What it's for</h2>
+<p>Figures the dirt coming out of a rectangular dig and the trucks to haul it. You get the volume in the
+ground, the larger volume once it is dug and loose, the number of truck loads, and the gravel for the base in
+yards and tons, with a section drawing of the cut. It is a quantity takeoff. It does not design the slope or
+shoring of the cut.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: a dig 30' 0" by 20' 0" and 4' 0" deep, in loam, with 12 yd³
+trucks and a 6" gravel base.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/excavation--inputs.webp" alt="Excavation inputs at their defaults: LENGTH 30' 0&quot;, WIDTH 20' 0&quot;, DEPTH 4' 0&quot;, SOIL TYPE Loam (25%), TRUCK CAPACITY 12 yd³, GRAVEL BASE DEPTH 6&quot;. Results read 10 truck loads, 88.9 yd³ bank, 111.1 yd³ loose, +25% swell, 12.2 yd³ gravel base, 18.9 tons." width="660" height="1435">
+  <span class="pin" style="--x:45%;--y:23.5%">1</span>
+  <span class="pin" style="--x:45%;--y:35.9%">2</span>
+  <span class="pin" style="--x:70%;--y:41.1%">3</span>
+  <span class="pin" style="--x:29.5%;--y:50.4%">4</span>
+  <span class="pin" style="--x:55%;--y:56.6%">5</span>
+</div><figcaption>Steps 1 to 5 fill the inputs. The results update as you go.</figcaption></figure>
+<ol class="steps">
+  <li>Enter <span class="label">LENGTH</span> and <span class="label">WIDTH</span> of the dig at the bottom
+      of the cut. Include the working room outside the footing if you will dig it. The volume is figured
+      with straight vertical sides.</li>
+  <li>Enter <span class="label">DEPTH</span> from existing grade to the bottom of the dig. The gravel base
+      sits inside this depth, so measure to the underside of the gravel.</li>
+  <li>Pick <span class="label">SOIL TYPE</span>: <strong>Sand (12%)</strong>, <strong>Loam (25%)</strong> or
+      <strong>Clay (40%)</strong>. The percent is the swell: how much the dirt grows once it is dug.</li>
+  <li>Set <span class="label">TRUCK CAPACITY</span> in cubic yards, from 1 to 20, to match the trucks you
+      are hiring.</li>
+  <li>Enter <span class="label">GRAVEL BASE DEPTH</span>, the compacted thickness of stone over the whole
+      footprint. Enter 0" for no gravel and the gravel line and the material list drop away.</li>
+  <li>Read <strong>RESULTS</strong>. On the defaults: <strong>10 truck loads</strong>,
+      <strong>88.9 yd³ bank · 111.1 yd³ loose</strong>, <strong>+25% swell — Loam (25%)</strong>,
+      <strong>12.2 yd³ gravel base · 18.9 tons</strong>.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/excavation--results.webp" alt="Excavation results: 10 truck loads, 88.9 yd³ bank, 111.1 yd³ loose, +25% swell, 12.2 yd³ gravel base, 18.9 tons. The section drawing shows a 4' 0&quot; dig 20' 0&quot; wide, a spoil pile, and notes including BANK 88.9 CY — NEAT LINE, VERTICAL SIDES, 10 LOADS @ 12.0 CY — LAST 3.1 CY, and UNDER 5' — COMPETENT PERSON TO CHECK FOR CAVE-IN. MATERIALS lists Gravel base (compacted), 6&quot; deep incl. ~10% over-dig/edge loss, 18.9 tons." width="660" height="1435">
+  <span class="pin" style="--x:40%;--y:17.3%">7</span>
+  <span class="pin" style="--x:91.5%;--y:44%">10</span>
+  <span class="pin" style="--x:6%;--y:57.7%">11</span>
+  <span class="pin" style="--x:93%;--y:64%">12</span>
+</div><figcaption>The numbers match the list below.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 6">
+  <li><strong>The headline</strong> is truck loads, rounded up to whole trucks. It is figured from the loose
+      volume, not the bank volume.</li>
+  <li><strong>Bank and loose.</strong> Bank is the dirt as it sits in the ground: length by width by depth.
+      Loose is bank plus the swell for your soil. Loose is what you haul and what you stockpile.</li>
+  <li><strong>Gravel base</strong> is in yards and tons. It carries an over-dig and edge-loss allowance. The
+      material list row and the drawing note both say so: <strong>incl. ~10% over-dig/edge loss</strong>.
+      The dirt volumes carry no allowance at all.</li>
+  <li><strong>The drawing</strong> is a section across the width, with the spoil pile beside it. Pinch to
+      zoom and use the expand button for full screen. See <a href="../tools/drawings.html">Drawings</a>.</li>
+  <li><strong>The notes under the drawing are where you check what was assumed.</strong>
+      <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the swell for each soil, the gravel over-dig
+      and the tons per cubic yard. The notes give the footprint area and perimeter, the bank volume with
+      <strong>NEAT LINE, VERTICAL SIDES</strong>, the gravel thickness with the level of its top below grade,
+      and the loads with how full the last truck is, here <strong>LAST 3.1 CY</strong>. The dashed slope on
+      the section is marked <strong>SHOWN, NOT IN VOLUME</strong>: if you lay the sides back, that extra dirt
+      is not counted.</li>
+  <li><span class="flag">SLOPE OR SHORE PER OSHA 1926 SUBPART P</span> appears in red once the dig is 5' or
+      deeper, where OSHA 1926.652 requires a protective system. Shallower digs carry <em>UNDER 5' — COMPETENT
+      PERSON TO CHECK FOR CAVE-IN</em> instead. Neither is a failed check, and the calculator does not classify
+      your soil or size the slope.</li>
+</ol>
+<div class="note">Excavation is a Pro calculator. <strong>SHARE PDF</strong> and <strong>SAVE</strong> are Pro
+as well, a one-time purchase. <strong>SHARE PDF</strong> and the list button beside it stay grey until you have entered your own
+measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+and saves nothing.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Booking trucks off the bank figure. The headline already uses the loose volume. If you work it by
+      hand, use loose.</li>
+  <li>Entering the footing size for a dig with sloped or benched sides. The volume is neat line with
+      vertical sides. Enter the average length and width of the hole you will really dig.</li>
+  <li>Adding the gravel to <span class="label">DEPTH</span> twice, or not at all. Depth is to the bottom of
+      the dig, gravel included. Check the gravel note on the drawing: it gives the level of the top of the
+      stone.</li>
+  <li>Leaving <span class="label">SOIL TYPE</span> on Loam for heavy clay. Clay swells the most of the
+      three, and it changes the truck count.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="concrete.html">Concrete</a> — the footing and slab that go in the hole</li>
+  <li><a href="grade-slope.html">Grade / Slope</a> — fall across the site</li>
+  <li><a href="retaining-wall.html">Retaining Wall</a></li>
+  <li><a href="../tools/drawings.html">Drawings</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a> — what SHARE PDF sends</li>
+  <li><a href="../tools/saving-and-history.html">Saving and history</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Header Sizing — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Header Sizing</h1>
+<h2 id="what">What it's for</h2>
+<p>Sizing the header over a door or window opening. You give it the opening width and, for a bearing wall, the
+building width, the snow load and what the wall carries. It gives you the header size, the jack and king studs
+each side, a drawing of the opening and a material list. For a bearing wall the size is read from the IRC
+header span table the screen names. An opening too wide for the table is flagged for an engineer.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>This example uses the numbers the screen opens with.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/header-sizing--inputs.webp" alt="Header Sizing inputs: OPENING WIDTH 3' 0&quot;, LOAD BEARING on, BUILDING WIDTH 36', GROUND SNOW 30 psf, WALL SUPPORTS Roof + ceiling, WALL HEIGHT 8' 0&quot;, and the result (2) 2x6, 1 jack and 1 king per side, with a green line reading Within IRC 2021 R602.7(1) table — southern pine No.2 basis" width="660" height="1435">
+  <span class="pin" style="--x:50%;--y:23.6%">1</span>
+  <span class="pin" style="--x:56%;--y:29.8%">2</span>
+  <span class="pin" style="--x:60%;--y:35%">3</span>
+  <span class="pin" style="--x:60%;--y:45%">4</span>
+  <span class="pin" style="--x:37.2%;--y:56%">5</span>
+</div><figcaption>The whole form and the answer fit on one screen.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">OPENING WIDTH</span> — the rough opening, framing to framing, not the door or window
+      unit. The example is 3' 0".</li>
+  <li><span class="label">LOAD BEARING</span> — on if the wall carries floor, ceiling or roof. Off for a
+      partition that carries only itself. Turning it off hides the next three rows.</li>
+  <li><span class="label">BUILDING WIDTH</span> — the width of the building. Pick from the three the table lists.</li>
+  <li><span class="label">GROUND SNOW</span> — the ground snow load for your area, in pounds per square foot,
+      from your county's snow load map.</li>
+  <li><span class="label">WALL SUPPORTS</span> — what sits on this wall. Tap and pick: roof and ceiling only, or
+      one or two floors as well. For a floor, choose center-bearing if the floor joists also rest on a wall or
+      beam in the middle of the building, or clear-span if they cross it in one piece.</li>
+  <li><span class="label">WALL HEIGHT</span> — sets the length of the jack and king stud stock on the cut list.
+      It does not change the header size.</li>
+  <li>Read the answer: <strong>(2) 2x6</strong>, <strong>1 jack · 1 king per side</strong>.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/header-sizing--results.webp" alt="Header Sizing lower screen: the BASIS &amp; WHAT WAS ASSUMED row, the HEADER drawing of a 3' 0&quot; opening with a (2) 2x6 header, king stud and jack stud labelled, then MATERIALS listing Header (2) 2x6 1 ea, Jack studs 2 pcs and King studs 2 pcs, and the greyed export buttons beside a lit SAVE" width="660" height="1435">
+  <span class="pin" style="--x:75%;--y:23.7%">4</span>
+  <span class="pin" style="--x:15%;--y:40%">5</span>
+  <span class="pin" style="--x:35%;--y:68.7%">6</span>
+  <span class="pin" style="--x:12%;--y:83.6%">7</span>
+</div><figcaption>The basis row, the drawing, the material list and the export buttons.</figcaption></figure>
+<ol class="steps">
+  <li><strong>The headline</strong> is the header: the number of plies in brackets, then the lumber size.</li>
+  <li><strong>The line under it</strong> is the jack studs and king studs on each side of the opening.</li>
+  <li><strong>The check.</strong> On a bearing wall a green line names the table the size came from and the
+      species it is based on. On a partition it reads <strong>Non-bearing — sized conservatively in-app</strong>.
+      <span class="flag">ENGINEER REQUIRED — OPENING EXCEEDS TABLE</span> means no lumber header in the table
+      covers that opening under that load. The headline changes to say an engineered header is needed, and
+      there is no material list. Narrow <span class="label">OPENING WIDTH</span>, or have the header
+      engineered.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it. On a bearing wall it states the conditions
+      the size was read under: exterior bearing wall, the building width, snow load and loading you picked, the
+      species the spans are based on, and how the jack studs were counted. It says interior girders use a
+      different table. On a partition it lists the app's own size steps and what the code permits instead.
+      Both end with the code edition and a reminder to check your local amendments.</li>
+  <li><strong>The drawing</strong> shows the opening with its header, jacks and kings. Pinch to zoom, drag to
+      pan, double-tap to reset. The expand button opens it full screen. See
+      <a href="../tools/drawings.html">Reading the drawing</a>.</li>
+  <li><span class="label">MATERIALS</span> — one header, and the jack and king studs for both sides.</li>
+  <li><span class="label">CUT SHEET</span>, the small button beside it, <span class="label">CUT LIST</span> and <span class="label">SEND LIST</span>
+      stay grey until you change at least one input. <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
+      <span class="label">CUT SHEET</span> makes a
+      PDF, the small button beside it shares the material list only, <span class="label">SAVE</span> keeps the
+      result in History, <span class="label">CUT LIST</span> puts the pieces on the Lock Screen with the header
+      length and the stud stock length, and <span class="label">SEND LIST</span> sends a checkable list to
+      another phone.</li>
+</ol>
+<div class="note">Header Sizing, and the cut sheet, cut list, send list and History buttons, are part of Pro, a
+one-time purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li><strong>Entering the unit size.</strong> <span class="label">OPENING WIDTH</span> is the rough opening.</li>
+  <li><strong>Leaving the snow load at the first choice.</strong> The header size depends on it. Get the real
+      figure for your area.</li>
+  <li><strong>Reading it as an interior girder size.</strong> The bearing table is for an exterior bearing wall.
+      The basis row says so, and says interior girders come from a different table.</li>
+  <li><strong>Forgetting the floors above.</strong> <span class="label">WALL SUPPORTS</span> starts at roof and
+      ceiling only. A floor on the wall changes the header.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="rough-opening.html">Rough Opening</a></li>
+  <li><a href="framing.html">Framing</a> — sizes the headers for a whole wall</li>
+  <li><a href="beam-sizing.html">Beam Sizing</a> — for openings and loads past the header table</li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/cut-list-lock-screen-and-widgets.html">Cut list on the Lock Screen</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

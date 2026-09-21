@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Concrete — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Concrete</h1>
+<h2 id="what">What it's for</h2>
+<p>Figures how much concrete a pour takes: a slab, a footing, a wall, round columns or a set of formed
+steps. You get cubic yards, the bag count for a small pour, rebar footage or mesh sheets if you ask for
+them, a section drawing and a material list. It is a quantity takeoff. It does not check anything against
+code.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: a 10' 0" by 10' 0" slab, 4" thick, 10% waste.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/concrete--inputs.webp" alt="Concrete inputs at their defaults: POUR TYPE Slab, LENGTH 10' 0&quot;, WIDTH 10' 0&quot;, DEPTH 4&quot;, REBAR off, WELDED-WIRE MESH off, WASTE FACTOR 10%. Results read 1.36 yd³, 62 bags @ 80lb, 82 bags @ 60lb." width="660" height="1435">
+  <span class="pin" style="--x:45%;--y:23.7%">1</span>
+  <span class="pin" style="--x:45%;--y:36.2%">2</span>
+  <span class="pin" style="--x:62%;--y:48.3%">3</span>
+  <span class="pin" style="--x:23.2%;--y:60.4%">4</span>
+  <span class="pin" style="--x:34%;--y:71.6%">5</span>
+</div><figcaption>Pour type first. It decides which dimensions the screen asks for.</figcaption></figure>
+<ol class="steps">
+  <li>Tap <span class="label">POUR TYPE</span> and pick <strong>Slab</strong>, <strong>Footing</strong>,
+      <strong>Wall</strong>, <strong>Column</strong> or <strong>Steps</strong>. The rows under it change to
+      suit. The list for each type is below.</li>
+  <li>Enter the dimensions. For a slab that is <span class="label">LENGTH</span> and
+      <span class="label">WIDTH</span> measured inside the forms, and <span class="label">DEPTH</span>, the
+      slab thickness. Tap a value and type it in feet and inches.</li>
+  <li>Turn on <span class="label">REBAR</span> if you want bar footage. Two more rows appear:
+      <span class="label">REBAR SIZE</span> (#3 to #6) and <span class="label">REBAR SPACING</span>, the
+      on-center spacing of the grid. On a slab you can turn on <span class="label">WELDED-WIRE MESH</span>
+      instead, or as well. Mesh is offered for slabs only.</li>
+  <li>Set <span class="label">WASTE FACTOR</span> with the − and + buttons. It moves in 5% steps and is added
+      to the concrete volume before the yards and bags are figured.</li>
+  <li>Read the answer in <strong>RESULTS</strong>. On the defaults it reads <strong>1.36 yd³</strong>, then
+      <strong>62 bags @ 80lb · 82 bags @ 60lb</strong>.</li>
+</ol>
+
+<h3>What each pour type asks for</h3>
+<ul>
+  <li><strong>Slab</strong> — <span class="label">LENGTH</span>, <span class="label">WIDTH</span>,
+      <span class="label">DEPTH</span>. Length and width are entered as feet and inches, depth as the slab
+      thickness.</li>
+  <li><strong>Footing</strong> — <span class="label">LENGTH</span> is the run of the footing.
+      <span class="label">WIDTH</span> and <span class="label">DEPTH</span> are the cross-section of the
+      trench or form. If you switch here from Slab, check the width: the same number is now read as inches,
+      so the slab's 10' 0" shows as 10".</li>
+  <li><strong>Wall</strong> — <span class="label">LENGTH</span>, <span class="label">HEIGHT</span> from top
+      of footing to top of wall, and <span class="label">THICKNESS</span>.</li>
+  <li><strong>Column</strong> — <span class="label">DIAMETER</span> of the round form,
+      <span class="label">HEIGHT</span>, and <span class="label">COLUMNS</span>, how many you are pouring
+      (1 to 20).</li>
+  <li><strong>Steps</strong> — <span class="label">STEPS</span> (1 to 20), <span class="label">RISE PER STEP</span>,
+      <span class="label">RUN PER STEP</span> and <span class="label">WIDTH</span> across the stair. The
+      volume is for solid formed steps, where each step stands on concrete all the way down.</li>
+</ul>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/concrete--results.webp" alt="Concrete results: 1.36 yd³, 62 bags @ 80lb, 82 bags @ 60lb, the BASIS &amp; WHAT WAS ASSUMED row, a section drawing of a 10' 0&quot; slab 4&quot; thick, MATERIALS listing Concrete 1.4 yd³ and 80-lb bags (alt) 62 bags, and the SHARE PDF and SAVE buttons." width="660" height="1435">
+  <span class="pin" style="--x:34%;--y:24.5%">6</span>
+  <span class="pin" style="--x:75%;--y:31%">9</span>
+  <span class="pin" style="--x:91.5%;--y:42.2%">10</span>
+  <span class="pin" style="--x:60%;--y:75.9%">11</span>
+</div><figcaption>The numbers match the list below.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 5">
+  <li><strong>The headline</strong> is cubic yards, waste included. While every input is still a default the
+      card is dimmed and tagged <span class="label">defaults</span>. It clears when you change an input.</li>
+  <li><strong>Bags or truck.</strong> Up to 3 yd³ the line under the headline gives bag counts for 80 lb and
+      60 lb bags. Over that it reads <strong>truck territory — order ready-mix</strong> and the bag row
+      drops out of the material list.</li>
+  <li><strong>Rebar.</strong> With <span class="label">REBAR</span> on, a second line gives total feet of
+      bar. It is bar in the pour only. The material list row says to add laps and round to stock lengths
+      when you order. For a wall it is a single curtain of bar. For a column it is a 4-bar cage with ties at
+      your spacing, and the row says to verify per code.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it to open. On this screen it holds the
+      ordering advice: order in 1/4-yd steps, small loads draw short-load fees, and steps poured against
+      fill need less than the solid figure.</li>
+  <li><strong>The drawing</strong> is a section of the pour with your dimensions on it. Pinch to zoom,
+      double-tap to go back, and use the expand button at its top right for full screen. See
+      <a href="../tools/drawings.html">Drawings</a>.</li>
+  <li><strong>MATERIALS</strong> lists concrete to the tenth of a yard, the 80-lb bag count as an
+      alternative, rebar in lineal feet, and mesh sheets when mesh is on.</li>
+</ol>
+<p>There are no red flags on this screen. Nothing here is a pass or a fail.</p>
+<div class="note">The Concrete calculator is free. <strong>SHARE PDF</strong> and <strong>SAVE</strong> are
+part of Pro, a one-time purchase. <strong>SHARE PDF</strong> and the list button beside it stay grey until you have
+entered your own measurements, so a sheet of sample numbers never reaches a job. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+and saves nothing.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Switching pour type and not re-checking the numbers. <span class="label">WIDTH</span> is feet and
+      inches across a slab but the cross-section of a footing. <span class="label">HEIGHT</span> is shared
+      by Wall and Column. Read every row after you change <span class="label">POUR TYPE</span>.</li>
+  <li>Entering a nominal depth. A slab screeded to the top of 2x forms is thinner than the nominal size of
+      the form board. Enter the thickness you will actually pour.</li>
+  <li>Setting waste to 0% on a pour over uneven subgrade. The volume is the exact geometric figure plus the
+      waste you set, nothing more.</li>
+  <li>Using the solid Steps figure for steps cast over compacted fill. Open
+      <span class="label">BASIS &amp; WHAT WAS ASSUMED</span>: the screen tells you that pour needs less.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="excavation.html">Excavation</a> — the dig and the gravel under the slab</li>
+  <li><a href="masonry.html">Masonry</a> — the block wall that sits on the footing</li>
+  <li><a href="deck.html">Deck</a> — footing count for a deck</li>
+  <li><a href="../tools/drawings.html">Drawings</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a> — what SHARE PDF sends</li>
+  <li><a href="../tools/saving-and-history.html">Saving and history</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

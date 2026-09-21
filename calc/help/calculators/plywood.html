@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Plywood — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Plywood</h1>
+<h2 id="what">What it's for</h2>
+<p>Counting sheets of sheathing for walls, a roof deck or a subfloor. You list the areas and walk away with a
+sheet count, a fastener count, ZIP tape and roof clips where they apply, and a layout drawing of the first area
+with the sheets on it. It is an order quantity, not a code check — the drawing tells you to verify nailing
+against APA and your code.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: one 12' by 8' wall in 7/16" OSB, 4x8 sheets.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/plywood--inputs.webp" alt="Plywood inputs at their defaults: APPLICATION Wall, SHEATHING TYPE OSB, SHEET SIZE 4x8, THICKNESS 7/16 inch, AREA 1 with LENGTH 12' 0&quot; and WIDTH 8' 0&quot;, OPENING DEDUCTIONS 0 sq ft, WASTE FACTOR 10%. The strip under the title reads 4 sheets." width="660" height="1435">
+  <span class="pin" style="--x:52%;--y:26.5%">1</span>
+  <span class="pin" style="--x:58%;--y:34.8%">2</span>
+  <span class="pin" style="--x:50%;--y:43.2%">3</span>
+  <span class="pin" style="--x:42%;--y:69.4%">5</span>
+  <span class="pin" style="--x:32.8%;--y:86.4%">7</span>
+</div><figcaption>What you are sheathing, what with, then the areas and the openings.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">APPLICATION</span> — Wall, Roof or Subfloor. Leave it at Wall. Roof adds one more
+      input, <span class="label">ROOF PITCH</span> — see below.</li>
+  <li><span class="label">SHEATHING TYPE</span> — OSB, Plywood or ZIP System. ZIP System adds seam tape to the
+      results and the material list.</li>
+  <li><span class="label">SHEET SIZE</span> — 4x8, 4x10 or 4x12. The count is by the area of one sheet.</li>
+  <li><span class="label">THICKNESS</span> — 7/16", 1/2", 5/8" or 3/4". This names the panel on the material
+      list. It does not change any quantity.</li>
+  <li>Under <span class="label">AREAS</span>, measure each rectangle: <span class="label">LENGTH</span> (12' 0")
+      and <span class="label">WIDTH</span> (8' 0"). For a wall, that is the wall's length and its height, plate
+      to plate. For a subfloor, the floor's length and width.</li>
+  <li>Tap <strong>Add Area</strong> for each further wall, roof plane or floor. The trash can removes one.</li>
+  <li><span class="label">OPENING DEDUCTIONS</span> — the total square feet of openings you want taken out, for
+      all areas together. Tap the number to type it, or use − and + to move it 5 sq ft at a time. It opens at
+      0 sq ft.</li>
+  <li><span class="label">WASTE FACTOR</span> — the extra for offcuts, in steps of 5%. It opens at 10%.</li>
+  <li>Read <span class="label">RESULTS</span>: <strong>4 sheets</strong>, 264 nails, 96 sq ft net area.</li>
+  <li>Check the layout drawing: two full sheets at 4' 0" and a closer at 3' 11-3/4", 12' 0" overall.</li>
+  <li>Read <span class="label">MATERIALS</span> — OSB 7/16, 4 sheets; Fasteners, 264 pcs.
+      <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the yields: the pitch factor on roof decking,
+      fasteners per sheet, ZIP tape per sheet and per roll, and H-clips per sheet.</li>
+  <li>Save or share the job with the buttons at the foot of the screen.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/plywood--more.webp" alt="Plywood results: 4 sheets, 264 nails, 96 sq ft net area. The wall sheathing layout shows an 8' 0&quot; by 12' 0&quot; wall with sheets at 4' 0&quot;, 4' 0&quot; and 3' 11-3/4&quot;, an EDGE NAILING detail, and notes ending 264 NAILS @ 60/SHEET +10% — VERIFY PER APA/CODE. MATERIALS lists OSB 7/16, 4 sheets and Fasteners, 264 pcs, above the SHARE PDF, list and SAVE buttons." width="660" height="1435">
+  <span class="pin" style="--x:92%;--y:17.3%">8</span>
+  <span class="pin" style="--x:50%;--y:22.3%">9</span>
+  <span class="pin" style="--x:80%;--y:56.5%">10</span>
+  <span class="pin" style="--x:35%;--y:75.9%">11</span>
+  <span class="pin" style="--x:93%;--y:89.2%">12</span>
+</div><figcaption>Results, the sheet layout, the order, and the save and share buttons.</figcaption></figure>
+
+<h3>Roof decking</h3>
+<p>With <span class="label">APPLICATION</span> on Roof, <span class="label">ROOF PITCH</span> appears, in inches
+of rise per 12. Enter each roof plane by its plan size — the footprint measured level, not up the slope. The
+calculator uses the pitch to work out the sloped area. The material list adds H-clips for the panel edges
+between rafters.</p>
+
+<h2 id="results">Reading the results</h2>
+<p><strong>The headline</strong> is sheets to buy: net area plus waste, divided by the area of one sheet and
+rounded up. The drawing note shows the sum — <em>JOB NET 96 SF · BUY 4 @ 32 SF +10%</em>. It also shows in a
+strip under the title whenever the results card is scrolled off screen.</p>
+<p><strong>Nails</strong> is a fastener allowance per sheet with your waste factor added. The drawing note reads
+<em>264 NAILS @ 60/SHEET +10% — VERIFY PER APA/CODE</em>. It is a quantity to buy. It is not a nailing
+schedule, so take edge and field spacing from your plans or the code.</p>
+<p><strong>Net area</strong> is your areas added up, sloped for a roof, less
+<span class="label">OPENING DEDUCTIONS</span>, before waste.</p>
+<p><strong>Tape</strong> appears only with ZIP System: rolls of seam tape and the lineal feet behind them.</p>
+<p>There is no pass or fail on this screen and nothing turns red.</p>
+<p><strong>The drawing</strong> is area 1 with the sheets laid on it, the way the notes describe — for the wall,
+<em>SHEETS VERTICAL — 8' 0" EDGE PLATE TO PLATE</em> with a <em>1/8" GAP</em> between panels, which is why the
+last sheet in the example is 3' 11-3/4" and not 4' 0". The shaded sheet is the one you cut. The corner detail
+shows edge nailing where two panels meet on a stud. Pinch to zoom, or tap the expand button at the top right to
+open it full screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</p>
+<p><span class="label">SHARE PDF</span> sends a sheet with the drawing, your inputs and the material list. The
+list button beside it sends the material list alone. <span class="label">SAVE</span> puts the job in History.
+<span class="label">SHARE PDF</span> and the list button stay dim until you change at least one input.
+<span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers
+<strong>Enter your job's numbers first</strong> and saves nothing.</p>
+<div class="note">Plywood is a Pro calculator, and sharing a PDF and saving to History are part of Pro too. This
+help is free. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Entering a roof plane by its sloped length with <span class="label">ROOF PITCH</span> set. The pitch is
+      applied for you, so the slope would be counted twice. Enter the plan size.</li>
+  <li>Entering <span class="label">OPENING DEDUCTIONS</span> as a width or a count. It is square feet, and one
+      figure covers the whole job.</li>
+  <li>Expecting openings to come out on their own. Nothing is deducted until you enter it, and the areas
+      have no door or window inputs.</li>
+  <li>Changing <span class="label">THICKNESS</span> and expecting the count to move. Only the name on the
+      material list changes.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="framing.html">Framing</a> — the wall under the sheathing</li>
+  <li><a href="roofing.html">Roofing</a> and <a href="roof-rafter.html">Roof Rafter</a></li>
+  <li><a href="floor-joist.html">Floor Joist</a> and <a href="flooring.html">Flooring</a></li>
+  <li><a href="siding.html">Siding</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

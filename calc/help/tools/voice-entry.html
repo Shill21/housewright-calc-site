@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Voice entry — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Voice entry</h1>
+<p>The mic key on the Dimensional Calculator lets you say a measurement or a sum instead of typing it.
+You see what the phone heard, you see what it adds up to, and nothing goes into the calculator until you
+tap <span class="label">INSERT</span>. Recognition runs on the phone — audio never leaves it.</p>
+
+<h2>Step by step</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/tool-dimensional.webp" alt="Dimensional Calculator keypad. The bottom row holds diagonal, equal parts, the mic key and the 1/16&quot; fraction menu." width="660" height="1435">
+  <span class="pin" style="--x:80.2%;--y:89.2%">1</span>
+</div><figcaption>The mic key is in the bottom row of the keypad.</figcaption></figure>
+<ol class="steps">
+  <li>On the Dimensional Calculator, tap the mic key. The <span class="label">VOICE ENTRY</span> sheet opens and
+      starts listening straight away. The first time, iOS asks for speech recognition and then for the microphone.</li>
+  <li>Say the measurement or the sum the way you would say it to the crew, then stop talking.</li>
+  <li>Read the transcript. It is exactly what the phone heard.</li>
+  <li>Check <span class="label">EQUALS</span>. It is the value of what you said, at the calculator's current
+      fraction setting.</li>
+  <li>Tap <span class="label">INSERT</span>. The button only appears once you have finished speaking, so a half-heard
+      phrase cannot be inserted.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/tool-voice.webp" alt="Voice entry sheet: transcript “5 foot 3 and 5/16 plus 12 and a half inches”, EQUALS 6' 3-13/16&quot;, INSERT button. The line above reads On-device recognition — audio never leaves your phone." width="660" height="1435">
+  <span class="pin" style="--x:87.1%;--y:61.6%">3</span>
+  <span class="pin" style="--x:52.3%;--y:75.5%">4</span>
+  <span class="pin" style="--x:88.6%;--y:81.5%">5</span>
+</div><figcaption>Transcript, the EQUALS preview, then INSERT.</figcaption></figure>
+
+<h2>What INSERT does</h2>
+<p>Inserting presses the same keys you would have typed. It does not press <span class="label">=</span> for you,
+so after a spoken sum the calculator shows the sum waiting, not the answer — press <span class="label">=</span>,
+or end the phrase with the word "equals".</p>
+<ul>
+  <li>A half-typed number on the display is cleared first, so it cannot run together with the spoken one.</li>
+  <li>A sum in progress is kept. Type <span class="label">5</span> <span class="label">ft</span>
+      <span class="label">+</span>, then speak the second measurement.</li>
+</ul>
+
+<h2>What you can say</h2>
+<p>The vocabulary is small on purpose. English only.</p>
+<ul>
+  <li><strong>Feet and inches</strong> — "five foot three", "twelve feet", "5 foot 3 and 5/16".</li>
+  <li><strong>Fractions</strong> — "three quarters", "an eighth", "five and five sixteenths",
+      "twelve and a half inches", "three quarters of an inch". Halves, thirds, quarters, eighths, sixteenths,
+      thirty-seconds and sixty-fourths are understood.</li>
+  <li><strong>Decimals</strong> — "2.5 feet" or "2 point 5 feet".</li>
+  <li><strong>Larger numbers</strong> — "forty seven", "one hundred twenty".</li>
+  <li><strong>Sums</strong> — "plus", "minus", "times", "multiplied by", "divided by":
+      "3/16 plus 5/8", "8 divided by 2".</li>
+  <li><strong>Equals</strong> — "6 inches plus 6 inches equals".</li>
+</ul>
+<p>Use "and" between a whole number and its fraction — it does the job of the dash key.</p>
+
+<h2>What it will not take</h2>
+<p>The parser never guesses. If any word in the phrase is not one it knows, the whole phrase is refused and you
+are asked to try again.</p>
+<ul>
+  <li>Any other word — "5 foot 3 whatever" is refused.</li>
+  <li>"to", "too" and "for" heard in place of two and four. They are not turned into numbers.</li>
+  <li>Negative numbers.</li>
+  <li>A sum with a piece missing — "5 plus", or "plus 5".</li>
+  <li>A number straight after inches with nothing between — "6 inches 3/4". Say "6 and 3/4 inches".</li>
+  <li>A decimal with a fraction on it — "2.5 and 3/4".</li>
+  <li>"clear". Close the sheet and use <span class="label">AC</span>.</li>
+</ul>
+
+<div class="note">Voice entry is part of the Dimensional Calculator, which is free. It does not need Pro.</div>
+
+<h2>If it doesn't work</h2>
+<ul>
+  <li><strong>"Speech recognition is off for Housewright Calc…"</strong> or <strong>"The microphone is off for
+      Housewright Calc…"</strong> — the sheet names the permission that was refused. Tap
+      <span class="label">Open Settings</span> on the sheet and turn that one on.</li>
+  <li><strong>"The microphone is busy…"</strong> — another app or a call has the microphone. Close it and open
+      the sheet again.</li>
+  <li><strong>"On-device speech recognition isn't available for…"</strong> — the phone has no on-device
+      recogniser for the language it names. The app tries your own English first, then US English. There is no
+      server fallback, because audio never leaves the phone.</li>
+  <li><strong>"Didn't hear anything"</strong> or <strong>"Didn't catch that as a dimension"</strong> — tap
+      <span class="label">TRY AGAIN</span>. If the transcript shows a word from the list above, rephrase it.</li>
+</ul>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="../start/entering-dimensions.html">Entering feet, inches and fractions</a></li>
+  <li><a href="siri.html">Ask Siri</a> — the same phrases, without opening the app</li>
+  <li><a href="laser.html">Bosch laser measure</a></li>
+  <li><a href="../calculators/dimensional.html">The Dimensional Calculator</a></li>
+  <li><a href="../more/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

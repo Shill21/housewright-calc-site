@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Beam Sizing — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Beam Sizing</h1>
+<h2 id="what">What it's for</h2>
+<p>A first size for a beam under a uniform load. You give it the span, the width of floor or roof the beam
+carries, the kind of load and the material, and it gives you a beam size, the load per foot, the jack and king
+studs under each end, a load drawing and a material list. This is preliminary sizing, not a code check. The
+screen says so on every result and on the drawing. Have the size confirmed from span tables or by an engineer
+before you order.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>This example uses the numbers the screen opens with.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/beam-sizing--inputs.webp" alt="Beam Sizing inputs: SPAN 10' 0&quot;, TRIBUTARY WIDTH 8' 0&quot;, WALL HEIGHT 8' 0&quot;, LOAD TYPE Floor, MATERIAL Dimensional, INCLUDE FLITCH PLATE off, and the result (3) 2x10, 400 PLF total load, depth 9-1/4&quot;, 2 jack / 2 king per side, LVL equivalent available" width="660" height="1435">
+  <span class="pin" style="--x:40%;--y:23.6%">1</span>
+  <span class="pin" style="--x:45.5%;--y:29.8%">2</span>
+  <span class="pin" style="--x:48%;--y:35.9%">3</span>
+  <span class="pin" style="--x:50%;--y:41.2%">4</span>
+  <span class="pin" style="--x:50%;--y:49.5%">5</span>
+</div><figcaption>The whole form and the answer fit on one screen.</figcaption></figure>
+<ol class="steps">
+  <li><span class="label">SPAN</span> — the clear distance between the beam's supports. The beam itself is
+      longer, because it bears on the jack studs at each end. The drawing gives both lengths. The example is
+      10' 0".</li>
+  <li><span class="label">TRIBUTARY WIDTH</span> — the width of floor or roof whose load lands on this beam. It is
+      usually half the joist span on each side of the beam. It is not the beam's length. The example is
+      8' 0".</li>
+  <li><span class="label">WALL HEIGHT</span> — sets the length of the jack and king stud stock on the cut list.
+      It does not change the beam size.</li>
+  <li><span class="label">LOAD TYPE</span> — <strong>Floor</strong>, <strong>Roof</strong>,
+      <strong>Deck</strong> or <strong>Exterior Wall</strong>. Each one applies its own load per square foot.
+      The drawing prints the figure that was used.</li>
+  <li><span class="label">MATERIAL</span> — <strong>Dimensional</strong> gives a built-up lumber beam.
+      <strong>LVL</strong> gives an LVL beam. <strong>Glulam</strong> and <strong>Steel</strong> give a rough size
+      only, and are always flagged for an engineer.</li>
+  <li><span class="label">INCLUDE FLITCH PLATE</span> shows with Dimensional only. Turn it on to sandwich steel
+      plates between the plies. Two more rows appear: <span class="label">FLITCH PLATES</span>, the number of
+      plates, and <span class="label">FLITCH PLATE THICKNESS</span>. The results then add the plate and the bolt
+      size and spacing.</li>
+  <li>Read the answer: <strong>(3) 2x10</strong>.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/beam-sizing--results.webp" alt="Beam Sizing lower screen: the BASIS &amp; WHAT WAS ASSUMED row, the beam drawing with a 400 PLF load from 50 PSF × 8' 0&quot;, 10' 0&quot; SPAN and 10' 6&quot; BEAM, reactions of 2000 LB each end on 2 jack + 2 king with 3&quot; bearing, a tributary plan at 8' 0&quot;, a PRELIM line, then MATERIALS listing Beam (3) 2x10 — 11' long 1 ea, Jack studs — 92-5/8&quot; precut stock — cut @ beam underside 4 pcs, King studs — 92-5/8&quot; precut 4 pcs, and the greyed export buttons beside a lit SAVE" width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:31.7%">4</span>
+  <span class="pin" style="--x:50%;--y:40.5%">5</span>
+  <span class="pin" style="--x:35%;--y:77%">6</span>
+  <span class="pin" style="--x:50%;--y:91.3%">7</span>
+</div><figcaption>The basis row, the load drawing, the material list and the export buttons.</figcaption></figure>
+<ol class="steps">
+  <li><strong>The headline</strong> is the beam: the number of plies in brackets, then the size.</li>
+  <li><strong>The lines under it.</strong> <strong>PLF total load</strong> is the load on each foot of beam: the
+      load per square foot times the tributary width. <strong>Depth</strong> is the actual depth of the beam. Then the jack and king studs under each end. A line such as
+      <strong>LVL equivalent available</strong> tells you another material would also work. Two standing notes
+      finish the list. They remind you the load is a common residential figure, and to confirm bearing,
+      fasteners and species.</li>
+  <li><strong>The check.</strong> This screen has no green line. A red line only shows when something is wrong.
+      <span class="flag">NO STOCK SIZE PASSES</span> means nothing in the list carries that span and load, and
+      the beam has to be engineered. Shorten <span class="label">SPAN</span> with a post, reduce
+      <span class="label">TRIBUTARY WIDTH</span>, or change <span class="label">MATERIAL</span>. Glulam and
+      Steel always show a red line saying those sizes are rough and must be engineered.</li>
+  <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it. It gives the species and grade the lumber
+      sizes assume and their design values, notes that another common species is weaker, gives the LVL values,
+      says how the beam's buy length is worked out, and ends with the preliminary sizing statement. Check the
+      species against what your yard stocks.</li>
+  <li><strong>The drawing</strong> shows the load on the beam, the span and the beam length, the reaction at each
+      end with the studs and bearing under it, and the tributary width in plan. The
+      <strong>PRELIM</strong> line is on every drawing. It is a reminder, not a failure. Pinch to zoom, drag to
+      pan, double-tap to reset. The expand button opens it full screen. See
+      <a href="../tools/drawings.html">Reading the drawing</a>.</li>
+  <li><span class="label">MATERIALS</span> — the beam, the jack and king studs for both ends, and the flitch
+      plates if you added them. When the beam has to be engineered there is no list.</li>
+  <li><span class="label">CUT SHEET</span>, the small button beside it, <span class="label">CUT LIST</span> and <span class="label">SEND LIST</span>
+      stay grey until you change at least one input. <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
+      <span class="label">CUT SHEET</span> makes a
+      PDF, the small button beside it shares the material list only, <span class="label">SAVE</span> keeps the
+      result in History, <span class="label">CUT LIST</span> puts the pieces on the Lock Screen with the beam
+      length and the stud stock length, and <span class="label">SEND LIST</span> sends a checkable list to
+      another phone.</li>
+</ol>
+<div class="note">Beam Sizing, and the cut sheet, cut list, send list and History buttons, are part of Pro, a
+one-time purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li><strong>Entering the beam length as the tributary width.</strong> The tributary width runs across the
+      joists, half way to the next support on each side. The plan view on the drawing shows it.</li>
+  <li><strong>Using it for a point load.</strong> The sizing is for a uniform load. A post, a girder truss or
+      another beam landing on this one is outside what the screen works out.</li>
+  <li><strong>Ordering to the span.</strong> The beam is longer than the span by its bearing at each end. Use the
+      beam length on the drawing.</li>
+  <li><strong>Ordering off a preliminary size.</strong> The screen tells you to verify with span tables or an
+      engineer. Do that before the lumber order, not after.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="header-sizing.html">Header Sizing</a> — door and window openings, from the header table</li>
+  <li><a href="floor-joist.html">Floor Joist</a></li>
+  <li><a href="deck.html">Deck</a></li>
+  <li><a href="../tools/drawings.html">Reading the drawing</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and 1:1 templates</a></li>
+  <li><a href="../tools/cut-list-lock-screen-and-widgets.html">Cut list on the Lock Screen</a></li>
+  <li><a href="../tools/saving-and-history.html">Saving and History</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>

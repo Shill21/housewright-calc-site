@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Masonry — Housewright Calc help</title>
+<link rel="stylesheet" href="../help.css">
+</head><body>
+<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<main><h1>Masonry</h1>
+<h2 id="what">What it's for</h2>
+<p>Counts the units for a block, brick or stone wall job: one wall or several, less the doors and windows.
+You get the unit count, mortar bags and sand, grout bags and vertical rebar for block if you ask for them, a
+coursed elevation of the first wall, and a material list. It is a takeoff. It does not check the wall
+against code.</p>
+
+<h2 id="steps">Step by step</h2>
+<p>The example is the screen as it opens: one CMU block wall, 20' 0" long and 8' 0" high, no openings, 10%
+waste.</p>
+<figure class="shot"><div class="frame">
+  <img src="../shots/masonry--inputs.webp" alt="Masonry inputs at their defaults: MASONRY TYPE CMU Block, WALL 1 with LENGTH 20' 0&quot; and HEIGHT 8' 0&quot;, Add Wall, DOORS 0, WINDOWS 0, INCLUDE GROUT off, INCLUDE VERTICAL REBAR off, WASTE FACTOR 10%. Results read 198 CMU Block." width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:22.6%">1</span>
+  <span class="pin" style="--x:45%;--y:40.5%">2</span>
+  <span class="pin" style="--x:38%;--y:52.3%">3</span>
+  <span class="pin" style="--x:33%;--y:57.6%">4</span>
+  <span class="pin" style="--x:64%;--y:69.8%">5</span>
+</div><figcaption>Steps 1 to 5. The grout and rebar rows show for CMU Block only.</figcaption></figure>
+<ol class="steps">
+  <li>Pick <span class="label">MASONRY TYPE</span>: <strong>CMU Block</strong>, <strong>Brick</strong> or
+      <strong>Stone</strong>. It sets how many units go in a square foot and how far a bag of mortar
+      goes.</li>
+  <li>Under <strong>WALLS</strong>, enter <span class="label">LENGTH</span> along the face of Wall 1 and
+      <span class="label">HEIGHT</span> from the top of the footing to the top of the last course.</li>
+  <li>Tap <strong>Add Wall</strong> for each further wall and enter its length and height. The red trash
+      button removes a wall. All the walls are added into one takeoff.</li>
+  <li>Set <span class="label">DOORS</span> and <span class="label">WINDOWS</span> with − and +. Each one
+      takes a fixed allowance off the wall area. The screen does not ask for opening sizes.</li>
+  <li>For block, turn on <span class="label">INCLUDE GROUT</span> to get core-fill bags. A
+      <span class="label">GROUT CORES</span> row appears: the percent of cores you will fill, from 5% to 100%
+      in 5% steps. Turn on <span class="label">INCLUDE VERTICAL REBAR</span> to get bar footage, and pick
+      <span class="label">REBAR SPACING</span> from 8″ OC to 48″ OC. Neither row shows for Brick or
+      Stone.</li>
+  <li>Set <span class="label">WASTE FACTOR</span>. It is applied to the unit count, the grout and the rebar.
+      Mortar and sand are figured from the unit count, so they carry it too.</li>
+  <li>Read <strong>RESULTS</strong>. On the defaults: <strong>198 CMU Block</strong>,
+      <strong>6 mortar bags · 18 cu ft sand</strong>, <strong>160 sq ft net area</strong>.</li>
+</ol>
+
+<h2 id="results">Reading the results</h2>
+<figure class="shot"><div class="frame">
+  <img src="../shots/masonry--results.webp" alt="Masonry results: 198 CMU Block, 6 mortar bags, 18 cu ft sand, 160 sq ft net area. Below, a running-bond elevation 20' 0&quot; by 8' 0&quot; with notes: 160 SF GROSS = 160 SF NET; 198 CMU BLOCK 8x8x16 @ 1.125/SF INCL 10% WASTE; 12 CRS @ 8&quot;, 12 BOND CUTS SHADED; 6 MORTAR ~35/BAG (PREMIX ~12), 18 CF SAND. MATERIALS list and the SHARE PDF and SAVE buttons." width="660" height="1435">
+  <span class="pin" style="--x:52%;--y:32.1%">8</span>
+  <span class="pin" style="--x:8%;--y:51.5%">10</span>
+  <span class="pin" style="--x:8%;--y:71.5%">11</span>
+  <span class="pin" style="--x:35%;--y:86%">13</span>
+</div><figcaption>The numbers match the list below.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 7">
+  <li><strong>The headline</strong> is the number of units to buy, waste included. It is dimmed and tagged
+      <span class="label">defaults</span> until you change an input.</li>
+  <li><strong>Mortar and sand</strong> are on the next line. A grout line and a rebar line, with the spacing,
+      appear only when those options are on. <strong>Net area</strong> is the wall area after the door and
+      window allowances.</li>
+  <li><strong>The drawing</strong> is a coursed elevation of Wall 1 only. With more than one wall it says
+      <strong>WALL 1 OF … SHOWN — TOTALS COVER ALL WALLS</strong>. Pinch to zoom and use the expand button
+      for full screen. See <a href="../tools/drawings.html">Drawings</a>.</li>
+  <li><strong>The notes under the drawing are where you check what was assumed.</strong>
+      <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the yields behind them: the area taken off
+      per door and window, units per square foot by type, mortar and grout per bag, and the rebar rule. The
+      first line is the area sum, and it shows what came off for each door and
+      window. The second gives the unit size and the units per square foot used, here 8x8x16 at 1.125/SF,
+      with the waste. The third is the coursing: the number of courses and how many cut units are shaded on
+      the elevation. The fourth gives the mortar basis. For block it reads <strong>~35/BAG (PREMIX ~12)</strong>:
+      the bag count is for masonry cement mixed with site sand, and premixed mortar lays far fewer block per
+      bag. With grout on, a grout line gives its basis the same way.</li>
+  <li><span class="flag">A red coursing note</span> means the wall height is not a whole number of courses
+      and the top course is a cut. It reads <strong>FULL CRS + TOP CUT</strong> with the size of the cut.
+      Change <span class="label">HEIGHT</span> to a course multiple if you can.</li>
+  <li><strong>MATERIALS</strong> lists the units in pieces, mortar in bags, sand in cubic feet, then grout
+      bags and rebar in lineal feet when they are on.</li>
+</ol>
+<div class="note">Masonry is a Pro calculator. <strong>SHARE PDF</strong> and <strong>SAVE</strong> are Pro
+as well, a one-time purchase. <strong>SHARE PDF</strong> and the list button beside it stay grey until you have entered your own
+measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+and saves nothing.</div>
+
+<h2 id="mistakes">Common mistakes</h2>
+<ul>
+  <li>Buying premixed mortar against the bag count. Read the mortar note on the drawing: the count assumes
+      masonry cement and site sand.</li>
+  <li>Expecting big openings to come off in full. A garage door is one <span class="label">DOORS</span>
+      count, the same allowance as a man door. For an odd opening, leave it out of the count and take the
+      units off by hand.</li>
+  <li>Leaving <span class="label">GROUT CORES</span> at its starting value when you are filling every core,
+      or only the rebar cores. Set the percent to match the job.</li>
+  <li>Reading the elevation as the whole job. It draws Wall 1. The counts cover every wall in the list.</li>
+</ul>
+
+<h2 id="related">Related</h2>
+<ul>
+  <li><a href="concrete.html">Concrete</a> — the footing under the wall</li>
+  <li><a href="retaining-wall.html">Retaining Wall</a> — segmental block walls</li>
+  <li><a href="excavation.html">Excavation</a></li>
+  <li><a href="../tools/drawings.html">Drawings</a></li>
+  <li><a href="../tools/cut-sheets-and-templates.html">Cut sheets and templates</a> — what SHARE PDF sends</li>
+  <li><a href="../tools/saving-and-history.html">Saving and history</a></li>
+</ul>
+
+</main>
+<footer>Housewright Calc · <a href="https://housewright.app/calc">housewright.app/calc</a></footer>
+<script src="../search-index.js"></script><script src="../help.js"></script>
+</body></html>
