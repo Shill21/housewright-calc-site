@@ -15,13 +15,13 @@ positions to pull off one tape. It is an order takeoff and a layout. It makes no
 <p>The example is the screen as it opens: a 6 ft privacy fence, 100' 0" long, posts at 8' 0", 4x4 posts,
 5-1/2" boards with a 1/8" gap, no gate, 2.0 bags of concrete per post, 10% waste.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/fence--inputs.webp" alt="Fence inputs at their defaults: STYLE Privacy, HEIGHT 6 ft, TOTAL RUN 100' 0&quot;, POST SPACING 8' 0&quot;, POST SIZE 4x4, BOARD WIDTH 5-1/2&quot;, BOARD GAP 1/8&quot;, INCLUDE GATE off, CONCRETE 2.0 bags/post, WASTE FACTOR 10%. A strip at the top reads 16 posts." width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:26.5%">1</span>
-  <span class="pin" style="--x:45%;--y:44.1%">3</span>
-  <span class="pin" style="--x:45%;--y:64.8%">5</span>
+  <img src="../shots/fence--inputs.webp" alt="Fence inputs at their defaults: STYLE Privacy, HEIGHT 6 ft, TOTAL RUN 100' 0&quot;, POST SPACING 8' 0&quot;, POST SIZE 4x4, BOARD WIDTH 5-1/2&quot;, BOARD GAP 1/8&quot;, INCLUDE GATE off, CONCRETE 2.0 bags/post, WASTE FACTOR 10%. CONCRETE carries its label on a line of its own above the value and stepper; WASTE FACTOR keeps its label beside them, wrapped to two lines. The strip under the FENCE title reads 16 posts." width="660" height="1435">
+  <span class="pin" style="--x:38%;--y:26.5%">1</span>
+  <span class="pin" style="--x:45%;--y:48%">3</span>
+  <span class="pin" style="--x:45%;--y:68.7%">5</span>
   <span class="pin" style="--x:62%;--y:77%">6</span>
-  <span class="pin" style="--x:82%;--y:80.8%">7</span>
-</div><figcaption>The strip at the top keeps the post count in view while the results are off screen.</figcaption></figure>
+  <span class="pin" style="--x:30%;--y:82%">7</span>
+</div><figcaption>Every input on its default, with the headline showing in the strip under the title.</figcaption></figure>
 <ol class="steps">
   <li>Pick <span class="label">STYLE</span>: Privacy, Picket, Horizontal or Split Rail. Changing the style
       resets the board width and gap to that style's starting sizes. Split Rail has no boards, so the two
@@ -46,10 +46,10 @@ positions to pull off one tape. It is an order takeoff and a layout. It makes no
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/fence--results.webp" alt="Fence results: 16 posts, 235 boards, 330 lin ft rails, Spacing 8' 0&quot;, Height 6' 0&quot;, 31 bags concrete. The elevation shows a 100' 0&quot; run 6' 0&quot; high with 8' 0&quot; bays, a footing detail marked 2' 0&quot; and VERIFY FROST, and the note 235 BOARDS (SCHEMATIC SPACING). The RUNNING MARK-OUT card starts below." width="660" height="1435">
-  <span class="pin" style="--x:40%;--y:43.3%">9</span>
-  <span class="pin" style="--x:8%;--y:62%">12</span>
-  <span class="pin" style="--x:50%;--y:97%">13</span>
+  <img src="../shots/fence--results.webp" alt="Fence scrolled to the results. The last inputs show above — CONCRETE 2.0 bags/post, its label on a line of its own over the value and stepper, then WASTE FACTOR 10% with its label beside them on two lines. RESULTS reads 16 posts, 235 boards · 330 lin ft rails, Spacing 8' 0&quot; · Height 6' 0&quot;, 31 bags concrete, then BASIS &amp; WHAT WAS ASSUMED. The elevation shows a 100' 0&quot; run 6' 0&quot; high with 8' 0&quot; bays, a footing detail marked 2' 0&quot; and VERIFY FROST, the note 235 BOARDS (SCHEMATIC SPACING) and the title strip FENCE ELEVATION — 16 POSTS @ 4x4 — NOT TO SCALE." width="660" height="1435">
+  <span class="pin" style="--x:40%;--y:39.6%">9</span>
+  <span class="pin" style="--x:8%;--y:56.8%">12</span>
+  <span class="pin" style="--x:78%;--y:43.3%">10</span>
 </div><figcaption>The numbers match the list below.</figcaption></figure>
 <ol class="steps" style="counter-reset:s 8">
   <li><strong>The headline</strong> is posts to buy, waste included. On the defaults it reads
@@ -75,7 +75,8 @@ positions to pull off one tape. It is an order takeoff and a layout. It makes no
       the near face and the far face, pulled from the center of the first post. The faces follow
       <span class="label">POST SIZE</span>: 3-1/2" apart for a 4x4, 5-1/2" for a 6x6. On the defaults there are
       12 marks, P1 at <strong>7' 10-1/4" → 8' 1-3/4"</strong>. Tap <strong>✓ MARKED — NEXT</strong> as you go,
-      or the speaker to have them read out. The note under the list says it: hook the first post center,
+      or the speaker to have them read out. <strong>RESET</strong> takes you back to the first mark; it asks
+      before it does, and it stops the speaker. The note under the list says it: hook the first post center,
       and gates lay out on site. See <a href="../tools/mark-out-and-speak.html">Mark-out and speak</a>.</li>
   <li><strong>MATERIALS.</strong> Each row carries what it was figured on. On the defaults:
       <strong>4x4 posts — 8' each (2' burial — verify frost depth)</strong>, <strong>Fence boards — 6'
@@ -84,22 +85,22 @@ positions to pull off one tape. It is an order takeoff and a layout. It makes no
       ASSUMED</span> states the post, rail and burial rules; these notes and the footing detail carry the
       rest.</li>
   <li><strong>The buttons.</strong> <strong>CUT SHEET</strong> shares a PDF of the drawing, inputs and
-      materials, and the small list button beside it shares the material list alone.
+      materials, and the list icon at the right end of the same button shares the material list alone.
       <strong>SAVE</strong> keeps the result in History. <strong>CUT LIST</strong> puts the material list
       on the Lock Screen as a cut list to work through. <strong>SEND LIST</strong> shares the list as a page someone else
       can open and tick off on their own phone, with no app.</li>
 </ol>
 <figure class="shot"><div class="frame">
-  <img src="../shots/fence--end.webp" alt="Fence scrolled to the end: mark-out rows P2 to P12, the note Hook the first post CENTER — interior post faces at 8' oc. Gates lay out on site, the MARKED — NEXT and RESET buttons, MATERIALS listing 4x4 posts 16 pcs, Fence boards 235 pcs, Rails 330 lin ft, Concrete mix (60-lb) 31 bags, and the CUT SHEET, SAVE, CUT LIST and SEND LIST buttons." width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:54.6%">13</span>
-  <span class="pin" style="--x:60%;--y:61.9%">14</span>
-  <span class="pin" style="--x:94%;--y:83.2%">15</span>
+  <img src="../shots/fence--end.webp" alt="Fence scrolled to the end: mark-out rows P3 to P12, the note Hook the first post CENTER — interior post faces at 8' oc. Gates lay out on site, the ✓ MARKED — NEXT and RESET buttons, MATERIALS listing 4x4 posts — 8' each (2' burial — verify frost depth) 16 pcs, Fence boards — 6' pickets 235 pcs, Rails — 16' stock typ 330 lin ft, Concrete mix (60-lb) 31 bags, then CUT SHEET — one pill with a list icon behind a hairline at its right end — beside SAVE, over CUT LIST and SEND LIST and the line Enter your own measurements to export, start a cut list or send one." width="660" height="1435">
+  <span class="pin" style="--x:70%;--y:56%">13</span>
+  <span class="pin" style="--x:30%;--y:63.1%">14</span>
+  <span class="pin" style="--x:89.8%;--y:83.8%">15</span>
 </div><figcaption>The mark-out, the material list and the export buttons.</figcaption></figure>
 <p>There are no red flags on this screen. Nothing here is a pass or a fail.</p>
 <div class="note">Fence is a Pro calculator. <strong>CUT SHEET</strong>, <strong>SAVE</strong>,
 <strong>CUT LIST</strong>, <strong>SEND LIST</strong> and the mark-out speaker are Pro as well, a one-time
-purchase. <strong>CUT SHEET</strong>, the list button beside it, <strong>CUT LIST</strong> and <strong>SEND LIST</strong>
-stay grey until you have entered your own measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
+purchase. <strong>CUT SHEET</strong>, the list icon at its right end, <strong>CUT LIST</strong> and <strong>SEND LIST</strong>
+stay dim until you have entered your own measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>
 and saves nothing.</div>
 
 <h2 id="mistakes">Common mistakes</h2>

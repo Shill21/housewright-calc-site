@@ -45,12 +45,12 @@ the screen names. Your town may have amended it.</p>
   <li>Read <span class="label">MATERIALS</span>, then save or share the job.</li>
 </ol>
 <figure class="shot"><div class="frame">
-  <img src="../shots/insulation--more.webp" alt="Insulation results: 15 bags, R-60 target, R-60 code min (zone 5 attic), Depth about 1' 5-1/8&quot;, 132 sq ft incl. waste, a green line Meets R-60 code min — IRC N1102.1.3, zone 5 attic, and the BASIS &amp; WHAT WAS ASSUMED row. Below is the attic section drawing with about 17-1/8&quot; required depth, then MATERIALS: Blown Cellulose, assumes about 9.2 sq ft/bag at R-60, check the bag chart, 15 bags." width="660" height="1435">
-  <span class="pin" style="--x:60%;--y:22%">9</span>
-  <span class="pin" style="--x:40%;--y:27%">10</span>
-  <span class="pin" style="--x:75%;--y:29.8%">11</span>
-  <span class="pin" style="--x:90%;--y:47%">12</span>
-  <span class="pin" style="--x:40%;--y:74.7%">13</span>
+  <img src="../shots/insulation--more.webp" alt="Insulation scrolled past the headline, which now reads 15 bags in the strip under the title with the code check beside it. The bottom of the results card shows 132 sq ft incl. waste, a green line Meets R-60 code min — IRC N1102.1.3, zone 5 attic, and the BASIS &amp; WHAT WAS ASSUMED row. Below is the attic section drawing with about 17-1/8&quot; required depth, then MATERIALS: Blown Cellulose, assumes about 9.2 sq ft/bag at R-60, check the bag chart, 15 bags, and a dimmed SHARE PDF with a list icon at its right end, beside a lit SAVE." width="660" height="1435">
+  <span class="pin" style="--x:60%;--y:25.6%">9</span>
+  <span class="pin" style="--x:48%;--y:30.2%">10</span>
+  <span class="pin" style="--x:75%;--y:33.4%">11</span>
+  <span class="pin" style="--x:90%;--y:47.8%">12</span>
+  <span class="pin" style="--x:35%;--y:78.3%">13</span>
 </div><figcaption>The answer, the code check, the basis row, the section and the order. The strip under the
 title repeats the headline and the check.</figcaption></figure>
 
@@ -64,7 +64,7 @@ with * spans several. If you are near a zone boundary, check with your building 
 <span class="label">CLIMATE ZONE</span> by hand.</p>
 
 <h3>Walls</h3>
-<p>With <span class="label">AREA TYPE</span> on Wall and any type except spray foam, one more input appears:
+<p>With <span class="label">AREA TYPE</span> on Wall, one more input appears:
 <span class="label">WALL FRAMING</span>, 2x4 (3-1/2") or 2x6 (5-1/2"). Set it to the studs you really have. It
 is the depth of the bay the insulation has to fit in. In a wall, blown insulation is figured as dense-pack, and
 the material line says so.</p>
@@ -74,8 +74,11 @@ the material line says so.</p>
 shows in a strip under the title, with the check beside it, whenever the results card is scrolled off
 screen.</p>
 <p><strong>The facts.</strong> The first line sets your target beside the code minimum for your zone and area
-type. <em>Depth</em> is how deep that insulation type has to be to reach the target — a ≈ in front means the
-figure has been rounded for display. The area line includes your waste factor.</p>
+type. <em>Depth</em> is how deep that insulation type goes in — a ≈ in front means the figure has been rounded
+for display. It is the depth that reaches your target, except where a wall bay caps spray foam: foam is
+trimmed flush, so there the depth is the bay, and the board feet on the MATERIALS row are figured on that
+same depth, not on the deeper one the target would have wanted. The section drawing still shows the deeper
+figure against the bay, which is what the overrun looks like. The area line includes your waste factor.</p>
 <p><strong>The checks.</strong> A pass is green. A fail is red capitals:</p>
 <ul>
   <li><span class="flag">BELOW CODE MIN — R-60 REQUIRED (IRC N1102.1.3, ZONE 5 ATTIC)</span>, with your own
@@ -90,8 +93,17 @@ figure has been rounded for display. The area line includes your waste factor.</
   <li><span class="flag">DENSE-PACK DEPTH FOR R-19 EXCEEDS STUD BAY — DEEPER STUDS, FURRING OR FOAM</span>, with
       your target in it. The same check for blown cellulose or fiberglass in a wall: the bay is not deep
       enough to hold the depth that R-value needs, so the wall cannot reach it. Deeper studs, furring, a
-      foam, or a lower <span class="label">TARGET R-VALUE</span>. Spray foam is not checked here; it is
-      trimmed flush with the studs.</li>
+      foam, or a lower <span class="label">TARGET R-VALUE</span>.</li>
+  <li><span class="flag">BAY CAPS R AT R-12 — R-21 NEEDS DEEPER STUDS OR EXTERIOR FOAM</span>, with the R the
+      bay holds and your target in it. Walls, spray foam only. Foam is trimmed flush with the studs, so it
+      never compresses — it simply stops at the stud face. The most a full bay can hold is the foam's R per
+      inch times the bay depth: open-cell is about R-3.7 an inch, closed-cell about R-6.5, so a 2x4 bay
+      reads <strong>R-12</strong> open-cell and <strong>R-22</strong> closed-cell. The screen rounds that R
+      DOWN — 3.7 × 3-1/2" is 12.95, and a bay that holds 12.95 is not an R-13 bay — so the figure in the
+      line is the one you can count on, never one you cannot. Short of your target, more foam will not get
+      there. Deeper studs, a layer of foam board outside the sheathing, closed-cell instead of open-cell, or
+      a lower <span class="label">TARGET R-VALUE</span>. The <em>Depth</em> fact and the board feet on the
+      MATERIALS row both follow the bay here, not the deeper figure the target asked for.</li>
 </ul>
 <p><strong><span class="label">BASIS &amp; WHAT WAS ASSUMED</span></strong> opens the source: the minimums are
 2021 IRC Table N1102.1.3 by climate zone, zones are assigned by county, and the map picks a state's predominant
@@ -108,8 +120,9 @@ IRC R806.3. Pinch to zoom, or tap the expand button at the top right to open it 
 <em>~9.2 sq ft/bag @ R-60 — check the bag chart</em>. Bag yields differ a lot from product to product. Compare
 that figure with the chart on the bag you are buying before you order.</p>
 <p><span class="label">SHARE PDF</span> sends a sheet with the drawing, your inputs and the material list. The
-list button beside it sends the material list alone. <span class="label">SAVE</span> puts the job in History.
-<span class="label">SHARE PDF</span> and the list button stay dim until you change at least one input.
+list icon at the right end of the same button sends the material list alone. <span class="label">SAVE</span> puts
+the job in History. <span class="label">SHARE PDF</span> and the list icon in it stay dim until you change at
+least one input.
 <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers
 <strong>Enter your job's numbers first</strong> and saves nothing.</p>
 <div class="note">Insulation is a Pro calculator, and sharing a PDF and saving to History are part of Pro too.
@@ -121,7 +134,7 @@ This help is free. See <a href="../more/free-and-pro.html">Free and Pro</a>.</di
   <li>Changing <span class="label">AREA TYPE</span> and keeping the old target. The minimum moves with the area
       type, so read the check again.</li>
   <li>Leaving <span class="label">WALL FRAMING</span> on the wrong stud. The bay depth decides whether the
-      stud-bay check fires, and for blown walls it changes the bag count.</li>
+      stud-bay and bay-caps-R checks fire, and for blown walls it changes the bag count.</li>
   <li>Ordering off the bag count without reading the coverage it assumed. The material line tells you the
       sq ft per bag it used. Check it against the bag.</li>
 </ul>

@@ -43,11 +43,11 @@ red.</p>
       assembly. The opening the stair needs is worked out from it.</li>
 </ol>
 <figure class="shot"><div class="frame">
-  <img src="../shots/stairs--results.webp" alt="The lower Stairs inputs: STAIRWELL OPENING and MEASURED HEADROOM switches off, RISER TYPE Open, STRINGERS 3, TREAD STOCK 5/4x12, RISER STOCK 1x8, WASTE FACTOR 10%, and the start of the results reading 16 risers @ 6-3/4&quot;" width="660" height="1435">
-  <span class="pin" style="--x:61%;--y:29.8%">7</span>
-  <span class="pin" style="--x:50%;--y:43.2%">8</span>
-  <span class="pin" style="--x:36%;--y:53.6%">9</span>
-  <span class="pin" style="--x:23%;--y:82.9%">10</span>
+  <img src="../shots/stairs--results.webp" alt="The lower Stairs inputs: STAIRWELL OPENING and MEASURED HEADROOM switches off, RISER TYPE Closed, STRINGERS 3, TREAD STOCK 5/4x12, RISER STOCK 1x8, WASTE FACTOR 10%, and the start of the results reading 16 risers @ 6-3/4&quot;. A strip under the STAIRS title repeats 16 risers @ 6-3/4&quot; and Meets code — IRC R311.7." width="660" height="1435">
+  <span class="pin" style="--x:61%;--y:33.7%">7</span>
+  <span class="pin" style="--x:50%;--y:47.0%">8</span>
+  <span class="pin" style="--x:36%;--y:57.5%">9</span>
+  <span class="pin" style="--x:23.5%;--y:86.3%">10</span>
 </div><figcaption>Steps 7 to 10, further down the inputs.</figcaption></figure>
 <ol class="steps" start="7" style="counter-reset:s 6">
   <li>If the hole in the floor is already framed, turn on <span class="label">STAIRWELL OPENING</span> and enter
@@ -55,14 +55,16 @@ red.</p>
       headroom is then worked out from it. If you have taped the real clearance on site, turn on
       <span class="label">MEASURED HEADROOM</span> and enter it. A measured figure is used for the code check
       ahead of a worked-out one. The example leaves both off.</li>
-  <li><span class="label">RISER TYPE</span> — <strong>Open</strong> leaves the gap between treads open.
-      <strong>Closed</strong> takes riser boards, and the material list buys them.</li>
+  <li><span class="label">RISER TYPE</span> — <strong>Closed</strong>, the example's setting, takes riser
+      boards, and the material list buys them. <strong>Open</strong> leaves the gap between treads open, and
+      the code check then measures that gap.</li>
   <li><span class="label">STRINGERS</span> is how many you are cutting. <span class="label">TREAD STOCK</span>
       sets the tread thickness, which is what the bottom riser is dropped by.
       <span class="label">RISER STOCK</span> is the thickness of the riser boards.</li>
   <li><span class="label">WASTE FACTOR</span> — the extra you buy over the measured quantity.</li>
-  <li>Read the answer: <strong>16 risers @ 6-3/4"</strong>. With open risers the example also shows a red flag.
-      Switch <span class="label">RISER TYPE</span> to <strong>Closed</strong> and the flag clears.</li>
+  <li>Read the answer: <strong>16 risers @ 6-3/4"</strong>. The example passes every check. Switch
+      <span class="label">RISER TYPE</span> to <strong>Open</strong> and a red flag appears: 6-3/4" less the
+      1" tread leaves a 5-3/4" gap, and a 4" sphere goes through it.</li>
 </ol>
 <h3>The other input modes</h3>
 <ul>
@@ -79,12 +81,12 @@ red.</p>
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/stairs--more.webp" alt="Stairs results: 16 risers @ 6-3/4&quot;, three riser-count chips, tread 10-1/2&quot;, rise 9' 0&quot;, run 13' 1-1/2&quot;, 32.74°, stringer layout and order lengths, opening required 11' 8-3/4&quot; for 6' 8&quot; headroom, a red open riser flag, the BASIS &amp; WHAT WAS ASSUMED row, and the stair section drawing" width="660" height="1435">
-  <span class="pin" style="--x:60.6%;--y:35%">1</span>
-  <span class="pin" style="--x:92%;--y:39.2%">2</span>
-  <span class="pin" style="--x:93%;--y:64.3%">4</span>
-  <span class="pin" style="--x:70%;--y:69.5%">5</span>
-  <span class="pin" style="--x:57.5%;--y:78%">6</span>
+  <img src="../shots/stairs--more.webp" alt="Stairs results: 16 risers @ 6-3/4&quot;, three riser-count chips, tread 10-1/2&quot;, rise 9' 0&quot;, run 13' 1-1/2&quot;, 32.74°, stringer layout and order lengths, opening required 11' 8-3/4&quot; for 6' 8&quot; headroom, the BASIS &amp; WHAT WAS ASSUMED row, and the stair section drawing" width="660" height="1435">
+  <span class="pin" style="--x:60.6%;--y:37.4%">1</span>
+  <span class="pin" style="--x:92%;--y:41.6%">2</span>
+  <span class="pin" style="--x:66%;--y:64.9%">4</span>
+  <span class="pin" style="--x:60%;--y:68.4%">5</span>
+  <span class="pin" style="--x:30%;--y:73.5%">6</span>
 </div><figcaption>The results card, then the section drawing.</figcaption></figure>
 <ol class="steps">
   <li><strong>The headline</strong> is the riser count and the riser height you cut to, rounded to 1/16". The
@@ -107,7 +109,9 @@ red.</p>
       throat, the code edition the checks use and a reminder to check your local code. If you have not given an
       opening or a measured headroom, the headroom note tells you to check it on site.</li>
   <li><strong>The drawing</strong> is the stair in section with the same numbers on it, and one step enlarged in
-      the corner. Pinch to zoom, drag to pan, double-tap to reset. The expand button opens it full screen. See
+      the corner. Pinch to zoom, drag to pan, double-tap to reset. The expand button opens it full screen. A
+      stair that fails a check carries the failure on the drawing as well, named in red — two of them, and then
+      a line saying how many more there are and to read the checks list. See
       <a href="../tools/drawings.html">Reading the drawing</a>.</li>
 </ol>
 <p>What clears each flag:</p>
@@ -128,9 +132,9 @@ red.</p>
 </ul>
 <figure class="shot"><div class="frame">
   <img src="../shots/stairs--end.webp" alt="Below the section drawing: the STRINGER BOARD — NOTCH SET-OUT drawing, ≈ 16' 7-3/4&quot; tip to tip with 15 notches on a 2x12, and the RUNNING MARK-OUT card with NOTCHED, HOUSED and STORY POLE tapes" width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:53.1%">7</span>
-  <span class="pin" style="--x:50%;--y:92.5%">8</span>
-  <span class="pin" style="--x:88%;--y:89.3%">9</span>
+  <span class="pin" style="--x:70%;--y:51.3%">7</span>
+  <span class="pin" style="--x:53.8%;--y:90.7%">8</span>
+  <span class="pin" style="--x:88%;--y:88.3%">9</span>
 </div><figcaption>The stringer board and the running mark-out.</figcaption></figure>
 <ol class="steps" start="7" style="counter-reset:s 6">
   <li><span class="label">STRINGER BOARD — NOTCH SET-OUT</span> is the same stringer lying flat on the horses.
@@ -144,10 +148,11 @@ red.</p>
 <p>Below the mark-out is the <strong>notching template</strong> card. It prints one notch at true size, across
 more than one sheet if the tread is wider than the page. If the riser is taller than the page it prints the
 set-out numbers instead, and the card says so before you print. Print at 100% scale. Do not fit to page. Then
-comes <span class="label">MATERIALS</span>: stringers, treads, and risers if they are closed, with the waste
-factor in the quantities.</p>
-<p>At the bottom, <span class="label">CUT SHEET</span>, the small list button beside it, <span class="label">CUT LIST</span>, <span class="label">SEND LIST</span> and <span class="label">OPTIMIZE</span>
-stay grey until you change at least one input, so a sheet made from the sample numbers never reaches a job.
+comes <span class="label">MATERIALS</span>: stringers, treads and riser boards, with the waste factor in the
+quantities. The riser row is there because the screen opens on <strong>Closed</strong>; on <strong>Open</strong>
+there are no riser boards to buy and the row goes.</p>
+<p>At the bottom, <span class="label">CUT SHEET</span>, the list icon at its right end, <span class="label">CUT LIST</span>, <span class="label">SEND LIST</span> and <span class="label">OPTIMIZE</span>
+stay dim until you change at least one input, so a sheet made from the sample numbers never reaches a job.
 <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
 <span class="label">CUT SHEET</span> makes a PDF with both drawings,
 <span class="label">SAVE</span> keeps the result in History, <span class="label">CUT LIST</span> puts the list on

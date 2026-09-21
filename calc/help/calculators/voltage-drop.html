@@ -9,8 +9,8 @@
 <h2 id="what">What it's for</h2>
 <p>A long run loses voltage in the wire. Enter the run, the load and the wire you plan to pull, and Voltage
 Drop tells you the drop in volts and percent, whether that is inside the limit you set, and the smallest
-listed size from yours upward that is. The limit is yours to set. It is a check on one run, with no material
-list.</p>
+listed size from yours upward that clears the limit and carries the amps. The limit is yours to set. It is a
+check on one run, with no material list.</p>
 
 <h2 id="steps">Step by step</h2>
 <p>The example is the screen as it opens: a 75' 0" run, 20 A at 120 V, on 12 AWG copper, held to 3.0%.</p>
@@ -43,7 +43,7 @@ list.</p>
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/voltage-drop--results.webp" alt="Voltage Drop results and drawing: headline 8 AWG, the struck-through 12 AWG line, the green check, the BASIS &amp; WHAT WAS ASSUMED row, then a one-line drawing from PANEL 20 A to LOAD showing 120 V and 114.1 V over 75' 0&quot;, a ladder of sizes 12, 10, 8, 6, 4 with 4.9%, 3.1%, 2.0%, 1.2%, 0.8%, an inset comparing #12 at 6530 and #8 at 16510 circular mils, and notes including DROP 5.93 V = 4.94% · OVER LIMIT 3.0% (STRUCK) in red. SHARE PDF and SAVE at the bottom." width="660" height="1435">
+  <img src="../shots/voltage-drop--results.webp" alt="Voltage Drop results and drawing: headline 8 AWG, the struck-through 12 AWG line, the green check, the BASIS &amp; WHAT WAS ASSUMED row, then a one-line drawing from PANEL 20 A to LOAD showing 120 V and 114.1 V over 75' 0&quot;, a ladder of sizes 12, 10, 8, 6, 4 with 4.9%, 3.1%, 2.0%, 1.2%, 0.8%, the limit line struck across 12 and 10 and 8 filled in, an inset comparing #12 at 6530 and #8 at 16510 circular mils, and notes including DROP 5.93 V = 4.94% · OVER LIMIT 3.0% (STRUCK) in red. SHARE PDF and SAVE at the bottom." width="660" height="1435">
   <span class="pin" style="--x:35%;--y:30%">7</span>
   <span class="pin" style="--x:75%;--y:45%">8</span>
   <span class="pin" style="--x:64%;--y:65%">9</span>
@@ -55,7 +55,8 @@ list.</p>
       it. Your size has met both tests: the drop, and carrying the <span class="label">AMPS</span>.</li>
   <li><strong>Your size passes the drop but cannot carry the amps.</strong> A 12 AWG copper on a 30 A load
       over 10' 0" drops under 1%, but the table rates it at 20 A. The headline is the size that carries the
-      load, your size is struck through with its rating beside it, and the red line reads
+      load, your size is struck through and reads <strong>rated 20 A @ 60 °C, under the 30 A load</strong>,
+      and the red line reads
       <span class="flag">12 AWG CANNOT CARRY 30 A — NEC 310.16</span>.</li>
   <li><strong>Your size fails and a larger one passes.</strong> This is the example. The headline is the
       larger size, your size is struck through, and the green line names the size that is within the limit.
@@ -78,9 +79,11 @@ drop limit or had to go bigger to carry the current, and names the table it used
 always has to carry the <span class="label">AMPS</span> as well as meet the drop.</p>
 <p><strong>The drawing</strong> is a one-line schematic, not to scale: panel to load and back, the voltage at
 each end on the wire you entered, and the one-way run. Under it is a ladder of sizes with the percent drop
-for each. Your size is struck through when it fails and the passing size is filled in. The boxed inset draws
+for each. One limit line strikes every size that misses the limit — here 12 and 10 — and stops where the
+answer starts. Your own size is the dashed cell and the passing size is filled in. The boxed inset draws
 the two conductors at their true relative area, in circular mils. The notes repeat the working: the out and
-back length, the wire you entered, the drop — in red when it is over the limit — and the upsize. The last
+back length, the wire you entered, the drop — in red when it is over the limit — the upsize, then the circuit
+type and the ampacity table it read. The last
 note on the drawing reads <strong>3%/5% IS AN NEC INFORMATIONAL NOTE, NOT A VIOLATION</strong>. Pinch to
 zoom, drag to move around, double-tap to reset, or tap the expand button at its top right for the whole
 screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</p>
