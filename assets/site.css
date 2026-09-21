@@ -226,6 +226,7 @@ img[data-sun] { transition: opacity .4s; }
 .roster h4 { margin: 0 0 8px; font: 500 .72rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ochre); }
 .roster ul { list-style: none; margin: 0; padding: 0; color: var(--dim); font-size: .98rem; line-height: 1.75; }
 .roster li.free::after { content: "free"; margin-left: 8px; font: 500 .62rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ok); border: 1px solid var(--ok); border-radius: 999px; padding: 2px 6px; vertical-align: 2px; }
+.roster li.partial::after { content: "results free"; }
 
 /* ── optimizer bars ───────────────────────────────────── */
 .boards { display: grid; gap: 9px; font: 400 .76rem/1.3 var(--mono); color: var(--dim); }
