@@ -9,6 +9,8 @@
   const CALC_STORE_URL = ''
   const WAITLIST = 'https://api.constructpro.app/api/waitlist'
   const MAILBOX = 'housewrightapp@gmail.com'
+  // which page the sign-up came from, so interest can be read per product: home / calc / desktop / companion
+  const SOURCE = (location.pathname.match(/(calc|desktop|companion)\/(?:[^/]*)$/) || [, 'home'])[1]
 
   // ── feet-inch-sixteenths, formatted the way Calc formats them (≈ when it cannot land on the grid)
   const ftin = (inches, den = 16) => {
@@ -175,7 +177,7 @@
       if (!/^\S+@\S+\.\S+$/.test(email)) return say('err', 'That does not look like an email address.')
       btn.disabled = true; const was = btn.textContent; btn.textContent = 'Adding you…'
       try {
-        const res = await fetch(WAITLIST, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) })
+        const res = await fetch(WAITLIST, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, source: SOURCE }) })
         const data = await res.json().catch(() => ({}))
         if (res.status === 201) { say('ok', `You are on the list, number ${Number(data.spot) || 1}. We will write when something ships.`); form.reset() }
         else if (res.status === 409) say('ok', 'That address is already on the list.')
