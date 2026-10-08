@@ -4,7 +4,7 @@
 <title>Rough Opening — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Rough Opening</h1>
 <h2 id="what">What it's for</h2>
 <p>You have the size of a window or door unit and need the framed hole it goes in. Rough Opening gives you
@@ -15,13 +15,14 @@ takeoff, not a structural check. Size a loaded header in <a href="header-sizing.
 <h2 id="steps">Step by step</h2>
 <p>The example is the screen as it opens: a 3' 0" × 4' 0" window in a bearing wall 8' 0" high.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/rough-opening--inputs.webp" alt="Rough Opening inputs: OPENING TYPE Window, UNIT WIDTH 3' 0&quot;, UNIT HEIGHT 4' 0&quot;, LOAD BEARING on, WALL HEIGHT 8' 0&quot;, WASTE FACTOR 10%. Results read 3' 0-1/2&quot; × 4' 0-1/2&quot; R.O., Header (2) 2x6, per side 1 king / 1 jack." width="660" height="1435">
-  <span class="pin" style="--x:52%;--y:22.6%">1</span>
-  <span class="pin" style="--x:40%;--y:31.8%">2</span>
-  <span class="pin" style="--x:56%;--y:44.3%">3</span>
-  <span class="pin" style="--x:40%;--y:50.4%">4</span>
-  <span class="pin" style="--x:23.5%;--y:56.5%">5</span>
-</div><figcaption>Steps 1–5 happen here. The answer is in the RESULTS card underneath.</figcaption></figure>
+  <img src="../shots/rough-opening--inputs.webp" alt="Rough Opening inputs: OPENING TYPE Window, UNIT WIDTH 3' 0&quot;, UNIT HEIGHT 4' 0&quot;, LOAD BEARING on, WIND / FRAMING ANCHOR ≤ 115 mph Exp B, WALL HEIGHT 8' 0&quot;, WASTE FACTOR 10%. Results read 3' 0-1/2&quot; × 4' 0-1/2&quot; R.O., Header (2) 2x6, per side 1 king / 1 jack." width="660" height="1435">
+  <span class="pin" style="--x:47.2%;--y:30.2%">1</span>
+  <span class="pin" style="--x:44.3%;--y:39.4%">2</span>
+  <span class="pin" style="--x:48.1%;--y:51.8%">3</span>
+  <span class="pin" style="--x:66.5%;--y:58.7%">4</span>
+  <span class="pin" style="--x:46.6%;--y:69.4%">5</span>
+  <span class="pin" style="--x:36.1%;--y:74.8%">6</span>
+</div><figcaption>Steps 1–6 happen here. The answer is in the RESULTS card underneath.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">OPENING TYPE</span> — pick <strong>Window</strong>, <strong>Interior Door</strong> or
       <strong>Exterior Door</strong>. The type decides how much is added to the unit size.</li>
@@ -30,6 +31,13 @@ takeoff, not a structural check. Size a loaded header in <a href="header-sizing.
       sheet. The example is 3' 0" wide and 4' 0" high.</li>
   <li><span class="label">LOAD BEARING</span> — on if the wall carries floor, ceiling or roof above it. Off for
       a partition that carries only itself. It opens on.</li>
+  <li><span class="label">WIND / FRAMING ANCHOR</span> — sets the king studs, the full-height studs beside the
+      jacks, from the IRC table that counts them by header span and wind. Leave <strong>≤ 115 mph Exp B</strong>
+      where the design wind speed is 115 mph or less, the site is Exposure B (built-up suburbs, woods) and jack
+      studs carry the header. Pick <strong>Higher / anchored</strong> for more wind, an Exposure C site (open
+      country, scattered trees and buildings), or a header hung on metal framing anchors instead of jacks. From
+      140 mph in Exposure B, 130 mph in Exposure C, or on any Exposure D site (open water, flats) the table gives
+      no count, and the kings have to be designed. Your building department gives the wind speed and exposure.</li>
   <li><span class="label">WALL HEIGHT</span> — the framed wall, underside of the bottom plate to the top of
       the double top plate. It sets the stud length the kings and jacks are bought at. A standard height
       lists a precut stud; any other height lists the exact cut length. The example is 8' 0".</li>
@@ -37,7 +45,7 @@ takeoff, not a structural check. Size a loaded header in <a href="header-sizing.
       is 10%.</li>
   <li>Read the RESULTS card: <strong>3' 0-1/2" × 4' 0-1/2" R.O.</strong>, then
       <strong>Header (2) 2x6 · per side: 1 king / 1 jack</strong>.</li>
-  <li>Scroll down. The R.O. size stays pinned under the title while you scroll.</li>
+  <li>Scroll down. The R.O. size stays in the answer bar under the title while you scroll.</li>
   <li>Check the drawing against the opening you are about to frame.</li>
   <li>Read the MATERIALS list for what to buy.</li>
 </ol>
@@ -46,10 +54,10 @@ takeoff, not a structural check. Size a loaded header in <a href="header-sizing.
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
   <img src="../shots/rough-opening--results.webp" alt="Rough Opening scrolled down: the R.O. size pinned under the title, the framing elevation with HDR (2) 2x6, KING, JACK, CRIPPLE and SILL called out and 36-1/2&quot; by 48-1/2&quot; dimensioned, then MATERIALS: Header (2) 2x6 — 4' long each, 2 ea; King studs — 2 layout · 92-5/8&quot; precut, 3 pcs; Jack studs — 2 layout · 92-5/8&quot; precut stock — cut @ header underside, 3 pcs. CUT SHEET with a list icon at its right end, CUT LIST and SEND LIST are dimmed; SAVE is lit." width="660" height="1435">
-  <span class="pin" style="--x:60%;--y:17.3%">7</span>
-  <span class="pin" style="--x:91.5%;--y:26.7%">8</span>
-  <span class="pin" style="--x:40%;--y:60.4%">9</span>
-</div><figcaption>Steps 7–9: the pinned R.O. size, the drawing with its expand button, and the materials list.</figcaption></figure>
+  <span class="pin" style="--x:30%;--y:20.3%">8</span>
+  <span class="pin" style="--x:79.7%;--y:62%">9</span>
+  <span class="pin" style="--x:28%;--y:81.9%">10</span>
+</div><figcaption>Steps 8–10: the pinned R.O. size, the drawing with its expand button, and the materials list.</figcaption></figure>
 <p><strong>The headline</strong> is the rough opening, width × height. A window gets 1/2" added to the unit
 each way. A door gets 2" on the width and 2-1/2" on the height. The word <strong>defaults</strong> beside
 it means you have not entered anything yet, so the answer is not your job's.</p>
@@ -58,7 +66,8 @@ it means you have not entered anything yet, so the answer is not your job's.</p>
 size is offered; get it sized.</p>
 <p><strong><span class="label">BASIS &amp; WHAT WAS ASSUMED</span></strong> — tap it to open. For a bearing
 wall it states the loading the header and jacks were picked for, and tells you to size the header in the
-Header calculator if there are floors above. For a window it notes the 1/2" allowance and says to verify
+Header calculator if there are floors above. It names the column of IRC Table R602.7.5 the king studs were
+read from, by the R.O. width and your wind choice. For a window it notes the 1/2" allowance and says to verify
 the manufacturer's spec. Read it before you order.</p>
 <p><strong>The drawing</strong> is the opening in elevation with the header, king, jack, cripples and sill
 named and the R.O. dimensioned, plus a boxed section through the header. Pinch to zoom, drag to move around, double-tap to reset, or tap the expand button at its top right for the whole screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</p>

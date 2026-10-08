@@ -4,7 +4,7 @@
 <title>Bosch laser measure — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Bosch laser measure</h1>
 <p>Pair a Bosch Bluetooth laser measure once, and every measurement you take on it lands in the Dimensional
 Calculator as an exact fraction — no reading it off the laser and typing it in.</p>
@@ -17,7 +17,7 @@ fractions."</p>
 <h2>Step by step</h2>
 <figure class="shot"><div class="frame">
   <img src="../shots/tool-settings.webp" alt="Settings screen. Under LASER, the PAIR BOSCH LASER button, and below it the line naming GLM 50 C and PLR C-series." width="660" height="1435">
-  <span class="pin" style="--x:87.9%;--y:55.3%">2</span>
+  <span class="pin" style="--x:88%;--y:55.4%">2</span>
 </div><figcaption>Settings ▸ LASER.</figcaption></figure>
 <ol class="steps">
   <li>Open the drawer and tap <span class="label">Settings</span>.</li>
@@ -57,15 +57,22 @@ Calculator. It does not need Pro.</div>
 <h2>If it doesn't work</h2>
 <ul>
   <li><strong>"Can't search — Bluetooth is off, or this app doesn't have Bluetooth access."</strong> Turn
-      Bluetooth on in Control Centre, then check Settings ▸ Housewright Calc on the phone.</li>
+      Bluetooth on in Control Centre, then check Settings ▸ Housewright Calc on the phone. Once Bluetooth is on,
+      the search starts by itself.</li>
   <li><strong>The search finds nothing.</strong> Press the Bluetooth button on the laser — it has to be switched
-      on at the laser. Lasers that are not Bluetooth Low Energy models will not show up.</li>
+      on at the laser. After about 20 seconds with nothing found the line reads "No laser found yet — only
+      Bluetooth LE (C-series) models can pair." and the search keeps going. Lasers that are not Bluetooth Low
+      Energy models will not show up.</li>
   <li><strong>The status reads <span class="label">BLUETOOTH IS OFF</span>.</strong> Turn Bluetooth on in Control
       Centre.</li>
   <li><strong>The status reads <span class="label">BLUETOOTH ACCESS DENIED</span>.</strong> Tap
       <span class="label">Open Settings</span> under it and turn Bluetooth on for the app.</li>
   <li><strong>The status stays on <span class="label">RECONNECTING…</span></strong> The laser is off, asleep or
       out of range. Wake it; the app keeps trying.</li>
+  <li><strong>"Can't find this laser — forget it and pair again."</strong> The phone failed to reach the paired
+      laser several times in a row — usually the laser was reset, or its pairing was cleared. Tap
+      <span class="label">FORGET LASER</span>, then <span class="label">PAIR BOSCH LASER</span> and pick it
+      again.</li>
   <li><strong>The laser fired and nothing landed.</strong> Check you are on the Dimensional Calculator and the
       laser mark is gold.</li>
 </ul>

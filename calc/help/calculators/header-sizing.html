@@ -4,7 +4,7 @@
 <title>Header Sizing — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Header Sizing</h1>
 <h2 id="what">What it's for</h2>
 <p>Sizing the header over a door or window opening. You give it the opening width and, for a bearing wall, the
@@ -15,12 +15,15 @@ header span table the screen names. An opening too wide for the table is flagged
 <h2 id="steps">Step by step</h2>
 <p>This example uses the numbers the screen opens with.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/header-sizing--inputs.webp" alt="Header Sizing inputs: OPENING WIDTH 3' 0&quot;, LOAD BEARING on, BUILDING WIDTH 36', GROUND SNOW 30 psf, WALL SUPPORTS Roof + ceiling, WALL HEIGHT 8' 0&quot;, and the result (2) 2x6, 1 jack and 1 king per side, with a green line reading Within IRC 2021 R602.7(1) table — southern pine No.2 basis" width="660" height="1435">
-  <span class="pin" style="--x:50%;--y:23.6%">1</span>
-  <span class="pin" style="--x:56%;--y:29.8%">2</span>
-  <span class="pin" style="--x:60%;--y:35%">3</span>
-  <span class="pin" style="--x:60%;--y:45%">4</span>
-  <span class="pin" style="--x:37.2%;--y:58.4%">5</span>
+  <img src="../shots/header-sizing--inputs.webp" alt="Header Sizing inputs: OPENING WIDTH 3' 0&quot;, LOAD BEARING on, BUILDING WIDTH 36', GROUND SNOW 30 psf, WALL SUPPORTS Roof + ceiling, WIND / FRAMING ANCHOR ≤ 115 mph Exp B, WALL HEIGHT 8' 0&quot;, and the result (2) 2x6, 1 jack · 1 king per side, with a green line reading Within IRC 2021 R602.7(1) table — southern pine No.2 basis" width="660" height="1435">
+  <span class="pin" style="--x:50.4%;--y:31.2%">1</span>
+  <span class="pin" style="--x:48.2%;--y:37.4%">2</span>
+  <span class="pin" style="--x:52.2%;--y:42.7%">3</span>
+  <span class="pin" style="--x:46.2%;--y:52.7%">4</span>
+  <span class="pin" style="--x:39.5%;--y:62.8%">5</span>
+  <span class="pin" style="--x:66.5%;--y:70.7%">6</span>
+  <span class="pin" style="--x:45.3%;--y:81.5%">7</span>
+  <span class="pin" style="--x:30.8%;--y:16.6%">8</span>
 </div><figcaption>The whole form and the answer fit on one screen.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">OPENING WIDTH</span> — the rough opening, framing to framing, not the door or window
@@ -33,6 +36,13 @@ header span table the screen names. An opening too wide for the table is flagged
   <li><span class="label">WALL SUPPORTS</span> — what sits on this wall. Tap and pick: roof and ceiling only, or
       one or two floors as well. For a floor, choose center-bearing if the floor joists also rest on a wall or
       beam in the middle of the building, or clear-span if they cross it in one piece.</li>
+  <li><span class="label">WIND / FRAMING ANCHOR</span> — sets the king studs, the full-height studs beside the
+      jacks, from the IRC table that counts them by header span and wind. Leave <strong>≤ 115 mph Exp B</strong>
+      where the design wind speed is 115 mph or less, the site is Exposure B (built-up suburbs, woods) and jack
+      studs carry the header. Pick <strong>Higher / anchored</strong> for more wind, an Exposure C site (open
+      country, scattered trees and buildings), or a header hung on metal framing anchors instead of jacks. From
+      140 mph in Exposure B, 130 mph in Exposure C, or on any Exposure D site (open water, flats) the table gives
+      no count, and the kings have to be designed. Your building department gives the wind speed and exposure. It does not change the header size.</li>
   <li><span class="label">WALL HEIGHT</span> — sets the length of the jack and king stud stock on the cut list.
       It does not change the header size.</li>
   <li>Read the answer: <strong>(2) 2x6</strong>, <strong>1 jack · 1 king per side</strong>.</li>
@@ -40,12 +50,11 @@ header span table the screen names. An opening too wide for the table is flagged
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/header-sizing--results.webp" alt="Header Sizing lower screen: the BASIS &amp; WHAT WAS ASSUMED row, the HEADER drawing of a 3' 0&quot; opening with a (2) 2x6 header, king stud and jack stud labelled, then MATERIALS listing Header (2) 2x6 1 ea, Jack studs 2 pcs and King studs 2 pcs, and a dimmed CUT SHEET with a list icon at its right end, beside a lit SAVE, above a dimmed CUT LIST and SEND LIST" width="660" height="1435">
-  <span class="pin" style="--x:75%;--y:26.6%">4</span>
-  <span class="pin" style="--x:15%;--y:41.4%">5</span>
-  <span class="pin" style="--x:35%;--y:70.0%">6</span>
-  <span class="pin" style="--x:89%;--y:87.8%">7</span>
-</div><figcaption>The basis row, the drawing, the material list and the export buttons.</figcaption></figure>
+  <img src="../shots/header-sizing--results.webp" alt="Header Sizing lower screen: the size and the green table line pinned under the title, the BASIS &amp; WHAT WAS ASSUMED row, the HEADER drawing of a 3' 0&quot; opening with a (2) 2x6 header, king stud and jack stud labelled and 1 JACK · 1 KING PER SIDE under it, then MATERIALS listing Header (2) 2x6 — 4' long 1 ea, Jack studs 2 pcs and King studs 2 pcs" width="660" height="1435">
+  <span class="pin" style="--x:56.6%;--y:35.5%">4</span>
+  <span class="pin" style="--x:60.3%;--y:52.1%">5</span>
+  <span class="pin" style="--x:27.2%;--y:86.8%">6</span>
+</div><figcaption>The basis row, the drawing and the material list.</figcaption></figure>
 <ol class="steps">
   <li><strong>The headline</strong> is the header: the number of plies in brackets, then the lumber size.</li>
   <li><strong>The line under it</strong> is the jack studs and king studs on each side of the opening.</li>
@@ -59,7 +68,8 @@ header span table the screen names. An opening too wide for the table is flagged
       the size was read under: exterior bearing wall, the building width, snow load and loading you picked, the
       species the spans are based on, and how the jack studs were counted. It says interior girders use a
       different table. On a partition it lists the app's own size steps and what the code permits instead.
-      Both end with the code edition and a reminder to check your local amendments.</li>
+      Both then name the column of IRC Table R602.7.5 the king studs were read from — the wind choice you made —
+      and end with the code edition and a reminder to check your local amendments.</li>
   <li><strong>The drawing</strong> shows the opening with its header, jacks and kings. Pinch to zoom, drag to
       pan, double-tap to reset. The expand button opens it full screen. See
       <a href="../tools/drawings.html">Reading the drawing</a>.</li>
@@ -78,6 +88,8 @@ one-time purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</di
 <h2 id="mistakes">Common mistakes</h2>
 <ul>
   <li><strong>Entering the unit size.</strong> <span class="label">OPENING WIDTH</span> is the rough opening.</li>
+  <li><strong>Leaving WIND / FRAMING ANCHOR on ≤ 115 mph on a windy or open site, or over framing anchors.</strong>
+      A 6' header then gets 1 king per side where the higher column asks for 2.</li>
   <li><strong>Leaving the snow load at the first choice.</strong> The header size depends on it. Get the real
       figure for your area.</li>
   <li><strong>Reading it as an interior girder size.</strong> The bearing table is for an exterior bearing wall.

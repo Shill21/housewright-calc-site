@@ -4,7 +4,7 @@
 <title>Roofing — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Roofing</h1>
 <h2 id="what">What it's for</h2>
 <p>Takes off a shingle roof. From the roof area and pitch you get bundles, squares, underlayment rolls and
@@ -16,14 +16,14 @@ takeoff. It makes no code check.</p>
 <p>The example is the screen as it opens: a 1000 sq ft footprint, gable roof, 6/12 pitch, architectural
 shingles, no edge lengths entered, 10% waste.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/roofing--inputs.webp" alt="Roofing inputs at their defaults: AREA ENTRY Footprint × pitch, FOOTPRINT AREA 1000 sq ft with the note measure to the ROOF EDGES (incl. overhangs), not the wall line, ROOF TYPE Gable, PITCH 6/12, SHINGLE TYPE Architectural, EAVE, RAKE, RIDGE, HIP and VALLEY LENGTH all 0&quot;, ICE &amp; WATER SHIELD on. A strip at the top reads 37 bundles." width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:26.5%">1</span>
-  <span class="pin" style="--x:55%;--y:33%">2</span>
-  <span class="pin" style="--x:42%;--y:46%">3</span>
-  <span class="pin" style="--x:70%;--y:57.9%">4</span>
-  <span class="pin" style="--x:50%;--y:73.4%">5</span>
-</div><figcaption>Steps 1 to 5. The strip at the top keeps the bundle count in view while the results are off
-screen.</figcaption></figure>
+  <img src="../shots/roofing--inputs.webp" alt="Roofing inputs at their defaults: AREA ENTRY Footprint × pitch, FOOTPRINT AREA 1000 sq ft with the note measure to the ROOF EDGES (incl. overhangs), not the wall line, ROOF TYPE Gable, PITCH 6/12, SHINGLE TYPE Architectural, EAVE, RAKE, RIDGE, HIP and VALLEY LENGTH all 0&quot;, ICE &amp; WATER SHIELD on. The answer bar at the top reads 37 bundles." width="660" height="1435">
+  <span class="pin" style="--x:44.0%;--y:28.1%">1</span>
+  <span class="pin" style="--x:51.3%;--y:36.5%">2</span>
+  <span class="pin" style="--x:41.2%;--y:47.7%">3</span>
+  <span class="pin" style="--x:46.9%;--y:57.9%">4</span>
+  <span class="pin" style="--x:46.2%;--y:67.2%">5</span>
+</div><figcaption>Steps 1 to 5. The answer bar at the top keeps the bundle count in view wherever you
+scroll.</figcaption></figure>
 <ol class="steps">
   <li>Pick <span class="label">AREA ENTRY</span>. <strong>Footprint × pitch</strong> works the roof surface
       out from the plan area and one pitch. <strong>Measured area</strong> takes the true surface you taped
@@ -33,7 +33,8 @@ screen.</figcaption></figure>
       type it, or nudge it 50 sq ft at a time with − and +. In Measured mode this row is replaced by
       <span class="label">MEASURED ROOF AREA</span>.</li>
   <li>Pick <span class="label">ROOF TYPE</span>: Gable, Hip, Shed, Mansard or Gambrel. Then
-      <span class="label">PITCH</span>, from 0/12 to 24/12. In Measured mode the pitch row stays on screen
+      <span class="label">PITCH</span>, from 0/12 to 24/12: tap it and type the rise, halves included, or use −
+      and + to step by a half. In Measured mode the pitch row stays on screen
       with the note <strong>pitch is NOT applied in measured mode</strong>.</li>
   <li>Pick <span class="label">SHINGLE TYPE</span>: Architectural, 3-Tab or Premium. It sets the bundles
       per square.</li>
@@ -53,19 +54,20 @@ screen.</figcaption></figure>
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/roofing--results.webp" alt="Roofing scrolled to the results: ICE &amp; WATER SHIELD on, SHIELD WIDTH 6' 0&quot;, WASTE FACTOR 10%. Results read 37 bundles, 11.18 squares, 1118 sq ft surface, order 1230, Pitch factor 1.118. The top of the roof plan drawing shows below." width="660" height="1435">
-  <span class="pin" style="--x:94.5%;--y:39.1%">6</span>
-  <span class="pin" style="--x:23.5%;--y:51.5%">7</span>
-  <span class="pin" style="--x:40%;--y:60.2%">8</span>
+  <img src="../shots/roofing--results.webp" alt="Roofing scrolled to the results: ICE &amp; WATER SHIELD on, SHIELD WIDTH 6' 0&quot;, WASTE FACTOR 10%. Results read 37 bundles, ≈ 11.18 squares, ≈ 1118 sq ft surface, order ≈ 1230, Pitch factor 1.118. The top of the roof plan drawing shows below." width="660" height="1435">
+  <span class="pin" style="--x:94.5%;--y:35.4%">6</span>
+  <span class="pin" style="--x:43%;--y:49.7%">7</span>
+  <span class="pin" style="--x:94%;--y:58.2%">8</span>
 </div><figcaption>Steps 6 and 7, then the answer.</figcaption></figure>
 <ol class="steps" style="counter-reset:s 7">
   <li><strong>The headline</strong> is shingle bundles to order. On the defaults it reads
       <strong>37 bundles</strong>. It is figured from the order area, and Hip, Gambrel and Mansard roofs add
       a cut-waste allowance on top. The shingle row in the material list names the allowance when there is
       one.</li>
-  <li><strong>Squares, surface, order.</strong> On the defaults: <strong>11.18 squares · 1118 sq ft surface
-      · order 1230</strong>. Surface is the real roof area with no waste. Order is the surface plus your
-      waste factor. Squares are figured from the surface, not the order.</li>
+  <li><strong>Squares, surface, order.</strong> On the defaults: <strong>≈ 11.18 squares · ≈ 1118 sq ft surface
+      · order ≈ 1230</strong>. Surface is the real roof area with no waste. Order is the surface plus your
+      waste factor. Squares are figured from the surface, not the order. The ≈ means the figure is rounded to
+      the places shown: 1000 × 1.118034 is 1118.03 sq ft.</li>
   <li><strong>Pitch factor</strong> is what the footprint was multiplied by to get the surface, here
       <strong>1.118</strong> for 6/12. In Measured mode this line reads <strong>Measured area — pitch factor
       not applied</strong>.</li>
@@ -76,8 +78,8 @@ screen.</figcaption></figure>
       <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the yields behind them: bundles per square,
       the extra cut waste for hips, gambrels and mansards, and the roll and bundle coverages for underlayment,
       ice shield, cap, starter and flashing. The notes show the area sum, here
-      <strong>1000 SF ×1.118 = 1118 SF · 11.18 SQ</strong>, and the order line,
-      <strong>ORDER 1230 SF · BUYS +10% WASTE</strong>. They also tell you what is missing:
+      <strong>1000 SF ×1.118 = ≈1118 SF · ≈11.18 SQ</strong>, and the order line,
+      <strong>ORDER ≈ 1230 SF · BUYS +10% WASTE</strong>. They also tell you what is missing:
       <strong>NO RIDGE/HIP ENTERED — NO CAP IN TAKEOFF</strong> and <strong>NO EAVE/RAKE ENTERED — NO EDGE
       MATERIALS</strong>. Enter those lengths in step 5 and the notes clear.</li>
   <li><em>SCHEMATIC — NOT TO SHAPE</em> means the outline on the plan is a stand-in. A
@@ -93,12 +95,11 @@ screen.</figcaption></figure>
       row tells you to verify the coverage against your cap product.</li>
 </ol>
 <figure class="shot"><div class="frame">
-  <img src="../shots/roofing--more.webp" alt="Roofing scrolled to the end: the roof plan drawing with an eave detail, a 6/12 → ×1.118 pitch triangle, the notes NO RIDGE/HIP ENTERED — NO CAP IN TAKEOFF, NO EAVE/RAKE ENTERED — NO EDGE MATERIALS, 6/12 · 26.6° · 1000 SF ×1.118 = 1118 SF · 11.18 SQ, ORDER 1230 SF · BUYS +10% WASTE, and SCHEMATIC — NOT TO SHAPE (FOOTPRINT IS AN AREA). MATERIALS lists Shingles (architectural) — Gable roof 37 bundles, Underlayment — 10-sq synthetic — 12 sq roof 2 rolls, Roofing Nails 31 lbs." width="660" height="1435">
-  <span class="pin" style="--x:91.5%;--y:35.2%">11</span>
-  <span class="pin" style="--x:14%;--y:53.3%">12</span>
-  <span class="pin" style="--x:8%;--y:56.7%">13</span>
-  <span class="pin" style="--x:60%;--y:70.0%">14</span>
-</div><figcaption>The drawing, its notes, the schematic note and the material list.</figcaption></figure>
+  <img src="../shots/roofing--more.webp" alt="Roofing scrolled to the end: the roof plan drawing with an eave detail, a 6/12 → ×1.118 pitch triangle, the notes NO RIDGE/HIP ENTERED — NO CAP IN TAKEOFF, NO EAVE/RAKE ENTERED — NO EDGE MATERIALS, 6/12 · 26.6° · 1000 SF ×1.118 = ≈1118 SF · ≈11.18 SQ, ORDER ≈ 1230 SF · BUYS +10% WASTE, and SCHEMATIC — NOT TO SHAPE (FOOTPRINT IS AN AREA). MATERIALS lists Shingles (architectural) — Gable roof 37 bundles, Underlayment — 10-sq synthetic — 12 sq roof 2 rolls, Roofing Nails 31 lbs." width="660" height="1435">
+  <span class="pin" style="--x:50%;--y:45%">11</span>
+  <span class="pin" style="--x:93%;--y:59.5%">13</span>
+  <span class="pin" style="--x:27.2%;--y:70.2%">14</span>
+</div><figcaption>The drawing, its notes, the schematic note and the material list. The basis row, step 12, is just above the top of this view.</figcaption></figure>
 <div class="note">Roofing is a Pro calculator. <strong>SHARE PDF</strong> and <strong>SAVE</strong> are Pro as
 well, a one-time purchase. <strong>SHARE PDF</strong> and the list icon at its right end stay dim until you have entered your own
 measurements. <strong>SAVE</strong> stays lit, but until then a tap only answers <strong>Enter your job's numbers first</strong>

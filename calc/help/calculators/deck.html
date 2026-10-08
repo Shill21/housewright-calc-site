@@ -4,28 +4,32 @@
 <title>Deck — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Deck</h1>
 <h2 id="what">What it's for</h2>
 <p>Takes off a rectangular deck from the boards down: decking, joists, screws, posts, footing tubes,
-concrete, beam, ledger, hangers and railing. You get the order, three drawings — a framing plan, the beam
-line with its footings, and the decking layout with the rip on the last board — and a material list you can
-work as a cut list. It does not size the joists or the beam. The material list tells you where to verify
-each.</p>
+concrete, beam, ledger, ledger fasteners, hangers and railing. You get the order, three drawings — a framing
+plan, the beam line with its footings, and the decking layout with the rip on the last board — and a material
+list you can work as a cut list. It checks the frame against the deck tables of the 2021 IRC, Section R507:
+the joist span and cantilever, the beam between its posts, the footing size for your soil, and the ledger
+fastening. A check within its limit reads green; one over it reads in red capitals.</p>
 
 <h2 id="steps">Step by step</h2>
 <p>The example is the screen as it opens: PT Lumber, 5/4x6 boards 16 ft long with a 1/8" gap, a deck 16' 0"
-by 12' 0" and 3' 0" above grade, 2x8 joists at 16″ OC, attached to the house, 40' 0" of railing, 10%
-waste.</p>
+by 12' 0" and 3' 0" above grade, 2x10 joists at 16" o.c. in DF / hem-fir / SPF, a 6" cantilever, a 2-ply beam
+with posts no more than 8' 0" apart, clay or silt soil, ground snow 40 psf or less, attached to the house with 1/2" lag screws, 40' 0" of
+railing, 10% waste.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/deck--inputs.webp" alt="Deck inputs at their defaults: MATERIAL PT Lumber, BOARD WIDTH 5/4x6, BOARD LENGTH 16 ft, BOARD GAP 1/8&quot;, DECK LENGTH 16' 0&quot;, DECK WIDTH 12' 0&quot;, HEIGHT ABOVE GRADE 3' 0&quot;, JOIST SPACING 16″ OC, JOIST SIZE 2x8, ATTACHED TO HOUSE (LEDGER) on. A strip at the top reads 29 boards." width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:26.5%">1</span>
-  <span class="pin" style="--x:70%;--y:34.8%">2</span>
-  <span class="pin" style="--x:48%;--y:52.5%">3</span>
-  <span class="pin" style="--x:48%;--y:58.6%">4</span>
-  <span class="pin" style="--x:55%;--y:71%">5</span>
-</div><figcaption>Steps 1 to 5. The strip at the top keeps the board count in view while the results are off
-screen.</figcaption></figure>
+  <img src="../shots/deck--inputs.webp" alt="Deck inputs at their defaults: MATERIAL PT Lumber, BOARD WIDTH 5/4x6, BOARD LENGTH 16 ft, BOARD GAP 1/8&quot;, DECK LENGTH 16' 0&quot;, DECK WIDTH 12' 0&quot;, HEIGHT ABOVE GRADE 3' 0&quot;, JOIST SPACING 16″ OC, JOIST SIZE 2x10, FRAMING SPECIES DF / hem-fir / SPF. The answer bar at the top reads 29 boards and, in green, Joists 2x10 @ 16″ OC span 11' 4-1/2&quot;." width="660" height="1435">
+  <span class="pin" style="--x:40.2%;--y:32.2%">1</span>
+  <span class="pin" style="--x:46.2%;--y:40.6%">2</span>
+  <span class="pin" style="--x:42.1%;--y:58.1%">3</span>
+  <span class="pin" style="--x:46.3%;--y:64.3%">4</span>
+  <span class="pin" style="--x:60.2%;--y:76.7%">5</span>
+  <span class="pin" style="--x:50.4%;--y:81.9%">6</span>
+  <span class="pin" style="--x:54.1%;--y:98.6%">7</span>
+</div><figcaption>Steps 1 to 7. The answer bar at the top keeps the board count and the first check in view
+wherever you scroll.</figcaption></figure>
 <ol class="steps">
   <li>Pick <span class="label">MATERIAL</span>: PT Lumber, Cedar or Composite. The board widths and lengths
       on offer change with it. If the size you had picked is not stocked in the new material, the screen
@@ -34,82 +38,129 @@ screen.</figcaption></figure>
       length you will buy.</li>
   <li>Enter <span class="label">BOARD GAP</span>, the space you will leave between boards.</li>
   <li>Enter <span class="label">DECK LENGTH</span>, along the house, and <span class="label">DECK WIDTH</span>,
-      out from the house. The decking runs the length. The joists run the width, so the width is the joist
-      length.</li>
+      out from the house: from the house wall behind the ledger (free-standing: the outside of the far rim) to
+      the outside face of the rim. The decking runs the length. The joists run the width, less the ledger and
+      the rim — on the example, 12' 0" wide gives a joist span of 11' 4-1/2" from the face of the ledger to the
+      center of the beam.</li>
   <li>Enter <span class="label">HEIGHT ABOVE GRADE</span>, from the ground to the top of the deck. It sets the
       post length in the material list.</li>
-  <li>Pick <span class="label">JOIST SPACING</span> (16″, 19.2″ or 24″ OC) and
-      <span class="label">JOIST SIZE</span> (2x6 to 2x12). The size names the joist, beam and ledger rows.
-      It is not checked against the span.</li>
+  <li>Pick <span class="label">JOIST SPACING</span> (16", 19.2" or 24" o.c.) and
+      <span class="label">JOIST SIZE</span> (2x6 to 2x12). The size names the joist, beam and ledger rows,
+      and the joist span is checked against it. The deck table prints 12″, 16″ and 24″ spacing only, so at
+      19.2″ the joist span says <strong>not checked</strong>.</li>
+  <li>Pick <span class="label">FRAMING SPECIES</span>, the lumber the joists and beam are cut from, No. 2
+      grade: Southern pine; DF / hem-fir / SPF (Douglas fir-larch, hem-fir, spruce-pine-fir); or Redwood /
+      cedar (redwood, western cedars, ponderosa pine, red pine). Every deck table is printed by these three
+      groups.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/deck--results.webp" alt="Deck scrolled to the rest of the inputs: JOIST SIZE 2x10, FRAMING SPECIES DF / hem-fir / SPF, JOIST CANTILEVER 6&quot;, BEAM PLIES 2-ply, MAX POST SPACING 8' 0&quot;, SOIL Clay or silt · 1,500 psf, GROUND SNOW 40 psf or less, ATTACHED TO HOUSE (LEDGER) on, LEDGER FASTENERS 1/2&quot; lag screws, RAILING on, RAILING LENGTH 40' 0&quot; and the top of WASTE FACTOR." width="660" height="1435">
+  <span class="pin" style="--x:56.4%;--y:42.4%">8</span>
+  <span class="pin" style="--x:44.3%;--y:47.6%">9</span>
+  <span class="pin" style="--x:56.4%;--y:64.1%">10</span>
+  <span class="pin" style="--x:31.4%;--y:62.1%">11</span>
+  <span class="pin" style="--x:38.3%;--y:71.3%">12</span>
+  <span class="pin" style="--x:58.9%;--y:77.5%">13</span>
+  <span class="pin" style="--x:42%;--y:83.2%">14</span>
+  <span class="pin" style="--x:38.3%;--y:90.7%">15</span>
+</div><figcaption>Steps 8 to 15, the inputs the deck code checks need and the rest of the form.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 7">
+  <li>Enter <span class="label">JOIST CANTILEVER</span>, how far the joists run past the center of the beam.
+      The beam stands that far in from the outer edge. 0 puts the beam at the edge.</li>
+  <li>Pick <span class="label">BEAM PLIES</span>, 2 or 3 of the joist size nailed together.</li>
+  <li>Enter <span class="label">MAX POST SPACING</span>, the most you want between posts along a beam. The
+      posts stand 6" in from each end of the beam and evenly between. On the example 8' 0" gives 3 posts
+      7' 6" apart. Close the posts up if the beam fails.</li>
+  <li>Pick <span class="label">SOIL</span>, the bearing the IRC lets you assume without a soils report (Table
+      R401.4.1): clay or silt 1,500 psf, sand 2,000 psf, gravel or rock 3,000 psf. It sizes the footings. If
+      you don't know, leave clay or silt — it is the lowest.</li>
+  <li>Pick <span class="label">GROUND SNOW</span>, the ground snow load your county gives. A deck is built
+      for 40 psf of people or for the ground snow, whichever is more (IRC R507.1). At 40 psf or less the
+      checks read the 40 psf rows of the deck tables; at 50, 60 or 70 psf they read that row. Over 70 psf is
+      past the tables, and the checks say <strong>not checked</strong>.</li>
   <li>Leave <span class="label">ATTACHED TO HOUSE (LEDGER)</span> on for a deck hung off the house. You get
-      a ledger, joist hangers and one beam. Turn it off for a freestanding deck. The ledger and hangers drop
-      out and you get two beams, with posts, footings and concrete for both.</li>
+      a ledger, its fasteners, joist hangers and one beam. Turn it off for a freestanding deck. The ledger and
+      hangers drop out and you get two beams, with posts, footings and concrete for both.</li>
+  <li>Pick <span class="label">LEDGER FASTENERS</span>: 1/2" lag screws or 1/2" through-bolts through no more
+      than 1/2" of sheathing, or 1/2" bolts through up to 1" of sheathing. The row shows only on an attached
+      deck. It sets the fastener spacing and count.</li>
   <li>Leave <span class="label">RAILING</span> on to buy railing. <span class="label">RAILING LENGTH</span>
       opens on the run this deck implies — the three open sides of a deck attached to the house (two widths
       plus the length; the house side takes no rail), or the whole perimeter of a free-standing one — and
       follows the deck as you change its size. Type over it and your figure is used instead. The row is
       hidden when railing is off.</li>
   <li>Set <span class="label">WASTE FACTOR</span>. It is added to the decking, joists, screws, concrete,
-      beam and railing. Posts, footing tubes, ledger and hangers are exact counts.</li>
+      beam and railing. Posts, footing tubes, ledger, ledger fasteners and hangers are exact counts.</li>
 </ol>
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/deck--results.webp" alt="Deck scrolled to the results: ATTACHED TO HOUSE (LEDGER) on, RAILING on, RAILING LENGTH 40' 0&quot;, WASTE FACTOR 10%. Results read 29 boards, 464 lin ft decking (order), 26 courses, 1 per row, 13 joists · 15 ordered, then the BASIS &amp; WHAT WAS ASSUMED row. The top of the framing plan below it reads 3 POSTS @ ≤8'-0&quot; O.C., is dimensioned 12' 0&quot; down the side, and has BEAM, JOIST and LEDGER labelled." width="660" height="1435">
-  <span class="pin" style="--x:35%;--y:37.1%">7</span>
-  <span class="pin" style="--x:48%;--y:47.6%">8</span>
-  <span class="pin" style="--x:23.5%;--y:52.1%">9</span>
-  <span class="pin" style="--x:38%;--y:63.2%">10</span>
-  <span class="pin" style="--x:25%;--y:79.5%">13</span>
-</div><figcaption>Steps 7 to 9, then the answer and the first drawing.</figcaption></figure>
-<ol class="steps" style="counter-reset:s 9">
+  <img src="../shots/deck--more.webp" alt="Deck scrolled to the results: 29 boards, 464 lin ft decking (order), 26 courses, 1 per row, 13 joists · 15 ordered, then five green rows — Joists 2x10 @ 16″ OC span 11' 4-1/2&quot; — within the 13' 7&quot; max (IRC 2021 R507.6); Cantilever 6&quot; — within the 2' 10-1/8&quot; max (IRC 2021 R507.6); Beam (2) 2x10 spans 7' 6&quot; — within the ≈ 8' 6-1/16&quot; max (IRC 2021 R507.5); Footings 18&quot; round — ≈ 17&quot; needed for ≈ 46 sq ft a post on 1,500 psf soil (IRC R507.3.1); Ledger: 1/2&quot; lags @ 15&quot; OC, staggered (IRC R507.9.1.3) — then the BASIS &amp; WHAT WAS ASSUMED row and the top of the framing plan, 3 POSTS @ ≤8' 0&quot; O.C." width="660" height="1435">
+  <span class="pin" style="--x:34%;--y:42.6%">16</span>
+  <span class="pin" style="--x:42%;--y:16.3%">17</span>
+  <span class="pin" style="--x:86.9%;--y:52.5%">18</span>
+  <span class="pin" style="--x:93%;--y:74.7%">19</span>
+  <span class="pin" style="--x:56.3%;--y:84.1%">20</span>
+</div><figcaption>Step 16, the waste factor, then steps 17 to 20: the answer, the five deck code checks and the basis.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 16">
   <li><strong>The headline</strong> is decking boards to buy at your stock length, waste included. On the
       defaults: <strong>29 boards</strong>.</li>
   <li><strong>Decking line.</strong> On the defaults: <strong>464 lin ft decking (order) · 26 courses · 1
       per row</strong>. Courses is the number of boards across the deck width, at board width plus gap.
       Per row is how many stock lengths it takes to cross the deck length. More than one means butt
-      joints.</li>
-  <li><strong>Joists.</strong> On the defaults: <strong>13 joists · 15 ordered</strong>. The first number is
-      what you lay out and hang. The second is the order, with waste.</li>
+      joints. <strong>Joists</strong>: <strong>13 joists · 15 ordered</strong> — the first number is what
+      you lay out and hang, the second the order, with waste.</li>
+  <li><strong>The deck code checks</strong>, one row each, the section named at the end. On the defaults
+      all five are within their limits:
+      <strong>Joists 2x10 @ 16" o.c. span 11' 4-1/2" — within the 13' 7" max (IRC 2021 R507.6)</strong> — the joist span runs
+      from the face of the ledger (on a freestanding deck, from the other beam) to the center of the beam;
+      <strong>Cantilever 6" — within the 2' 10-1/8" max (IRC 2021 R507.6)</strong>;
+      <strong>Beam (2) 2x10 spans 7' 6" — within the ≈ 8' 6-1/16" max (IRC 2021 R507.5)</strong> — post to post;
+      <strong>Footings 18" round — ≈ 17" needed for ≈ 46 sq ft a post on 1,500 psf soil (IRC
+      R507.3.1)</strong> — the deck area the busiest post carries, and the tube the list buys;
+      <strong>Ledger: 1/2" lags @ 15" OC, staggered (IRC R507.9.1.3)</strong>.
+      A failed check reads in red capitals and says what it is over, for example
+      <strong>JOISTS 2X8 @ 16" O.C. SPAN 11' 4-1/2" — OVER THE 11' 1" MAX (IRC R507.6)</strong>. The strip at the
+      top shows the first failure while you scroll. A case the tables do not reach reads as a plain
+      <strong>not checked</strong> line instead of a guess.</li>
+  <li><strong>BASIS &amp; WHAT WAS ASSUMED</strong> opens to the load (40 psf live plus 10 psf dead, or the
+      ground snow you picked plus 10 psf dead), the species and grade, where each width and span is measured,
+      how the footing is sized and rounded up to a stock tube (12" least), and what is not checked: the posts,
+      the decking spacing and the lateral ties. The cut sheet prints the same load basis and soil beside the
+      checks.</li>
+</ol>
+<figure class="shot"><div class="frame">
+  <img src="../shots/deck--end.webp" alt="Deck scrolled to the drawings. DECK FRAMING, 13 joists (15 ordered): the plan dimensioned 16' 0&quot; by 12' 0&quot;, 3 POSTS @ ≤8' 0&quot; O.C., BEAM, JOIST and LEDGER labelled, a footing detail 4' 0&quot; deep marked VERIFY FROST. DECK BEAM LINE, 2x10 JOISTS, 2-PLY BEAM: 3 POSTS PER BEAM @ 7' 6&quot; O.C., 3' 0&quot; above grade, 4' 0&quot; tubes, rows of 8' 0&quot;, 15' 6&quot; and 16' 0&quot; along the beam, a SECTION AT POST 12' 0&quot; wide, and the notes END FOOTINGS 6&quot; IN · 18&quot; TUBE · VERIFY FROST and SPANS: SEE THE IRC R507 CHECKS." width="660" height="1435">
+  <span class="pin" style="--x:30.1%;--y:67.9%">21</span>
+  <span class="pin" style="--x:70.5%;--y:95.7%">22</span>
+</div><figcaption>21 the framing plan · 22 the beam line and its footings. The decking layout is next, below them.</figcaption></figure>
+<ol class="steps" style="counter-reset:s 20">
   <li><strong>DECK FRAMING</strong> is the plan: ledger, joists, beam and posts, with the deck dimensioned
       and a footing detail marked <strong>VERIFY FROST</strong>. Pinch to zoom, drag to pan, double-tap to
       reset, and use the expand button for full screen. See
       <a href="../tools/drawings.html">Drawings</a>.</li>
   <li><strong>DECK BEAM LINE</strong> is an elevation along the beam and a section at a post. It dimensions
-      the post centers along the beam, the height above grade and the footing depth. Its notes say the end
-      footings sit in from the ends of the beam, give the tube size, and read <strong>PERIMETER BEAMS ONLY —
-      VERIFY SPAN PER DCA 6</strong>. The beam is not sized for you.</li>
+      the post centers along the beam, the height above grade and the footing depth, and draws the beam where
+      the cantilever puts it. Its notes give where the end footings sit, the tube size, and
+      <strong>SPANS: SEE THE IRC R507 CHECKS</strong>.</li>
   <li><strong>DECKING LAYOUT</strong> shows every course over the joists, with running dimensions from the
       house side. The corner detail gives the last board. On the defaults the course module is
       <strong>5-5/8"</strong> and the last board is a <strong>3-3/8" RIP</strong>. The notes spell out the
       module, <strong>5-1/2" + 1/8" GAP</strong>, and whether there are butt joints.</li>
-  <li><strong>MATERIALS.</strong> <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the substructure
-      rules: posts at 8' or less along each beam, one 12" × 48" tube footing per post at about 7 bags, post
-      stock of the height plus 12", screws 2 per joist crossing. Each material row also carries its own
-      assumption after the dash, and this is where you check them. On the defaults:
-      joists <strong>12' each — verify span in Floor Joist calc</strong>; screws <strong>350/box — 2 per
-      joist crossing (+ splices)</strong>; 6x6 posts <strong>beam bearing @ &lt;=8' spacing</strong>; footing
-      tubes <strong>12" — 48" — verify local frost depth</strong>; concrete <strong>60-lb, ~7/footing +
-      waste</strong>; beam <strong>2 plies — verify ply/span per code</strong>. An attached deck adds the
-      ledger, marked <strong>flash + lag per code</strong>, and one hanger per joist.</li>
-  <li><strong>The buttons</strong> are at the very bottom. <strong>CUT SHEET</strong> shares a PDF of the
-      drawing, inputs and materials, and the list icon at its right end shares the material list alone.
-      <strong>SAVE</strong> keeps the result in History. <strong>CUT LIST</strong> puts the material list on
-      the Lock Screen as a cut list to work through. <strong>SEND LIST</strong> shares the list as a page
-      someone else can open and tick off on their own phone, with no app.</li>
 </ol>
-<figure class="shot"><div class="frame">
-  <img src="../shots/deck--more.webp" alt="Deck scrolled to the second drawing. The framing plan's title block reads DECK FRAMING, 13 joists (15 ordered). Below it, DECK BEAM LINE: 3 POSTS PER BEAM @ 7' 6&quot; O.C., a 3' 0&quot; height above grade, 4' 0&quot; footings, dimensions 8' 0&quot;, 15' 6&quot; and 16' 0&quot; along the beam, a SECTION AT POST 12' 0&quot; wide, and the notes END FOOTINGS 6&quot; IN · 12&quot; TUBE · VERIFY FROST and PERIMETER BEAMS ONLY — VERIFY SPAN PER DCA 6." width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:22.5%">13</span>
-  <span class="pin" style="--x:30%;--y:57.8%">14</span>
-</div><figcaption>13 the framing plan · 14 the beam line and its footings.</figcaption></figure>
-<figure class="shot"><div class="frame">
-  <img src="../shots/deck--end.webp" alt="Deck scrolled to the decking layout and materials. DECKING LAYOUT shows 26 courses over a 16' 0&quot; by 12' 0&quot; deck, a corner detail with 5-5/8&quot; and a 3-3/8&quot; RIP, and the notes COURSE MODULE 5-5/8&quot; = 5-1/2&quot; + 1/8&quot; GAP, 26 COURSES · 29 BOARDS @ 16 FT, 1 BOARD PER COURSE — NO BUTT JOINTS. MATERIALS lists PT Lumber decking 29 boards, Joists (2x8) 15 pcs, Deck screws 3 boxes, 6x6 Posts 3 pcs, Footing Tubes 12&quot; 3 pcs, and the start of the Concrete row." width="660" height="1435">
-  <span class="pin" style="--x:80%;--y:48.3%">15</span>
-  <span class="pin" style="--x:30%;--y:67.2%">16</span>
-</div><figcaption>15 the rip on the last board · 16 the material list, each row with its own note.</figcaption></figure>
-<p>There are no red flags on this screen. Nothing here is a pass or a fail, and that includes the joist
-and beam sizes.</p>
+<ol class="steps" style="counter-reset:s 23">
+  <li><strong>MATERIALS.</strong> Each row carries its own note after the dash. On the defaults: joists
+      <strong>12' each</strong>; screws <strong>350/box — 2 per joist crossing (+ splices)</strong>; 6x6 posts
+      <strong>4' each — 3 per beam @ 7' 6" o.c.</strong>; footing tubes <strong>18" — 48" — verify local frost
+      depth</strong>; concrete <strong>60-lb, ~16/footing + waste</strong>; beam <strong>outer beam, 2
+      plies</strong>. An attached deck adds the ledger, marked <strong>flashed (IRC R703.4)</strong>, its lag
+      screws or bolts at the table's spacing, and one hanger per joist.</li>
+  <li><strong>The buttons</strong> are at the very bottom. <strong>CUT SHEET</strong> shares a PDF of the
+      drawing, inputs, the code checks and materials, and the list icon at its right end shares the material
+      list alone. <strong>SAVE</strong> keeps the result in History. <strong>CUT LIST</strong> puts the
+      material list on the Lock Screen as a cut list to work through. <strong>SEND LIST</strong> shares the
+      list as a page someone else can open and tick off on their own phone, with no app.</li>
+</ol>
 <div class="note">Deck is a Pro calculator. <strong>CUT SHEET</strong>, <strong>SAVE</strong>,
 <strong>CUT LIST</strong> and <strong>SEND LIST</strong> are Pro as well, a one-time purchase. <strong>CUT SHEET</strong>, the list icon
 in it, <strong>CUT LIST</strong> and <strong>SEND LIST</strong> stay dim until you have entered your own
@@ -119,16 +170,22 @@ and saves nothing.</div>
 <h2 id="mistakes">Common mistakes</h2>
 <ul>
   <li>Swapping length and width. <span class="label">DECK LENGTH</span> is along the house and sets the joist
-      count, the beam and the ledger. <span class="label">DECK WIDTH</span> is out from the house and is the
-      joist length. Check the framing plan: the joists should run the way you mean to frame them.</li>
-  <li>Taking <span class="label">JOIST SIZE</span> as approved. Nothing on this screen checks a span. The
-      joist row sends you to <a href="floor-joist.html">Floor Joist</a>, and the beam row and the beam line
-      drawing both tell you to verify the beam.</li>
+      count, the beam and the ledger. <span class="label">DECK WIDTH</span> is out from the house, measured to
+      the outside of the rim — not the joist length, which is shorter by the ledger and the rim. Check the
+      framing plan: the joists should run the way you mean to frame them.</li>
+  <li>Leaving <span class="label">FRAMING SPECIES</span> on the wrong group. Ask the yard what the treated
+      framing is. Southern pine spans a little farther than DF / hem-fir / SPF in most sizes, so a deck that
+      passes in one group can fail in the other.</li>
+  <li>Leaving <span class="label">GROUND SNOW</span> at 40 psf or less in snow country. Every green row is
+      judged at the load you pick; look up your county's ground snow before you trust them.</li>
+  <li>Reading a pass as a permit. The checks cover the joists, beam, footings and ledger at the load you
+      pick. They do not check the posts, decking spacing, lateral ties, guards or stairs, or a ground snow
+      load over 70 psf. Your building department has the last word.</li>
   <li>Finding a thin rip at the last board on the day. Read the corner detail on the decking layout before
       you start. If the rip is too narrow to fasten, change <span class="label">BOARD GAP</span> a little
       and watch it move.</li>
   <li>Ordering 48" footing tubes where frost is deeper. The footing tube and concrete rows are figured on
-      a 12" x 48" tube, and the tube row says to verify local frost depth. The post row is height above grade
+      a 48" deep tube, and the tube row says to verify local frost depth. The post row is height above grade
       plus a foot, rounded up to even-foot stock. It does not change with frost depth, because the posts
       stand on the footings.</li>
   <li>Entering the deck perimeter as <span class="label">RAILING LENGTH</span> on an attached deck. The
@@ -138,7 +195,7 @@ and saves nothing.</div>
 
 <h2 id="related">Related</h2>
 <ul>
-  <li><a href="floor-joist.html">Floor Joist</a> — check the joist span</li>
+  <li><a href="floor-joist.html">Floor Joist</a> — interior floor joists (a different span table)</li>
   <li><a href="beam-sizing.html">Beam Sizing</a></li>
   <li><a href="stairs.html">Stairs</a> — the stair off the deck</li>
   <li><a href="baluster-spacing.html">Baluster Spacing</a> — the railing infill</li>

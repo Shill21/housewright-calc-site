@@ -4,7 +4,7 @@
 <title>TJI Joist Guide — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>TJI Joist Guide</h1>
 <h2 id="what">What it's for</h2>
 <p>Checking whether you can cut a hole in the web of a TJI joist, and where. You give it the joist series and
@@ -17,11 +17,11 @@ for TJI joists only.</p>
 <p>This example uses the numbers the screen opens with.</p>
 <figure class="shot"><div class="frame">
   <img src="../shots/tji-joist-guide--inputs.webp" alt="TJI Joist inputs: SERIES TJI 210, DEPTH 11-7/8&quot;, CLEAR SPAN 16' 0&quot;, SUPPORT CONDITION Simple, JOIST SPACING 16&quot; o.c., DEFLECTION LIMIT L/360, FLOOR LOAD 40 / 10 psf, HOLE SHAPE Round, HOLE SIZE 4&quot;" width="660" height="1435">
-  <span class="pin" style="--x:36%;--y:27.5%">1</span>
-  <span class="pin" style="--x:40%;--y:32.9%">2</span>
-  <span class="pin" style="--x:45%;--y:42.2%">3</span>
-  <span class="pin" style="--x:70%;--y:49%">4</span>
-  <span class="pin" style="--x:58%;--y:59%">5</span>
+  <span class="pin" style="--x:36.1%;--y:29.6%">1</span>
+  <span class="pin" style="--x:34.2%;--y:35%">2</span>
+  <span class="pin" style="--x:43.4%;--y:44.3%">3</span>
+  <span class="pin" style="--x:58.3%;--y:51.2%">4</span>
+  <span class="pin" style="--x:50%;--y:61.1%">5</span>
 </div><figcaption>Steps 1 to 5.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">SERIES</span> — the TJI series you are using. Tap and pick from the list.</li>
@@ -37,10 +37,10 @@ for TJI joists only.</p>
       with the spacing, only change the maximum span. They do not move the hole.</li>
 </ol>
 <figure class="shot"><div class="frame">
-  <img src="../shots/tji-joist-guide--results.webp" alt="FLOOR LOAD 40 / 10 psf, HOLE SHAPE Round and HOLE SIZE 4&quot;, then the results: Hole permitted, end clearance 2' 0&quot;, hole 4&quot;, table column 4&quot; (size rounded up), allowed centerline 2' 2&quot; to 13' 10&quot; from left support, max span 21' 2&quot;, bearing minimum end 1-3/4&quot; and intermediate 3-1/2&quot;, followed by the manufacturer's hole rules" width="660" height="1435">
-  <span class="pin" style="--x:52%;--y:28.5%">7</span>
-  <span class="pin" style="--x:48%;--y:37.7%">8</span>
-  <span class="pin" style="--x:55%;--y:48.9%">9</span>
+  <img src="../shots/tji-joist-guide--results.webp" alt="FLOOR LOAD 40 / 10 psf, HOLE SHAPE Round and HOLE SIZE 4&quot;, then the results: Within hole table, end clearance 2' 0&quot;, hole 4&quot;, table column 4&quot; (size rounded up), allowed centerline 2' 2&quot; to 13' 10&quot; from left support, max span 21' 2&quot;, bearing minimum end 1-3/4&quot; and intermediate 3-1/2&quot;, followed by the manufacturer's hole rules" width="660" height="1435">
+  <span class="pin" style="--x:42.8%;--y:28.3%">7</span>
+  <span class="pin" style="--x:41.2%;--y:37.6%">8</span>
+  <span class="pin" style="--x:60%;--y:16.3%">9</span>
 </div><figcaption>Steps 7 to 9.</figcaption></figure>
 <ol class="steps" start="7" style="counter-reset:s 6">
   <li><span class="label">HOLE SHAPE</span> — <strong>Round</strong>, <strong>Square</strong> or
@@ -48,13 +48,16 @@ for TJI joists only.</p>
   <li><span class="label">HOLE SIZE</span> — the diameter of a round hole, or the longest side of a square or
       rectangular one. With Duct the row reads <span class="label">DUCT WIDTH</span> and a
       <span class="label">DUCT HEIGHT</span> row appears under it.</li>
-  <li>Read the answer: <strong>Hole permitted</strong>, with the distances under it.</li>
+  <li>Read the answer: <strong>Within hole table</strong>, with the distances under it.</li>
 </ol>
 
 <h2 id="results">Reading the results</h2>
 <ol class="steps">
-  <li><strong>The headline</strong> is the verdict: <strong>Hole permitted</strong> or
-      <strong>Hole not permitted</strong>.</li>
+  <li><strong>The headline</strong> is the verdict: <strong>Within hole table</strong> or
+      <strong>Hole not permitted</strong>. If <span class="label">CLEAR SPAN</span> is longer than the joist's
+      tabulated max span, the joist comes first: the headline reads <strong>Won't span</strong> with your span,
+      the one check is <span class="flag">SPAN EXCEEDS MAX</span>, and no hole zones, clearances or hole rules
+      print until you pick a joist that spans.</li>
   <li><strong>Where the hole can go.</strong> <strong>End clearance</strong> is the least distance from the
       inside face of a support to the near edge of the hole. <strong>Table column</strong> is the hole size the
       table was read at. If your size falls between columns, the next one up is used.
@@ -64,23 +67,25 @@ for TJI joists only.</p>
       held at both ends, because the screen cannot know which end is a true end. A note gives the shorter
       distance the table allows at a true end support.</li>
   <li><strong>Max span</strong> is the longest span tabulated for this series, depth, spacing, deflection limit
-      and load. If web stiffeners are needed at that span the line says so. If the table has no entry it reads
+      and load. With <strong>Continuous</strong>, if the guide calls for web stiffeners at that span the line
+      says so: they go at the middle supports where the bearing is under 5-1/4". A Simple span has no middle
+      support, so the line never says it there. If the table has no entry it reads
       <strong>Span not tabulated</strong>. <strong>Bearing min</strong> is the least bearing length at an end
       and at a middle support.</li>
-  <li><strong>The manufacturer's rules</strong> print on every result. Never cut or notch a flange. Keep web
+  <li><strong>The manufacturer's rules</strong> print on every result for a joist that spans. Never cut or notch a flange. Keep web
       above and below the hole. Keep holes apart. The small knockouts can be used anywhere. There is also a note
       about one large hole at the exact center of a simple span. Read them on the screen, where the sizes are
       given.</li>
 </ol>
 <figure class="shot"><div class="frame">
   <img src="../shots/tji-joist-guide--more.webp" alt="The end of the TJI results: two green lines, Within the manufacturer's hole table and Within the tabulated max span, the BASIS &amp; WHAT WAS ASSUMED row, and the joist drawing with hatched zones 2' 0&quot; in from each support, a 12' 0&quot; allowed hole zone and a 16' 0&quot; clear span, then SHARE PDF and SAVE" width="660" height="1435">
-  <span class="pin" style="--x:88%;--y:41.5%">5</span>
-  <span class="pin" style="--x:72%;--y:45%">6</span>
-  <span class="pin" style="--x:20%;--y:59%">7</span>
-  <span class="pin" style="--x:89%;--y:89.9%">8</span>
+  <span class="pin" style="--x:95%;--y:40.8%">5</span>
+  <span class="pin" style="--x:56%;--y:45.8%">6</span>
+  <span class="pin" style="--x:20%;--y:66%">7</span>
+  <span class="pin" style="--x:42.4%;--y:90%">8</span>
 </div><figcaption>The checks, the basis row, the drawing and the export buttons.</figcaption></figure>
 <ol class="steps" start="5" style="counter-reset:s 4">
-  <li><strong>The checks.</strong> Two lines, green when they pass. <span class="flag">HOLE NOT PERMITTED</span>
+  <li><strong>The checks.</strong> Two lines, green when within the table. <span class="flag">HOLE NOT PERMITTED</span>
       means the table has no allowance for that hole in that joist. The first note says why. Make the hole
       smaller, change its shape, or use a deeper joist. <span class="flag">SPAN EXCEEDS MAX</span> means
       <span class="label">CLEAR SPAN</span> is longer than the tabulated span. Go to a deeper joist or a heavier

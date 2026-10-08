@@ -4,7 +4,7 @@
 <title>Stairs — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Stairs</h1>
 <h2 id="what">What it's for</h2>
 <p>Laying out a straight flight of stairs. You give it the floor-to-floor rise, or the run, or both, and it
@@ -16,13 +16,14 @@ red.</p>
 <h2 id="steps">Step by step</h2>
 <p>This example uses the numbers the screen opens with, so your screen matches the shots.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/stairs--inputs.webp" alt="Stairs inputs: INPUT MODE By Height, TOTAL RISE 9' 0&quot;, TARGET RISER HEIGHT 7&quot;, RISER ROUNDING Riser Limited, TREAD DEPTH 10-1/2&quot;, NOSING 3/4&quot;, TARGET HEADROOM 6' 8&quot;, STAIR WIDTH 3' 0&quot;, UPPER FLOOR THICKNESS 10&quot;" width="660" height="1435">
-  <span class="pin" style="--x:50%;--y:26.5%">1</span>
-  <span class="pin" style="--x:50%;--y:35.8%">2</span>
-  <span class="pin" style="--x:58%;--y:42%">3</span>
-  <span class="pin" style="--x:60%;--y:48.8%">4</span>
-  <span class="pin" style="--x:44%;--y:59.7%">5</span>
-</div><figcaption>Steps 1 to 5. The strip under the title repeats the answer while you scroll.</figcaption></figure>
+  <img src="../shots/stairs--inputs.webp" alt="Stairs inputs: INPUT MODE By Height, TOTAL RISE 9' 0&quot;, TARGET RISER HEIGHT 7&quot;, RISER ROUNDING Riser Limited, LEFTOVER RISE Spread, TREAD DEPTH 10-1/2&quot;, NOSING 3/4&quot;, TARGET HEADROOM 6' 8&quot;, STAIR WIDTH 3' 0&quot;, UPPER FLOOR THICKNESS 10&quot;" width="660" height="1435">
+  <span class="pin" style="--x:43.1%;--y:32.2%">1</span>
+  <span class="pin" style="--x:44.3%;--y:41.4%">2</span>
+  <span class="pin" style="--x:61.1%;--y:47.5%">3</span>
+  <span class="pin" style="--x:52.2%;--y:54.5%">4</span>
+  <span class="pin" style="--x:50.3%;--y:65.9%">5</span>
+  <span class="pin" style="--x:46.2%;--y:76.8%">6</span>
+</div><figcaption>Steps 1 to 6. The answer bar under the title stays put while you scroll.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">INPUT MODE</span> — leave it on <strong>By Height</strong>. You know the rise and the
       riser you want. The other three modes are covered below.</li>
@@ -34,6 +35,13 @@ red.</p>
       <strong>Riser Limited</strong> rounds the count up, so no riser comes out taller than your target.
       <strong>Nearest</strong> rounds to the closest whole count. That can save a riser, but the riser can come
       out taller than you asked for.</li>
+  <li><span class="label">LEFTOVER RISE</span> — the risers are cut to the 1/16" a tape reads, and a rise
+      seldom splits into equal 1/16" risers. <strong>Spread</strong>, the setting the screen opens on, puts each
+      tread at its own share of the rise, to the 1/16". The risers come out in two heights 1/16" apart, mixed up
+      the flight, and they add up to the rise exactly: 10' 6-3/8" in 19 risers is 8 at 6-11/16" and 11 at
+      6-5/8". <strong>Bottom riser</strong> is the Construction Master layout: every riser cut the same, with the
+      whole leftover in the bottom riser. At 10' 6-3/8" that bottom riser finishes 7-1/8" against 6-5/8", which
+      is more than the 3/8" the code allows.</li>
   <li><span class="label">TREAD DEPTH</span> — the level run of one step. The total run is this times the number
       of treads. The example is 10-1/2".</li>
   <li><span class="label">NOSING</span> is how far the front of the tread hangs over the riser below.
@@ -43,13 +51,13 @@ red.</p>
       assembly. The opening the stair needs is worked out from it.</li>
 </ol>
 <figure class="shot"><div class="frame">
-  <img src="../shots/stairs--results.webp" alt="The lower Stairs inputs: STAIRWELL OPENING and MEASURED HEADROOM switches off, RISER TYPE Closed, STRINGERS 3, TREAD STOCK 5/4x12, RISER STOCK 1x8, WASTE FACTOR 10%, and the start of the results reading 16 risers @ 6-3/4&quot;. A strip under the STAIRS title repeats 16 risers @ 6-3/4&quot; and Meets code — IRC R311.7." width="660" height="1435">
-  <span class="pin" style="--x:61%;--y:33.7%">7</span>
-  <span class="pin" style="--x:50%;--y:47.0%">8</span>
-  <span class="pin" style="--x:36%;--y:57.5%">9</span>
-  <span class="pin" style="--x:23.5%;--y:86.3%">10</span>
-</div><figcaption>Steps 7 to 10, further down the inputs.</figcaption></figure>
-<ol class="steps" start="7" style="counter-reset:s 6">
+  <img src="../shots/stairs--results.webp" alt="The lower Stairs inputs: TARGET HEADROOM 6' 8&quot;, STAIR WIDTH 3' 0&quot;, UPPER FLOOR THICKNESS 10&quot;, STAIRWELL OPENING and MEASURED HEADROOM switches off, RISER TYPE Closed, STRINGERS 3, TREAD STOCK 5/4x12, RISER STOCK 1x8, WASTE FACTOR 10%. The answer bar under the STAIRS title repeats 16 risers · cut 6-3/4&quot; and Headroom not checked — within IRC 2021 R311.7.1, .3, .5 limits — check local code." width="660" height="1435">
+  <span class="pin" style="--x:58.3%;--y:41.6%">8</span>
+  <span class="pin" style="--x:44.5%;--y:54.6%">9</span>
+  <span class="pin" style="--x:42.1%;--y:65.5%">10</span>
+  <span class="pin" style="--x:76%;--y:93.7%">11</span>
+</div><figcaption>Steps 8 to 11, further down the inputs.</figcaption></figure>
+<ol class="steps" start="8" style="counter-reset:s 7">
   <li>If the hole in the floor is already framed, turn on <span class="label">STAIRWELL OPENING</span> and enter
       <span class="label">OPENING LENGTH</span>, measured level, back from the face of the top riser. The
       headroom is then worked out from it. If you have taped the real clearance on site, turn on
@@ -62,7 +70,7 @@ red.</p>
       sets the tread thickness, which is what the bottom riser is dropped by.
       <span class="label">RISER STOCK</span> is the thickness of the riser boards.</li>
   <li><span class="label">WASTE FACTOR</span> — the extra you buy over the measured quantity.</li>
-  <li>Read the answer: <strong>16 risers @ 6-3/4"</strong>. The example passes every check. Switch
+  <li>Read the answer: <strong>16 risers · cut 6-3/4"</strong>. The example is within every limit it checks. Switch
       <span class="label">RISER TYPE</span> to <strong>Open</strong> and a red flag appears: 6-3/4" less the
       1" tread leaves a 5-3/4" gap, and a 4" sphere goes through it.</li>
 </ol>
@@ -81,29 +89,41 @@ red.</p>
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/stairs--more.webp" alt="Stairs results: 16 risers @ 6-3/4&quot;, three riser-count chips, tread 10-1/2&quot;, rise 9' 0&quot;, run 13' 1-1/2&quot;, 32.74°, stringer layout and order lengths, opening required 11' 8-3/4&quot; for 6' 8&quot; headroom, the BASIS &amp; WHAT WAS ASSUMED row, and the stair section drawing" width="660" height="1435">
-  <span class="pin" style="--x:60.6%;--y:37.4%">1</span>
-  <span class="pin" style="--x:92%;--y:41.6%">2</span>
-  <span class="pin" style="--x:66%;--y:64.9%">4</span>
-  <span class="pin" style="--x:60%;--y:68.4%">5</span>
-  <span class="pin" style="--x:30%;--y:73.5%">6</span>
+  <img src="../shots/stairs--more.webp" alt="Stairs results: 16 risers · cut 6-3/4&quot;, three riser-count chips, tread 10-1/2&quot;, rise 9' 0&quot;, run 13' 1-1/2&quot;, 32.74°, R+/– and T+/– 0&quot;, bottom riser cut 5-3/4&quot;, stringer layout and order lengths, opening required 11' 8-3/4&quot; for 6' 8&quot; headroom, the green line Headroom not checked — within IRC 2021 R311.7.1, .3, .5 limits — check local code, the BASIS &amp; WHAT WAS ASSUMED row, and the top of the stair section drawing" width="660" height="1435">
+  <span class="pin" style="--x:75%;--y:14.7%">1</span>
+  <span class="pin" style="--x:50%;--y:42.9%">2</span>
+  <span class="pin" style="--x:96%;--y:69.8%">4</span>
+  <span class="pin" style="--x:58.6%;--y:74.1%">5</span>
+  <span class="pin" style="--x:50%;--y:94%">6</span>
 </div><figcaption>The results card, then the section drawing.</figcaption></figure>
 <ol class="steps">
-  <li><strong>The headline</strong> is the riser count and the riser height you cut to, rounded to 1/16". The
-      <span class="label">defaults</span> tag means you have not entered anything of your own yet.</li>
+  <li><strong>The headline</strong> is the riser count and the riser you cut to, <strong>cut</strong> 6-3/4" in the
+      example. It is on the 1/16" grid, so it is exact. When the rise does not split evenly, the spread gives
+      two riser heights, and the headline names both with how many of each: <strong>19 risers · 8 @ 6-11/16" +
+      11 @ 6-5/8"</strong> for 10' 6-3/8". The chips below show the average riser, rise divided by
+      count, which is why they can carry ≈. The bottom riser is different: see <strong>Bottom riser cut</strong>.
+      The <span class="label">defaults</span> tag means you have not entered anything of your own yet.</li>
   <li><strong>The chips</strong> show one riser fewer, the current count, and one more, each with its riser
       height and its verdict. Tap a chip to take that count. The screen switches to <strong>By Count</strong>.
       A chip past the <span class="label">RISERS</span> row's range of 2 to 30 is dimmed and does nothing when tapped.</li>
   <li><strong>The lines under the chips.</strong> Tread, rise, run and the incline in degrees.
       <strong>R+/–</strong> and <strong>T+/–</strong> are what rounding to 1/16" leaves over the whole flight.
-      They print bold when they are not zero. <strong>Bottom riser cut</strong> is the first riser you cut. It
-      is shorter than the rest by the tread thickness and any R+/–. <strong>Stringer LAYOUT</strong> is the length
+      They print bold when they are not zero. With the rise spread, R+/– is 0: the leftover is already shared
+      out. <strong>Bottom riser cut</strong> is the first riser you cut. It is shorter than the riser it finishes
+      at by the tread thickness, and on <strong>Bottom riser</strong> by the R+/– as well. The
+      <strong>drop</strong>, the amount you take off the foot of the stringer after laying it out, is the cut
+      riser less the bottom riser cut. With the rise spread it is just the tread thickness, 1" on 5/4 stock. On
+      Bottom riser, with a 7-1/8" riser and a 6-1/2" bottom riser cut, it is 5/8". The mark-out card, both
+      drawings and the 1:1 template print that same figure. <strong>Stringer LAYOUT</strong> is the length
       you lay out and cut. <strong>ORDER</strong> is the tip-to-tip length the board has to hold, with the board
       size after it. <strong>Opening req'd</strong> is the stairwell opening that gives your target headroom,
       nosing included.</li>
-  <li><strong>The check.</strong> A stair with nothing wrong reads <strong>Meets code — IRC R311.7</strong> in
-      green. Otherwise each failure gets its own <span class="flag">RED LINE IN CAPITALS</span>, with the number
-      that failed and the code section it was checked against. There can be several at once. Fix every one.</li>
+  <li><strong>The check.</strong> A stair with nothing wrong says in green what it was checked against. Until you
+      give an opening or a measured headroom it reads <strong>Headroom not checked — within IRC 2021 R311.7.1, .3, .5 limits — check local code</strong>:
+      the width, the rise of the flight, and the risers, treads and nosing. Once the headroom is checked too it reads
+      <strong>Within IRC 2021 R311.7.1–.3, .5 limits — check local code</strong>. Handrails, guards and landings are never checked. Otherwise each
+      failure gets its own <span class="flag">RED LINE IN CAPITALS</span>, with the number that failed and the code
+      section it was checked against. There can be several at once. Fix every one.</li>
   <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it. It opens the rounding rule, how the opening
       was worked out, the headroom note, how the riser count was rounded, the bottom riser drop, the stringer
       throat, the code edition the checks use and a reminder to check your local code. If you have not given an
@@ -116,13 +136,18 @@ red.</p>
 </ol>
 <p>What clears each flag:</p>
 <ul>
-  <li><strong>Open riser gap</strong> — set <span class="label">RISER TYPE</span> to Closed.</li>
+  <li><strong>Open riser gap</strong> — a gap of 4" or more lets a 4" sphere through, so the gap has to be under
+      4". Set <span class="label">RISER TYPE</span> to Closed, or use more risers.</li>
+  <li><strong>Flight rise</strong> — one flight may rise no more than 12' 7" between floors or landings (IRC
+      R311.7.3). This screen lays out a single flight, so a taller rise needs a landing. Work out each flight on
+      its own, with the rise from the floor to the landing and from the landing up.</li>
   <li><strong>Riser height too tall</strong> — lower <span class="label">TARGET RISER HEIGHT</span>, tap the chip
       with one more riser, or go back to Riser Limited.</li>
   <li><strong>Riser height too short</strong> — raise <span class="label">TARGET RISER HEIGHT</span>, or tap the
       chip with one fewer riser.</li>
-  <li><strong>Riser variation</strong> — the rounding left over is too much for the bottom riser to take. Tap a
-      chip with a different count.</li>
+  <li><strong>Riser variation</strong> — only on <strong>Bottom riser</strong>: the leftover is too much for one
+      riser to take. Set <span class="label">LEFTOVER RISE</span> to Spread, or tap a chip with a different count.
+      A spread stair never trips it, because no riser is more than 1/16" off another.</li>
   <li><strong>Tread depth</strong> — raise <span class="label">TREAD DEPTH</span>, or in a run mode lengthen
       <span class="label">TOTAL RUN</span>.</li>
   <li><strong>Stair width</strong> — raise <span class="label">STAIR WIDTH</span>.</li>
@@ -131,30 +156,33 @@ red.</p>
   <li><strong>Stringer throat</strong> — too little wood is left under the notches. The flag says what to do.</li>
 </ul>
 <figure class="shot"><div class="frame">
-  <img src="../shots/stairs--end.webp" alt="Below the section drawing: the STRINGER BOARD — NOTCH SET-OUT drawing, ≈ 16' 7-3/4&quot; tip to tip with 15 notches on a 2x12, and the RUNNING MARK-OUT card with NOTCHED, HOUSED and STORY POLE tapes" width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:51.3%">7</span>
-  <span class="pin" style="--x:53.8%;--y:90.7%">8</span>
-  <span class="pin" style="--x:88%;--y:88.3%">9</span>
-</div><figcaption>The stringer board and the running mark-out.</figcaption></figure>
+  <img src="../shots/stairs--end.webp" alt="The stair section drawing, with DROP 1&quot; → 1ST RISER 5-3/4&quot; and TREAD 1&quot; · RISER BOARDS GO IN FIRST under it, then the STRINGER BOARD — NOTCH SET-OUT drawing, ≈ 16' 7-3/4&quot; tip to tip with 15 notches on a 2x12 and the running distance to every nose" width="660" height="1435">
+  <span class="pin" style="--x:64.3%;--y:64%">7</span>
+</div><figcaption>The section drawing and the stringer board. The running mark-out card is next, below it.</figcaption></figure>
 <ol class="steps" start="7" style="counter-reset:s 6">
   <li><span class="label">STRINGER BOARD — NOTCH SET-OUT</span> is the same stringer lying flat on the horses.
       It shows the tip-to-tip length, the square settings, the drop on the first riser, the throat, and the
       running distance to every nose.</li>
   <li><span class="label">RUNNING MARK-OUT</span> lists those distances one at a time so you hook the tape once
       and mark down the board. Pick the tape: <strong>NOTCHED</strong>, <strong>HOUSED</strong> or
-      <strong>STORY POLE</strong>.</li>
+      <strong>STORY POLE</strong>. On a spread stair, mark every station off the one hook. The marks carry
+      the two riser heights; the square only sets the angle. The story pole shows which tread gets which.</li>
   <li>The speaker reads the marks aloud. See <a href="../tools/mark-out-and-speak.html">Mark-out and speak</a>.</li>
 </ol>
 <p>Below the mark-out is the <strong>notching template</strong> card. It prints one notch at true size, across
-more than one sheet if the tread is wider than the page. If the riser is taller than the page it prints the
+more than one sheet if the tread is wider than the page. On a spread stair the notch is the exact share of the
+rise, about 6-21/32" for 10' 6-3/8" in 19, so trace it at each NOTCHED mark. If the riser is taller than the page it prints the
 set-out numbers instead, and the card says so before you print. Print at 100% scale. Do not fit to page. Then
 comes <span class="label">MATERIALS</span>: stringers, treads and riser boards, with the waste factor in the
-quantities. The riser row is there because the screen opens on <strong>Closed</strong>; on <strong>Open</strong>
+quantities. Stringers are bought at the next even-foot length, the lengths the yard stocks, and
+<span class="label">OPTIMIZE</span> starts from that same length. The riser row is there because the screen opens on <strong>Closed</strong>; on <strong>Open</strong>
 there are no riser boards to buy and the row goes.</p>
 <p>At the bottom, <span class="label">CUT SHEET</span>, the list icon at its right end, <span class="label">CUT LIST</span>, <span class="label">SEND LIST</span> and <span class="label">OPTIMIZE</span>
 stay dim until you change at least one input, so a sheet made from the sample numbers never reaches a job.
 <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
-<span class="label">CUT SHEET</span> makes a PDF with both drawings,
+<span class="label">CUT SHEET</span> makes a PDF with both drawings and every input you set. Its table opens with
+the same check line the screen shows, such as <strong>Headroom not checked</strong>, then your inputs, then the cut
+figures and the notes; what does not fit the first page carries on to the next.
 <span class="label">SAVE</span> keeps the result in History, <span class="label">CUT LIST</span> puts the list on
 the Lock Screen, <span class="label">SEND LIST</span> sends a checkable list to another phone, and
 <span class="label">OPTIMIZE</span> sends the stringers to the Cut List Optimizer at their order length. A stringer
@@ -168,12 +196,14 @@ purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</div>
       floor to finished floor. If finish flooring is still to go down on either level, allow for it before you
       enter the rise.</li>
   <li><strong>Buying to the layout length.</strong> The layout length is what you mark and cut. The board has to
-      be as long as <strong>ORDER</strong>. The material list rounds that up to a stock length.</li>
+      be as long as <strong>ORDER</strong>. The material list rounds that up to the next even foot.</li>
   <li><strong>Cutting every riser the same.</strong> The bottom riser is shorter. Cut it to
       <strong>Bottom riser cut</strong>, not to the headline height.</li>
+  <li><strong>Stepping the square on a spread stair.</strong> Stepping one 1/16" setting up the board puts
+      the flight off at the top, 1/2" short at 10' 6-3/8" in 19. Mark the NOTCHED stations from the one hook
+      instead.</li>
   <li><strong>Taking the green line as a headroom pass.</strong> With no opening and no measured headroom, the
-      headroom has not been checked. Open <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> and read the
-      note.</li>
+      headroom has not been checked, and the green line says so. Measure it on site, or enter the opening.</li>
 </ul>
 
 <h2 id="related">Related</h2>

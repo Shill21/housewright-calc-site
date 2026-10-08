@@ -4,7 +4,7 @@
 <title>Voice entry — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Voice entry</h1>
 <p>The mic key on the Dimensional Calculator lets you say a measurement or a sum instead of typing it.
 You see what the phone heard, you see what it adds up to, and nothing goes into the calculator until you
@@ -13,7 +13,7 @@ tap <span class="label">INSERT</span>. Recognition runs on the phone — audio n
 <h2>Step by step</h2>
 <figure class="shot"><div class="frame">
   <img src="../shots/tool-dimensional.webp" alt="Dimensional Calculator keypad. The bottom row holds diagonal, equal parts, the mic key and the 1/16&quot; fraction menu." width="660" height="1435">
-  <span class="pin" style="--x:80.2%;--y:89.2%">1</span>
+  <span class="pin" style="--x:73%;--y:87.4%">1</span>
 </div><figcaption>The mic key is in the bottom row of the keypad.</figcaption></figure>
 <ol class="steps">
   <li>On the Dimensional Calculator, tap the mic key. The <span class="label">VOICE ENTRY</span> sheet opens and
@@ -22,14 +22,15 @@ tap <span class="label">INSERT</span>. Recognition runs on the phone — audio n
   <li>Read the transcript. It is exactly what the phone heard.</li>
   <li>Check <span class="label">EQUALS</span>. It is the value of what you said, at the calculator's current
       fraction setting.</li>
-  <li>Tap <span class="label">INSERT</span>. The button only appears once you have finished speaking, so a half-heard
-      phrase cannot be inserted.</li>
+  <li>Tap <span class="label">INSERT</span>. It appears as soon as what you said reads as a measurement, even while
+      the sheet is still listening. It stops listening and puts in exactly what <span class="label">EQUALS</span>
+      shows, so check that first.</li>
 </ol>
 <figure class="shot"><div class="frame">
   <img src="../shots/tool-voice.webp" alt="Voice entry sheet: transcript “5 foot 3 and 5/16 plus 12 and a half inches”, EQUALS 6' 3-13/16&quot;, INSERT button. The line above reads On-device recognition — audio never leaves your phone." width="660" height="1435">
   <span class="pin" style="--x:87.1%;--y:61.6%">3</span>
-  <span class="pin" style="--x:52.3%;--y:75.5%">4</span>
-  <span class="pin" style="--x:88.6%;--y:85.6%">5</span>
+  <span class="pin" style="--x:19.6%;--y:72.5%">4</span>
+  <span class="pin" style="--x:62.7%;--y:81.8%">5</span>
 </div><figcaption>Transcript, the EQUALS preview, then INSERT.</figcaption></figure>
 
 <h2>What INSERT does</h2>
@@ -54,6 +55,13 @@ or end the phrase with the word "equals".</p>
   <li><strong>Sums</strong> — "plus", "minus", "times", "multiplied by", "divided by":
       "3/16 plus 5/8", "8 divided by 2".</li>
   <li><strong>Equals</strong> — "6 inches plus 6 inches equals".</li>
+  <li><strong>A foot and a half</strong> — "a foot and a half" is 1' 6", "two and a half feet" is 2' 6", "an inch
+      and a half" is 1-1/2".</li>
+  <li><strong>A question</strong> — "what's", "what is" or "how much is" at the start is skipped:
+      "what's 3 sixteenths plus 5 eighths".</li>
+  <li><strong>Symbols</strong>, typed or dictated — <strong>+ − x × / ÷ =</strong>: "3/16 + 5/8", "12 feet x 4".
+      A dash on its own is minus ("10 feet - 3 feet"), except between a whole number and a fraction, where it is
+      the dash key: "6 - 1/2 inches" is 6-1/2".</li>
 </ul>
 <p>Use "and" between a whole number and its fraction — it does the job of the dash key.</p>
 
@@ -67,6 +75,8 @@ are asked to try again.</p>
   <li>A sum with a piece missing — "5 plus", or "plus 5".</li>
   <li>A number straight after inches with nothing between — "6 inches 3/4". Say "6 and 3/4 inches".</li>
   <li>A decimal with a fraction on it — "2.5 and 3/4".</li>
+  <li>Two whole numbers joined by a dash — "12-4". For minus, put a space each side: "12 - 4".</li>
+  <li>A second "and" after a unit — "a foot and a half and a quarter".</li>
   <li>"clear". Close the sheet and use <span class="label">AC</span>.</li>
 </ul>
 
@@ -77,13 +87,18 @@ are asked to try again.</p>
   <li><strong>"Speech recognition is off for Housewright Calc…"</strong> or <strong>"The microphone is off for
       Housewright Calc…"</strong> — the sheet names the permission that was refused. Tap
       <span class="label">Open Settings</span> on the sheet and turn that one on.</li>
-  <li><strong>"The microphone is busy…"</strong> — another app or a call has the microphone. Close it and open
-      the sheet again.</li>
+  <li><strong>"Voice entry is turned off on this device by Screen Time or your organization."</strong> — whoever
+      manages the phone's Screen Time or its company profile has turned speech recognition off. It can't be turned
+      on from the app or from its settings; ask them.</li>
+  <li><strong>"The microphone isn't available…"</strong> — a call or another app has the microphone, or there's no
+      microphone connected. Close the sheet, sort that out, and open it again.</li>
   <li><strong>"On-device speech recognition isn't available for…"</strong> — the phone has no on-device
       recogniser for the language it names. The app tries your own English first, then US English. There is no
       server fallback, because audio never leaves the phone.</li>
   <li><strong>"Didn't hear anything"</strong> or <strong>"Didn't catch that as a dimension"</strong> — tap
       <span class="label">TRY AGAIN</span>. If the transcript shows a word from the list above, rephrase it.</li>
+  <li><strong>AirPods connected, or a headset came out, while it was listening</strong> — it stops and shows what
+      it heard. <span class="label">TRY AGAIN</span> listens again on the microphone you have now.</li>
 </ul>
 
 <h2>Related</h2>

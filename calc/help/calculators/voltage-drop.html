@@ -4,7 +4,7 @@
 <title>Voltage Drop — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Voltage Drop</h1>
 <h2 id="what">What it's for</h2>
 <p>A long run loses voltage in the wire. Enter the run, the load and the wire you plan to pull, and Voltage
@@ -16,11 +16,11 @@ check on one run, with no material list.</p>
 <p>The example is the screen as it opens: a 75' 0" run, 20 A at 120 V, on 12 AWG copper, held to 3.0%.</p>
 <figure class="shot"><div class="frame">
   <img src="../shots/voltage-drop--inputs.webp" alt="Voltage Drop inputs: ONE-WAY RUN 75' 0&quot;, SYSTEM VOLTAGE 120 V, AMPS 20 A, WIRE SIZE 12 AWG, CONDUCTOR Copper, MAX DROP 3.0%. Results: 8 AWG, with 12 AWG struck through at 4.94% drop (5.93 V) — over the 3.0% limit, 8 AWG: 1.95% drop (2.34 V), and a green line 8 AWG within 3.0% max drop." width="660" height="1435">
-  <span class="pin" style="--x:45%;--y:23.5%">1</span>
-  <span class="pin" style="--x:46%;--y:29.8%">2</span>
-  <span class="pin" style="--x:45%;--y:35.5%">3</span>
-  <span class="pin" style="--x:38.5%;--y:41.1%">4</span>
-  <span class="pin" style="--x:48%;--y:46.5%">5</span>
+  <span class="pin" style="--x:46.5%;--y:31.1%">1</span>
+  <span class="pin" style="--x:52.6%;--y:37.8%">2</span>
+  <span class="pin" style="--x:32.3%;--y:43.2%">3</span>
+  <span class="pin" style="--x:42.5%;--y:48.9%">4</span>
+  <span class="pin" style="--x:42.9%;--y:54.3%">5</span>
 </div><figcaption>Steps 1–5. Step 6, MAX DROP, is the last input row.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">ONE-WAY RUN</span> — the length of cable from the panel to the load, one way, along
@@ -33,10 +33,10 @@ check on one run, with no material list.</p>
   <li><span class="label">CONDUCTOR</span> — <strong>Copper</strong> or <strong>Aluminum</strong>.</li>
   <li><span class="label">MAX DROP</span> — the limit you are holding the run to, in steps of 0.5%. The
       example is 3.0%.</li>
-  <li>Read RESULTS. The headline is the size that passes: <strong>8 AWG</strong>. Under it, your own size is
+  <li>Read RESULTS. The headline is the smallest size within the limit: <strong>8 AWG</strong>. Under it, your own size is
       struck through with its drop, <strong>12 AWG 4.94% drop (5.93 V) — over the 3.0% limit</strong>, then
-      the passing size with its drop, <strong>8 AWG: 1.95% drop (2.34 V)</strong>.</li>
-  <li>Tap <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> to see what the recommended size was
+      the size within the limit with its drop, <strong>8 AWG: 1.95% drop (2.34 V)</strong>.</li>
+  <li>Tap <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> to see what the smallest size was
       governed by, and the formula.</li>
   <li>Scroll down to the run drawing and its ladder of sizes.</li>
 </ol>
@@ -44,24 +44,24 @@ check on one run, with no material list.</p>
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
   <img src="../shots/voltage-drop--results.webp" alt="Voltage Drop results and drawing: headline 8 AWG, the struck-through 12 AWG line, the green check, the BASIS &amp; WHAT WAS ASSUMED row, then a one-line drawing from PANEL 20 A to LOAD showing 120 V and 114.1 V over 75' 0&quot;, a ladder of sizes 12, 10, 8, 6, 4 with 4.9%, 3.1%, 2.0%, 1.2%, 0.8%, the limit line struck across 12 and 10 and 8 filled in, an inset comparing #12 at 6530 and #8 at 16510 circular mils, and notes including DROP 5.93 V = 4.94% · OVER LIMIT 3.0% (STRUCK) in red. SHARE PDF and SAVE at the bottom." width="660" height="1435">
-  <span class="pin" style="--x:35%;--y:30%">7</span>
-  <span class="pin" style="--x:75%;--y:45%">8</span>
+  <span class="pin" style="--x:25.3%;--y:23.4%">7</span>
+  <span class="pin" style="--x:56.9%;--y:38.7%">8</span>
   <span class="pin" style="--x:64%;--y:65%">9</span>
-</div><figcaption>Steps 7–9: the size that passes, the basis row, and the ladder of sizes.</figcaption></figure>
+</div><figcaption>Steps 7–9: the smallest size within the limit, the basis row, and the ladder of sizes.</figcaption></figure>
 <p>The results card reads one of five ways.</p>
 <ul>
-  <li><strong>Your size passes.</strong> The headline is your <span class="label">WIRE SIZE</span>, the line
+  <li><strong>Your size is within the limit.</strong> The headline is your <span class="label">WIRE SIZE</span>, the line
       under it is its drop, and the green line reads <strong>Within 3.0% max drop</strong>, with your limit in
-      it. Your size has met both tests: the drop, and carrying the <span class="label">AMPS</span>.</li>
-  <li><strong>Your size passes the drop but cannot carry the amps.</strong> A 12 AWG copper on a 30 A load
+      it. Your size is within both limits: the drop, and carrying the <span class="label">AMPS</span>.</li>
+  <li><strong>Your size is within the drop limit but cannot carry the amps.</strong> A 12 AWG copper on a 30 A load
       over 10' 0" drops under 1%, but the table rates it at 20 A. The headline is the size that carries the
       load, your size is struck through and reads <strong>rated 20 A @ 60 °C, under the 30 A load</strong>,
       and the red line reads
       <span class="flag">12 AWG CANNOT CARRY 30 A — NEC 310.16</span>.</li>
-  <li><strong>Your size fails and a larger one passes.</strong> This is the example. The headline is the
+  <li><strong>Your size is over the limit and a larger one is within it.</strong> This is the example. The headline is the
       larger size, your size is struck through, and the green line names the size that is within the limit.
       The search starts at your size and only goes up.</li>
-  <li><strong>Nothing listed passes.</strong> The headline reads <strong>Even 4/0 AWG exceeds</strong> your
+  <li><strong>No listed size is within the limit.</strong> The headline reads <strong>Even 4/0 AWG exceeds</strong> your
       limit and the red line reads <span class="flag">EVEN 4/0 AWG EXCEEDS … LIMIT — REDUCE RUN LENGTH OR
       LOAD</span>. The fix is a shorter <span class="label">ONE-WAY RUN</span>, fewer
       <span class="label">AMPS</span>, or a higher <span class="label">SYSTEM VOLTAGE</span> if the equipment
@@ -74,9 +74,9 @@ check on one run, with no material list.</p>
 12</span>. Pick a larger <span class="label">WIRE SIZE</span> or switch <span class="label">CONDUCTOR</span>
 to Copper.</p>
 <p><strong><span class="label">BASIS &amp; WHAT WAS ASSUMED</span></strong> opens to the formula and a reminder
-that the limit is your own setting. When a size passes, a line above it says whether that size was set by the
-drop limit or had to go bigger to carry the current, and names the table it used. A recommended size
-always has to carry the <span class="label">AMPS</span> as well as meet the drop.</p>
+that the limit is your own setting. When a size is within the limit, a line above it says whether that size was set by the
+drop limit or had to go bigger to carry the current, and names the table it used. The smallest size
+always has to carry the <span class="label">AMPS</span> as well as stay within the drop limit.</p>
 <p><strong>The drawing</strong> is a one-line schematic, not to scale: panel to load and back, the voltage at
 each end on the wire you entered, and the one-way run. Under it is a ladder of sizes with the percent drop
 for each. One limit line strikes every size that misses the limit — here 12 and 10 — and stops where the

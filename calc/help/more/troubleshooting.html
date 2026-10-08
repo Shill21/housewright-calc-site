@@ -4,7 +4,7 @@
 <title>Troubleshooting — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Troubleshooting</h1>
 <p>The problems people hit most, what causes each one, and the fix.</p>
 
@@ -37,7 +37,10 @@ fraction such as 11/16" where you meant a whole number and a fraction. See
   <li><strong>"Speech recognition is off…"</strong> or <strong>"The microphone is off…"</strong> — voice entry
       needs both permissions. Tap <span class="label">Open Settings</span> on the sheet and turn on the one it
       names.</li>
-  <li><strong>"The microphone is busy…"</strong> — a call or another app has it. Close that and try again.</li>
+  <li><strong>"Voice entry is turned off on this device by Screen Time or your organization."</strong> — speech
+      recognition is restricted by whoever manages the phone. It can't be turned on from the app; ask them.</li>
+  <li><strong>"The microphone isn't available…"</strong> — a call or another app has it, or there's no microphone
+      connected. Close that and try again.</li>
   <li><strong>"On-device speech recognition isn't available for…"</strong> — the phone has no on-device recogniser
       for that language. Voice entry works in English and never sends audio to a server, so there is nothing to
       fall back to.</li>
@@ -48,14 +51,18 @@ fraction such as 11/16" where you meant a whole number and a fraction. See
 <h2>The laser won't pair</h2>
 <ul>
   <li><strong>"Can't search — Bluetooth is off, or this app doesn't have Bluetooth access."</strong> Turn Bluetooth
-      on in Control Centre. Then, in the phone's Settings ▸ Housewright Calc, make sure Bluetooth is allowed.</li>
-  <li><strong>It searches and finds nothing.</strong> Press the Bluetooth button on the laser. The app works with
+      on in Control Centre. Then, in the phone's Settings ▸ Housewright Calc, make sure Bluetooth is allowed. Once
+      Bluetooth is on, the search starts by itself.</li>
+  <li><strong>It searches and finds nothing.</strong> After about 20 seconds the line reads "No laser found yet —
+      only Bluetooth LE (C-series) models can pair." Press the Bluetooth button on the laser. The app works with
       Bluetooth Low Energy Bosch laser measures — the Settings screen names GLM 50 C and PLR C-series, and says
       newer GLM -27 C models are not verified yet.</li>
   <li><strong>Paired, but the status reads <span class="label">BLUETOOTH IS OFF</span>,
       <span class="label">BLUETOOTH ACCESS DENIED</span> or <span class="label">RECONNECTING…</span></strong> The
       first is Control Centre; the second has an <span class="label">Open Settings</span> button under it; the third
       means the laser is off, asleep or out of range.</li>
+  <li><strong>"Can't find this laser — forget it and pair again."</strong> The laser was reset or its pairing was
+      cleared. Tap <span class="label">FORGET LASER</span>, then pair it again.</li>
   <li><strong>Paired and connected, but a measurement went nowhere.</strong> Readings land on the Dimensional
       Calculator. Taken with another calculator open, the reading is held — go back to the Dimensional Calculator
       and it is there.</li>
@@ -86,7 +93,7 @@ usually no connection; try again when you are back online. See <a href="free-and
 
 <h2>A calculator shows a lock</h2>
 <p>It is a Pro calculator. Tapping it opens the purchase screen instead of the calculator. Five calculators are
-free for good — Dimensional Calculator, Unit Converter, Framing, Concrete and Rough Opening. If you have already
+free — Dimensional Calculator, Unit Converter, Framing, Concrete and Rough Opening. If you have already
 bought Pro and still see locks, use Settings ▸ <span class="label">PURCHASES</span> ▸
 <span class="label">RESTORE PURCHASES</span>. The guide for a locked calculator is still free to read.</p>
 

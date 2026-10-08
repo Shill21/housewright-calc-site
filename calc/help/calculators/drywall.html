@@ -4,7 +4,7 @@
 <title>Drywall — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Drywall</h1>
 <h2 id="what">What it's for</h2>
 <p>A board takeoff for one room or a whole house. You list the rooms and walk away with a sheet count, tape,
@@ -15,13 +15,13 @@ on it. It is an order quantity, not a code check.</p>
 <p>The example is the screen as it opens: one 12' by 10' room with 8' walls, a door, a window and a ceiling,
 hung in 4x8 board.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/drywall--inputs.webp" alt="Drywall inputs at their defaults: SHEET SIZE 4x8, THICKNESS 1/2 inch, FINISH LEVEL 4, then ROOM 1 with LENGTH 12' 0&quot;, WIDTH 10' 0&quot;, HEIGHT 8' 0&quot;, DOORS 1, WINDOWS 1 and INCLUDE CEILING on. The strip under the title reads 17 sheets." width="660" height="1435">
-  <span class="pin" style="--x:50%;--y:26.5%">1</span>
-  <span class="pin" style="--x:50%;--y:34.8%">2</span>
-  <span class="pin" style="--x:27.3%;--y:44%">3</span>
-  <span class="pin" style="--x:42%;--y:58.7%">4</span>
-  <span class="pin" style="--x:32%;--y:76.7%">5</span>
-  <span class="pin" style="--x:65%;--y:88.2%">6</span>
+  <img src="../shots/drywall--inputs.webp" alt="Drywall inputs at their defaults: SHEET SIZE 4x8, THICKNESS 1/2 inch, FINISH LEVEL 4, then ROOM 1 with LENGTH 12' 0&quot;, WIDTH 10' 0&quot;, HEIGHT 8' 0&quot;, DOORS 1, WINDOWS 1 and INCLUDE CEILING on. The answer bar under the title reads 17 sheets." width="660" height="1435">
+  <span class="pin" style="--x:44.0%;--y:26.3%">1</span>
+  <span class="pin" style="--x:42.4%;--y:34.7%">2</span>
+  <span class="pin" style="--x:48.1%;--y:43.9%">3</span>
+  <span class="pin" style="--x:20.0%;--y:48.3%">4</span>
+  <span class="pin" style="--x:34.2%;--y:76.6%">5</span>
+  <span class="pin" style="--x:54.1%;--y:88.2%">6</span>
 </div><figcaption>The board first, then one block of inputs for each room.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">SHEET SIZE</span> — the board you are buying: 4x8, 4x10 or 4x12. Leave it at 4x8.</li>
@@ -40,8 +40,8 @@ hung in 4x8 board.</p>
       top right of a block removes that room.</li>
   <li><span class="label">WASTE FACTOR</span> — the extra you buy for offcuts and breakage, in steps of 5%. It
       opens at 10%.</li>
-  <li>Read the answer in <span class="label">RESULTS</span>: <strong>17 sheets</strong>, 1 tape roll, 4.6 gal
-      mud, 472 sq ft net area.</li>
+  <li>Read the answer in <span class="label">RESULTS</span>: <strong>17 sheets</strong>, 1 tape roll, ≈ 4.6 gal
+      mud, 472 sq ft net area. The ≈ means the gallon figure is rounded: level 4 × 519.2 sq ft ÷ 450 is 4.615.</li>
   <li>Scroll on to the drawing and the <span class="label">MATERIALS</span> list.
       <span class="label">BASIS &amp; WHAT WAS ASSUMED</span> states the yields the list is figured on: no
       opening deductions, the corner bead per door and window, tape per 1,000 sq ft, mud per finish level and
@@ -49,20 +49,21 @@ hung in 4x8 board.</p>
   <li>Save or share the job with the buttons at the foot of the screen.</li>
 </ol>
 <figure class="shot"><div class="frame">
-  <img src="../shots/drywall--results.webp" alt="WASTE FACTOR at 10%, then the RESULTS card reading 17 sheets, 1 tape roll, 4.6 gal mud and 472 sq ft net area, with the drywall elevation drawing below it" width="660" height="1435">
-  <span class="pin" style="--x:23.3%;--y:38.4%">8</span>
-  <span class="pin" style="--x:40%;--y:48.2%">9</span>
-  <span class="pin" style="--x:75%;--y:58.5%">10</span>
+  <img src="../shots/drywall--results.webp" alt="WASTE FACTOR at 10%, then the RESULTS card reading 17 sheets, 1 tape roll, ≈ 4.6 gal mud and 472 sq ft net area, with the drywall elevation drawing below it" width="660" height="1435">
+  <span class="pin" style="--x:36.1%;--y:40.1%">8</span>
+  <span class="pin" style="--x:23.8%;--y:48.8%">9</span>
+  <span class="pin" style="--x:50%;--y:78.3%">10</span>
 </div><figcaption>Waste factor, the results card, and the wall elevation under it.</figcaption></figure>
 
-<div class="note">The small <span class="label">default</span> tag beside a value means you have not changed it.
+<div class="note">The small <span class="label">sample</span> tag after an input's name means you have not changed
+it.
 While every input is still a default the results are dimmed and tagged <span class="label">defaults</span>,
 because the answer is not your job yet. The ⓘ beside <span class="label">FINISH LEVEL</span> and
 <span class="label">WASTE FACTOR</span> opens one sentence on what the term means.</div>
 
 <h2 id="results">Reading the results</h2>
 <p><strong>The headline</strong> is the sheet count for every room together, with waste added and rounded up to
-a whole sheet. It also shows in a strip under the title whenever the results card is scrolled off screen.</p>
+a whole sheet. It also shows in the answer bar under the title whenever the results card is scrolled off screen.</p>
 <p><strong>Tape and mud.</strong> Tape is in whole rolls. Mud is in gallons and moves with
 <span class="label">FINISH LEVEL</span>, down to none at level 0.</p>
 <p><strong>Net area</strong> is the walls, plus the ceiling where you included it, before waste. Door and window
@@ -76,8 +77,8 @@ size or where they sit. The screw line ends <em>VERIFY PER GA-216</em>: the calc
 and does not set a spacing. Pinch to zoom, or tap the expand button at the drawing's top right to open it
 full screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/drywall--more.webp" alt="The drywall drawing and the MATERIALS list: 1/2 drywall 4x8, 17 sheets; joint tape, 1 roll; joint compound, 4.6 gal; drywall screws, 4 lb; corner bead, 4 sticks. Below is a dimmed SHARE PDF with a list icon at its right end, beside a lit SAVE, with the line Enter your own measurements to export." width="660" height="1435">
-  <span class="pin" style="--x:35%;--y:66.3%">10</span>
+  <img src="../shots/drywall--more.webp" alt="The drywall drawing and the MATERIALS list: 1/2 drywall 4x8, 17 sheets; joint tape, 1 roll; joint compound, ≈ 4.6 gal; drywall screws, 4 lb; corner bead, 4 sticks. Below is a dimmed SHARE PDF with a list icon at its right end, beside a lit SAVE, with the line Enter your own measurements to export." width="660" height="1435">
+  <span class="pin" style="--x:27.2%;--y:66.4%">10</span>
   <span class="pin" style="--x:89%;--y:89.9%">11</span>
 </div><figcaption>The material list, and the save and share buttons at the foot of the screen.</figcaption></figure>
 <p><strong>Materials</strong> is the order: board, joint tape, joint compound, screws by the pound, and corner

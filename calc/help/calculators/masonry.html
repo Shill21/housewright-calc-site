@@ -4,7 +4,7 @@
 <title>Masonry — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Masonry</h1>
 <h2 id="what">What it's for</h2>
 <p>Counts the units for a block, brick or stone wall job: one wall or several, less the doors and windows.
@@ -17,26 +17,26 @@ against code.</p>
 waste.</p>
 <figure class="shot"><div class="frame">
   <img src="../shots/masonry--inputs.webp" alt="Masonry inputs at their defaults: MASONRY TYPE CMU Block, WALL 1 with LENGTH 20' 0&quot; and HEIGHT 8' 0&quot;, Add Wall, DOORS 0, WINDOWS 0, INCLUDE GROUT off, INCLUDE VERTICAL REBAR off, WASTE FACTOR 10%. Results read 198 CMU Block." width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:22.6%">1</span>
-  <span class="pin" style="--x:45%;--y:40.5%">2</span>
-  <span class="pin" style="--x:38%;--y:52.3%">3</span>
-  <span class="pin" style="--x:33%;--y:57.6%">4</span>
-  <span class="pin" style="--x:64%;--y:69.8%">5</span>
+  <span class="pin" style="--x:47.2%;--y:26.3%">1</span>
+  <span class="pin" style="--x:19.6%;--y:33.9%">2</span>
+  <span class="pin" style="--x:32.3%;--y:44.2%">3</span>
+  <span class="pin" style="--x:34.2%;--y:50.7%">4</span>
+  <span class="pin" style="--x:50.3%;--y:62.9%">5</span>
 </div><figcaption>Steps 1 to 5. The grout and rebar rows show for CMU Block only.</figcaption></figure>
 <ol class="steps">
   <li>Pick <span class="label">MASONRY TYPE</span>: <strong>CMU Block</strong>, <strong>Brick</strong> or
       <strong>Stone</strong>. It sets how many units go in a square foot and how far a bag of mortar
       goes.</li>
-  <li>Under <strong>WALLS</strong>, enter <span class="label">LENGTH</span> along the face of Wall 1 and
-      <span class="label">HEIGHT</span> from the top of the footing to the top of the last course.</li>
-  <li>Tap <strong>Add Wall</strong> for each further wall and enter its length and height. The red trash
-      button removes a wall. All the walls are added into one takeoff.</li>
+  <li>Under <strong>WALLS</strong>, each wall is one line: its length along the face × its height from the
+      top of the footing to the top of the last course. Tap either to enter it.</li>
+  <li>Tap <strong>Add wall</strong> for each further wall and enter its length and height. The red trash
+      button at the end of the line removes a wall. All the walls are added into one takeoff.</li>
   <li>Set <span class="label">DOORS</span> and <span class="label">WINDOWS</span> with − and +. Each one
       takes a fixed allowance off the wall area. The screen does not ask for opening sizes.</li>
   <li>For block, turn on <span class="label">INCLUDE GROUT</span> to get core-fill bags. A
       <span class="label">GROUT CORES</span> row appears: the percent of cores you will fill, from 5% to 100%
       in 5% steps. Turn on <span class="label">INCLUDE VERTICAL REBAR</span> to get bar footage, and pick
-      <span class="label">REBAR SPACING</span> from 8″ OC to 48″ OC. Neither row shows for Brick or
+      <span class="label">REBAR SPACING</span> from 8" o.c. to 48" o.c. Neither row shows for Brick or
       Stone.</li>
   <li>Set <span class="label">WASTE FACTOR</span>. It is applied to the unit count, the grout and the rebar.
       Mortar and sand are figured from the unit count, so they carry it too.</li>
@@ -47,10 +47,10 @@ waste.</p>
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
   <img src="../shots/masonry--results.webp" alt="Masonry results: 198 CMU Block, 6 mortar bags, 18 cu ft sand, 160 sq ft net area. Below, a running-bond elevation 20' 0&quot; by 8' 0&quot; with notes: 160 SF GROSS = 160 SF NET; 198 CMU BLOCK 8x8x16 @ 1.125/SF INCL 10% WASTE; 12 CRS @ 8&quot;, 12 BOND CUTS SHADED; 6 MORTAR ~35/BAG (PREMIX ~12), 18 CF SAND, and the title strip MASONRY WALL, RUNNING BOND — HALF LAP, NOT TO SCALE. MATERIALS starts with CMU Block 198 pcs and the start of the Mortar row, 6 bags." width="660" height="1435">
-  <span class="pin" style="--x:52%;--y:33.2%">8</span>
-  <span class="pin" style="--x:8%;--y:49.0%">10</span>
-  <span class="pin" style="--x:8%;--y:71.6%">11</span>
-  <span class="pin" style="--x:35%;--y:87.2%">13</span>
+  <span class="pin" style="--x:57%;--y:16.3%">8</span>
+  <span class="pin" style="--x:30%;--y:50%">10</span>
+  <span class="pin" style="--x:56.7%;--y:31.1%">11</span>
+  <span class="pin" style="--x:27.2%;--y:82.3%">13</span>
 </div><figcaption>The numbers match the list below.</figcaption></figure>
 <ol class="steps" style="counter-reset:s 7">
   <li><strong>The headline</strong> is the number of units to buy, waste included. It is dimmed and tagged

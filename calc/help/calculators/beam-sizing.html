@@ -4,7 +4,7 @@
 <title>Beam Sizing — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Beam Sizing</h1>
 <h2 id="what">What it's for</h2>
 <p>A first size for a beam under a uniform load. You give it the span, the width of floor or roof the beam
@@ -16,12 +16,13 @@ before you order.</p>
 <h2 id="steps">Step by step</h2>
 <p>This example uses the numbers the screen opens with.</p>
 <figure class="shot"><div class="frame">
-  <img src="../shots/beam-sizing--inputs.webp" alt="Beam Sizing inputs: SPAN 10' 0&quot;, TRIBUTARY WIDTH 8' 0&quot;, WALL HEIGHT 8' 0&quot;, LOAD TYPE Floor, MATERIAL Dimensional, INCLUDE FLITCH PLATE off, and the result (3) 2x10, 400 PLF total load, depth 9-1/4&quot;, 2 jack / 2 king per side, LVL equivalent available" width="660" height="1435">
-  <span class="pin" style="--x:40%;--y:23.6%">1</span>
-  <span class="pin" style="--x:45.5%;--y:29.8%">2</span>
-  <span class="pin" style="--x:48%;--y:35.9%">3</span>
-  <span class="pin" style="--x:50%;--y:40.6%">4</span>
-  <span class="pin" style="--x:50%;--y:48.9%">5</span>
+  <img src="../shots/beam-sizing--inputs.webp" alt="Beam Sizing inputs: SPAN 10' 0&quot;, TRIBUTARY WIDTH 8' 0&quot;, WALL HEIGHT 8' 0&quot;, WIND / FRAMING ANCHOR ≤ 115 mph Exp B, LOAD TYPE Floor, MATERIAL Dimensional, INCLUDE FLITCH PLATE off, and the result (3) 2x10, 400 PLF total load, depth 9-1/4&quot;, 2 jack / 2 king per side, LVL equivalent available" width="660" height="1435">
+  <span class="pin" style="--x:32.7%;--y:27.2%">1</span>
+  <span class="pin" style="--x:54.8%;--y:33.4%">2</span>
+  <span class="pin" style="--x:46.2%;--y:39.6%">3</span>
+  <span class="pin" style="--x:66.2%;--y:46.4%">4</span>
+  <span class="pin" style="--x:42.1%;--y:56.4%">5</span>
+  <span class="pin" style="--x:39.0%;--y:64.8%">6</span>
 </div><figcaption>The whole form and the answer fit on one screen.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">SPAN</span> — the clear distance between the beam's supports. The beam itself is
@@ -32,6 +33,13 @@ before you order.</p>
       8' 0".</li>
   <li><span class="label">WALL HEIGHT</span> — sets the length of the jack and king stud stock on the cut list.
       It does not change the beam size.</li>
+  <li><span class="label">WIND / FRAMING ANCHOR</span> — sets the king studs, the full-height studs beside the
+      jacks, from the IRC table that counts them by header span and wind. Leave <strong>≤ 115 mph Exp B</strong>
+      where the design wind speed is 115 mph or less, the site is Exposure B (built-up suburbs, woods) and jack
+      studs carry the beam. Pick <strong>Higher / anchored</strong> for more wind, an Exposure C site (open
+      country, scattered trees and buildings), or a beam hung on metal framing anchors instead of jacks. From
+      140 mph in Exposure B, 130 mph in Exposure C, or on any Exposure D site (open water, flats) the table gives
+      no count, and the kings have to be designed. Your building department gives the wind speed and exposure. It does not change the beam size.</li>
   <li><span class="label">LOAD TYPE</span> — <strong>Floor</strong>, <strong>Roof</strong>,
       <strong>Deck</strong> or <strong>Exterior Wall</strong>. Each one applies its own load per square foot.
       The drawing prints the figure that was used.</li>
@@ -47,12 +55,11 @@ before you order.</p>
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/beam-sizing--results.webp" alt="Beam Sizing lower screen: the BASIS &amp; WHAT WAS ASSUMED row, the beam drawing with a 400 PLF load from 50 PSF × 8' 0&quot;, 10' 0&quot; SPAN and 10' 6&quot; BEAM, reactions of 2000 LB each end on 2 jack + 2 king with 3&quot; bearing, a tributary plan at 8' 0&quot;, a PRELIM line, then MATERIALS listing Beam (3) 2x10 — 11' long 1 ea, Jack studs — 92-5/8&quot; precut stock — cut @ beam underside 4 pcs, King studs — 92-5/8&quot; precut 4 pcs, and a dimmed CUT SHEET with a list icon at its right end, beside a lit SAVE" width="660" height="1435">
-  <span class="pin" style="--x:70%;--y:33.7%">4</span>
-  <span class="pin" style="--x:50%;--y:40.8%">5</span>
-  <span class="pin" style="--x:35%;--y:77.2%">6</span>
-  <span class="pin" style="--x:89%;--y:96.5%">7</span>
-</div><figcaption>The basis row, the load drawing, the material list and the export buttons.</figcaption></figure>
+  <img src="../shots/beam-sizing--results.webp" alt="Beam Sizing lower screen: the answer bar under the title reading (3) 2x10 and 400 PLF total load, the BASIS &amp; WHAT WAS ASSUMED row, the beam drawing with a 400 PLF load from 50 PSF × 8' 0&quot;, 10' 0&quot; SPAN and 10' 6&quot; BEAM, reactions of 2000 LB each end on 2 jack + 2 king with 3&quot; bearing, a tributary plan at 8' 0&quot;, a PRELIM line, then MATERIALS listing Beam (3) 2x10 — 11' long 1 ea, Jack studs — 92-5/8&quot; precut stock — cut @ beam underside 4 pcs, King studs — 92-5/8&quot; precut 4 pcs, cut off after the King studs row" width="660" height="1435">
+  <span class="pin" style="--x:56%;--y:43.8%">4</span>
+  <span class="pin" style="--x:50%;--y:68%">5</span>
+  <span class="pin" style="--x:27.2%;--y:94.9%">6</span>
+</div><figcaption>The basis row, the load drawing and the material list.</figcaption></figure>
 <ol class="steps">
   <li><strong>The headline</strong> is the beam: the number of plies in brackets, then the size.</li>
   <li><strong>The lines under it.</strong> <strong>PLF total load</strong> is the load on each foot of beam: the
@@ -61,13 +68,15 @@ before you order.</p>
       finish the list. They remind you the load is a common residential figure, and to confirm bearing,
       fasteners and species.</li>
   <li><strong>The check.</strong> This screen has no green line. A red line only shows when something is wrong.
-      <span class="flag">NO STOCK SIZE PASSES</span> means nothing in the list carries that span and load, and
+      <span class="flag">NO STOCK SIZE CARRIES THIS</span> means nothing in the list carries that span and load, and
       the beam has to be engineered. Shorten <span class="label">SPAN</span> with a post, reduce
       <span class="label">TRIBUTARY WIDTH</span>, or change <span class="label">MATERIAL</span>. Glulam and
       Steel always show a red line saying those sizes are rough and must be engineered.</li>
   <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it. It gives the species and grade the lumber
-      sizes assume and their design values, notes that another common species is weaker, gives the LVL values,
-      says how the beam's buy length is worked out, and ends with the preliminary sizing statement. Check the
+      sizes assume and their design values, notes that another common species is weaker, gives the LVL values
+      and how an LVL's bounce is checked (the span ÷ 360 under the live load, ÷ 240 under the whole load),
+      says how the beam's buy length is worked out, names the column of IRC Table R602.7.5 the king studs were
+      read from (the span and your wind choice), and ends with the preliminary sizing statement. Check the
       species against what your yard stocks.</li>
   <li><strong>The drawing</strong> shows the load on the beam, the span and the beam length, the reaction at each
       end with the studs and bearing under it, and the tributary width in plan. The

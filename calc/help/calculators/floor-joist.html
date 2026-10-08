@@ -4,7 +4,7 @@
 <title>Floor Joist — Housewright Calc help</title>
 <link rel="stylesheet" href="../help.css">
 </head><body>
-<header><a class="home" href="../index.html">HELP &amp; GUIDES</a></header>
+<header><a class="home" href="../index.html">&larr; ALL GUIDES</a></header>
 <main><h1>Floor Joist</h1>
 <h2 id="what">What it's for</h2>
 <p>Framing a floor with sawn lumber joists. You give it the floor size, the joist size and the spacing, and it
@@ -16,17 +16,20 @@ small for the span.</p>
 <p>This example uses the numbers the screen opens with.</p>
 <figure class="shot"><div class="frame">
   <img src="../shots/floor-joist--inputs.webp" alt="Floor Joist inputs: FLOOR LENGTH 20' 0&quot;, FLOOR WIDTH 12' 0&quot;, JOIST SIZE 2x10, SPACING 16 inches OC, RIM JOIST, BRIDGING, SUBFLOOR and JOIST HANGERS on, WASTE FACTOR 10%, and the result 16 joists, 18 ordered" width="660" height="1435">
-  <span class="pin" style="--x:47%;--y:23.6%">1</span>
-  <span class="pin" style="--x:46%;--y:29.8%">2</span>
-  <span class="pin" style="--x:50%;--y:35%">3</span>
-  <span class="pin" style="--x:50%;--y:43.5%">4</span>
-  <span class="pin" style="--x:53%;--y:52.6%">5</span>
+  <span class="pin" style="--x:47.2%;--y:29.5%">1</span>
+  <span class="pin" style="--x:30%;--y:36.6%">2</span>
+  <span class="pin" style="--x:43.1%;--y:41.7%">3</span>
+  <span class="pin" style="--x:38.3%;--y:50.1%">4</span>
+  <span class="pin" style="--x:42.1%;--y:59.4%">5</span>
 </div><figcaption>The whole form fits on one screen.</figcaption></figure>
 <ol class="steps">
   <li><span class="label">FLOOR LENGTH</span> — the side the joists are laid out along. The spacing steps off down
       this side. The example is 20' 0".</li>
-  <li><span class="label">FLOOR WIDTH</span> — the direction the joists run. This is the joist length and the span
-      that gets checked, so enter the distance the joists actually span. The example is 12' 0".</li>
+  <li><span class="label">FLOOR WIDTH (OUTSIDE OF RIM)</span> — the direction the joists run, measured over the
+      outside faces of the rim joists: the whole box you frame, the same box the drawing dimensions. The joists
+      are cut to fit between the two 1-1/2" rims, so each is 3" shorter than the width — 11' 9" in the example.
+      With <span class="label">RIM JOIST</span> off, nothing stands outside the joist ends and they run the full
+      width. The span check reads the full width. The example is 12' 0".</li>
   <li><span class="label">JOIST SIZE</span> — 2x6 to 2x12.</li>
   <li><span class="label">SPACING</span> — on center.</li>
   <li>Four switches add rows to the material list. <span class="label">RIM JOIST</span> is the joist on edge
@@ -39,31 +42,34 @@ small for the span.</p>
 
 <h2 id="results">Reading the results</h2>
 <figure class="shot"><div class="frame">
-  <img src="../shots/floor-joist--results.webp" alt="Floor Joist results: 16 joists, 18 ordered, length 12' 0&quot;, 9 sheets, 15 blocking, a green line reading Within IRC R502.3.1(2) max span, the BASIS &amp; WHAT WAS ASSUMED row, the FLOOR FRAMING plan drawing, and the MATERIALS list" width="660" height="1435">
-  <span class="pin" style="--x:66%;--y:26.7%">1</span>
-  <span class="pin" style="--x:82%;--y:32.0%">3</span>
-  <span class="pin" style="--x:72%;--y:35.5%">4</span>
-  <span class="pin" style="--x:89.5%;--y:50.4%">5</span>
-  <span class="pin" style="--x:35%;--y:80.4%">6</span>
+  <img src="../shots/floor-joist--results.webp" alt="Floor Joist results: 16 joists, 18 ordered, length 12' 0&quot;, 9 sheets, 15 blocking, a green line reading Within IRC 2021 R502.3.1(2) max span, the BASIS &amp; WHAT WAS ASSUMED row, the FLOOR FRAMING plan drawing, and the MATERIALS list" width="660" height="1435">
+  <span class="pin" style="--x:71%;--y:16.3%">1</span>
+  <span class="pin" style="--x:91%;--y:35.2%">3</span>
+  <span class="pin" style="--x:56.3%;--y:39.1%">4</span>
+  <span class="pin" style="--x:40%;--y:65%">5</span>
+  <span class="pin" style="--x:27.2%;--y:90.2%">6</span>
 </div><figcaption>Results, the framing plan and the material list.</figcaption></figure>
 <ol class="steps">
   <li><strong>The headline</strong> has two counts. The first is the joists in the layout. The second is the
       number to order, with the waste factor in it.</li>
-  <li><strong>The line under it</strong> gives the joist length, the subfloor sheets and the blocking pieces.</li>
+  <li><strong>The line under it</strong> gives the length the joists are cut to (between the rims), the subfloor
+      sheets and the blocking pieces.</li>
   <li><strong>The span check.</strong> Green means the joist size is within the table at this spacing. A
       <span class="flag">SPAN EXCEEDS MAX</span> line gives the longest span that joist size allows at that
       spacing. Go up a size in <span class="label">JOIST SIZE</span>, tighten
       <span class="label">SPACING</span>, or shorten the span with a beam or a bearing wall under the floor and
-      enter the shorter span as <span class="label">FLOOR WIDTH</span>.</li>
+      enter the shorter span as <span class="label">FLOOR WIDTH (OUTSIDE OF RIM)</span>.</li>
   <li><span class="label">BASIS &amp; WHAT WAS ASSUMED</span> — tap it. It names the table, and the species, grade,
       floor loads and deflection limit the table was read for. It notes that another common species spans a
-      little less. It also gives the length the blocking is cut to. Check the species and grade against the
-      stamp on your lumber.</li>
+      little less. It also gives the length the blocking is cut to, and how the joist cut comes off the width.
+      Check the species and grade against the stamp on your lumber.</li>
   <li><strong>The drawing</strong> is the floor in plan: joists at their spacing, the rim, the blocking line, and
-      the two counts under it. Pinch to zoom, drag to pan, double-tap to reset. The expand button opens it full
+      the two counts under it. The width is dimensioned over the rims, and the joists are drawn between them.
+      Pinch to zoom, drag to pan, double-tap to reset. The expand button opens it full
       screen. See <a href="../tools/drawings.html">Reading the drawing</a>.</li>
-  <li><span class="label">MATERIALS</span> — joists at the order count, blocking, rim joist in lineal feet,
-      subfloor sheets and hangers. A switch you turned off takes its row out.</li>
+  <li><span class="label">MATERIALS</span> — joists at the order count with the stock length to buy and the length
+      to cut (the cut list shows the same cut), blocking, rim joist in lineal feet, subfloor sheets and
+      hangers. A switch you turned off takes its row out.</li>
 </ol>
 <p>Under the list, <span class="label">CUT SHEET</span>, the list icon at its right end, <span class="label">CUT LIST</span> and <span class="label">SEND LIST</span>
 stay dim until you change at least one input. <span class="label">SAVE</span> stays lit, but while every input is still a default a tap only answers <strong>Enter your job's numbers first</strong> and saves nothing.
@@ -75,10 +81,12 @@ one-time purchase. See <a href="../more/free-and-pro.html">Free and Pro</a>.</di
 
 <h2 id="mistakes">Common mistakes</h2>
 <ul>
-  <li><strong>Swapping length and width.</strong> The joists run across <span class="label">FLOOR WIDTH</span>.
+  <li><strong>Entering the joist length as the width.</strong> The width is over the rims. If you measured the
+      opening between the rims, add the two rims back on.</li>
+  <li><strong>Swapping length and width.</strong> The joists run across <span class="label">FLOOR WIDTH (OUTSIDE OF RIM)</span>.
       If yours run the long way, enter the long side as the width. The drawing shows which way they run.</li>
   <li><strong>Entering the whole building width over a center beam.</strong> The span that gets checked is
-      <span class="label">FLOOR WIDTH</span>. With a beam or bearing wall under the floor, run each side as its
+      <span class="label">FLOOR WIDTH (OUTSIDE OF RIM)</span>. With a beam or bearing wall under the floor, run each side as its
       own floor.</li>
   <li><strong>Ordering the first number.</strong> The first count is the layout. The second has your waste in
       it.</li>
